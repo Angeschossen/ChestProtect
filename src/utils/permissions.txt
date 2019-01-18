@@ -1,0 +1,36 @@
+chestprotect.command.<Command>
+Description: Gives access to command x
+Example:
+chestprotect.command.trust
+Access to /Protect trust command
+
+chestprotect.protections.<Number>
+Description: Defines max protections for player
+
+chestprotect.members.<Number>
+Description: Defines max protection members for player
+
+chestprotect.bypass
+Description: Bypass protections
+
+chestprotect.gui.protection.teleport
+Description: Allow to teleport to protection through GUI
+
+chestprotect.bypass.edit
+Description: Edit other players protections
+
+chestprotect.bypass.interact
+Description: Interact with other players protections
+
+chestprotect.admin.player
+Description: Access /Protect admin player command
+
+chestprotect.admin.player.delete
+Description: Delete player data
+
+chestprotect.player.setting.<Setting>
+Description: Edit own player settings
+Note: Setting name can be found in GUI
+
+chestprotect.protection.setting.<Setting>
+Note: Setting name can be found in GUI

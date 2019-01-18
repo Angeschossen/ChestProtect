@@ -1,0 +1,109 @@
+# Here you can edit all chat messages
+# GUI strings can be found in <language>_gui.yml
+# If you encounter any issues, contact plugin support.
+# Plugin page: https://www.spigotmc.org/resources/.53494
+# Discord: https://discord.gg/jF9NJmw
+
+# ###############################
+# About chat message type system:
+# Does only work for messages in
+# "message" or "command" section.
+# ###############################
+
+# You can use some codes to set the type
+# of a message to title, actionbar or chat.
+# How does it work:
+
+# For example we want to print the prefix as a title:
+# Set general.noPermission to: '#t#&cYou''re not allowed to do this.' (Set "#t#" in front of it)
+# This would just print it as a title.
+
+# You also can set in, stay and out fade timings in seconds:
+# Set for example general.prefix to: '#t#!!1!!2!!3!!&cYou''re not allowed to do this.'
+# This would display this message as a title with
+# a fade in delay of 1 seconds, a stay time with 2 seconds
+# and a fade out delay of 3 seconds.
+
+# You also can display it as a actionbar message:
+# Just add "#a#" in front of it.
+# If you want to display it in chat, just don't set any
+# of these in front of it or use "#c#".
+
+# Also you can combine these modes:
+# Set for example general.noPermission to: '#c#a#t#!!1!!2!!3!!&cYou''re not allowed to do this.'
+# This would print this message as chat, actionbar and an title with an in delay (1 seconds),
+# stay time (2 seconds) and fade out delay (3 seconds)
+# For any questions or issues, please contact me on discord or via pm.
+
+
+general:
+  role:
+    owner: '&4Owner'
+    admin: '&cAdmin'
+    member: '&eMember'
+    visitor: '&5Visitor'
+
+help:
+  general:
+    prefix: '&8[&eProtect&8] &7Usage: '
+    header: '&7------------<- &5Protect Help &7Page&6 {page} &8/&e {pages} &7->------------'
+    page: '&7Use &8/&dProtect help {next} &7for the next page.'
+    footer: '&7------------<- &5Protect Help &7Page&6 {page} &8/&e {pages} &7->------------'
+  command:
+    lock: '&8/&7Protect lock &8- &eLock an objects'
+    unlock: '&8/&7Protect unlock &8- &eUnlock an object'
+    trust: '&8/&7Protect trust &8<&aPlayer&8> - &eAdd protection member'
+    untrust: '&8/&7Protect untrust &8<&aPlayer&8> - &eRemove protection member'
+    delete: '&8/&7Protect delete &8- &eDelete protection'
+    menu: '&8/&7Protect menu &8[&aPlayer&8] - &eOpen menu'
+    help: '&8/&7Protect help &8[&aSite&8] - &eGet help'
+    admin:
+      import: '&8/&7Protect import &8<&aPlugin&8> &8- &eImport data from other plugins'
+      reload: '&8/&7Protect reload &8<&aConfig&8, &aLanguage&8> - &eReload configuration'
+      admin: '&8/&7Protect admin &8<&aAction&8> - &eRun admin actions'
+      about: '&8/&7Protect about &8- &eShow information about SuperProtect'
+
+message:
+  no-permission: '&8[&eProtect&8] &cYou don''t have permission to do this. &7You need permission&b {permission}&7.'
+  world-invalid: '&8[&eProtect&8] &cThis is deactivated in this world.'
+  noaccess:
+    protection: '&8[&eProtect&8] &cYou''re not allowed to do this at this protection. &7It belongs to&b {player}&7.'
+    action: '&8[&eProtect&8] &cYou''re not allowed to run this action at this protection. &7Owner&b {player} &7needs to give you permission to do so.'
+  event:
+    open-owner: '&8[&eProtect&8] &7This block belongs to &byou&7.'
+    open-trusted: '&8[&eProtect&8] &7This block is protected by&b {player}&7.'
+    protectable: '&8[&eProtect&8] &7You placed an protectable block. Execute &8/&eLock &7to lock it.'
+
+command:
+  general:
+    money-cost: '&8[&eProtect&8] &cYou don''t have enough to pay the cost. &7You need&b ${cost}&7.'
+    pos-not-allowed: '&8[&eProtect&8] &cYou''re not allowed to do this at this position. &7Go somewhere else.'
+    player-not-exist: '&8[&eProtect&8] &cThere''s no player with the name&e {player}&c. &7Please check your input.'
+    not-protected: '&8[&eProtect&8] &cYou can''t do that. &7This block isn''t protected.'
+  help:
+    help: '&8[&eProtect&8] &7Use &8/&aLand help &7for help.'
+    cmd-not-exist: '&8[&eProtect&8] &cThis subcommand doesn''t exist. &7Command&b {command} &7wasn''t found.'
+    page-not-exist: '&8[&eProtect&8] &cThe page&e {page} &cdoesn''t exist. &7Typo?'
+  lock:
+    activated: '#t#!!1!!1!!1!!&7Lock-Mode:;;&aActivated'
+    deactivated: '#t#!!1!!1!!1!!&7Lock-Mode:;;&cDeactivated'
+    already: '&8[&6Protect&8] &cYou can''t protect this block. &7It''s already protected.'
+    max-protections: '&8[&6Protect&8] &cYou can''t create any more protections. &7The maximum for you is&b {max}&7. Contact an administrator for help.'
+    success: '&8[&6Protect&8] &7Successful protected this block for&b ${cost}&7.'
+  unlock:
+    activated: '#t#!!1!!1!!1!!&7Unlock-Mode:;;&aActivated'
+    deactivated: '#t#!!1!!1!!1!!&7Unlock-Mode:;;&cDeactivated'
+    success: '&8[&6Protect&8] &7Successful unlocked this objective.'
+  trust:
+    activated: '#t#!!1!!1!!1!!&7Trust-Mode:;;&aActivated'
+    deactivated: '#t#!!1!!1!!1!!&7Trust-Mode:;;&cDeactivated'
+    already: '&8[&6Protect&8] &cYou can''t do this. &7Player&b {player} &7is already trusted at this protection.'
+    max-members: '&8[&6Protect&8] &cYou can''t add any more members. &7The maximum for you is&b {max}&7. Contact an administrator for help.'
+    success: '&8[&6Protect&8] &7Successful trusted player&b {player} &7at this protection.'
+  untrust:
+    activated: '#t#!!1!!1!!1!!&7Untrust-Mode:;;&aActivated'
+    deactivated: '#t#!!1!!1!!1!!&7Untrust-Mode:;;&cDeactivated'
+    already: '&8[&6Protect&8] &cYou can''t do this. &7Player&b {player} &7is already untrusted at this protection.'
+    success: '&8[&6Protect&8] &7Successful untrusted player&b {player} &7at this protection.'
+
+

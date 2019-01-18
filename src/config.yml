@@ -1,0 +1,287 @@
+#   _____ _               _  ______          _            _
+#  /  __ \ |             | | | ___ \        | |          | |
+#  | /  \/ |__   ___  ___| |_| |_/ / __ ___ | |_ ___  ___| |_
+#  | |   | '_ \ / _ \/ __| __|  __/ '__/ _ \| __/ _ \/ __| __|
+#  | \__/\ | | |  __/\__ \ |_| |  | | | (_) | ||  __/ (__| |_
+#   \____/_| |_|\___||___/\__\_|  |_|  \___/ \__\___|\___|\__|
+#
+# Resource page: https://www.spigotmc.org/resources/53494
+# Discord: https://discord.gg/jF9NJmw
+
+# If you encounter any issues, please report them
+# to discord support server or via pm.
+# Bugs or issues are mostly fixed within hours.
+# You can ignore the IDs in some setting names (_<ID>).
+
+general:
+  # Language
+  language: 'en-US'
+  # Should ChestProtect check for updates?
+  # Will only send an notification to console
+  # when ChestProtect enables.
+  checkUpdate: true
+
+  option:
+    # Worlds where players should
+    # be able to lock objects
+    worlds_list:
+      - world
+    # Command shortcuts
+    # NOTE: You need to reload the server
+    # if you want to take changes here action
+    command:
+      # Allow usage to perform /Lock
+      # Set this to false, if you don't want this
+      lock: true
+      # Allow usage to perform /Unlock
+      # Set this to false, if you don't want this
+      unlock: true
+      # Allow usage to perform /Trust
+      # Set this to false, if you don't want this
+      trust: true
+      # Allow usage to perform /Untrust
+      # Set this to false, if you don't want this
+      untrust: true
+
+  # Date format
+  # MM: Month (01)
+  # dd: Day of month
+  # yyyy: Year
+  # hh: hours
+  # mm: minutes
+  # ss: seconds
+  dateFormat:
+    # General for invities etc.
+    # 24 hour format:
+    # MM/dd/yyyy HH:mm:ss
+    general_2: 'MM/dd/yyyy hh:mm:ss'
+    # For things like cooldown etc.
+    # NOTE: You will need to change
+    # the messages to for example {time} hours,
+    # if you change the format to
+    # 'hh:mm:ss'.
+    small: 'mm:ss'
+
+# Protection settings
+protection:
+  # Costs to create protection
+  costs:
+    general: 50
+    # Increase via protection amount
+    # Percentage (For example going up to 10% more cost every time he protects an object)
+    increase: 2
+    # If player unlock protection
+    cashback: 10
+  # Blocks wich should be able
+  # to become protected.
+  blocks:
+    - CHEST
+    - FURNACE
+    - OAK_DOOR
+    - IRON_DOOR
+    - SPRUCE_DOOR
+    - BIRCH_DOOR
+    - JUNGLE_DOOR
+    - ACACIA_DOOR
+    - DARK_OAK_DOOR
+  # Default protection settings
+  setting:
+    # Hopper transfer
+    hopper_transfer:
+      # Enable or disable
+      # for default setting
+      enabled_7: false
+      # Material which should
+      # be displayed for this setting.
+      # Materials can be found here:
+      # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+      item_7: 'HOPPER'
+
+  # Role default settings
+  # Can be changed later in GUI
+  role:
+    # Visitors (untrusted players)
+    visitor:
+      # Settings
+      setting:
+        # Allow visitors to trust players?
+        player_trust:
+          default_6: false
+        # Allow visitors to untrust players?
+        player_untrust:
+          default_7: false
+    # Members (trusted players)
+    member:
+      setting:
+        # Allow members to trust players?
+        player_trust:
+          default_8: false
+        # Allow members to untrust players?
+        player_untrust:
+          default_9: false
+    # Admins (role that can be set)
+    admin:
+      setting:
+        # Allow admins to trust players?
+        player_trust:
+          default_9: true
+        # Allow admins to untrust players?
+        player_untrust:
+          default_10: true
+
+  # General options
+  option:
+    # Prevent hoppers steal items from protections
+    # NOTE: Players need to enable that in the
+    # settings to take action
+    preventHopperTransfer: true
+
+# Player settings
+player:
+ # Here you can set defaults
+ # Player will be able to change these
+ # in the GUI, if they have permission
+ # to do so.
+ setting:
+   # Make the command /Lock persistent
+   lock_persistent:
+     # Default value
+     # Players can change that later
+     default: false
+     # Item wich should be displayed
+     # in the GUI for this setting.
+     # Materials can be found here:
+     # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+     item_2: 'IRON_BARS'
+   # Make the command /Unlock persistent.
+   unlock_persistent:
+     default_2: false
+     item_3: 'LIME_WOOL'
+   # Make the command /Trust persistent.
+   trust_persistent:
+     default_3: false
+     item_4: 'PLAYER_HEAD'
+   # Make the command /Untrust persistent.
+   untrust_persistent:
+     default_4: false
+     item_5: 'RED_WOOL'
+   # Auto lock placed blocks
+   # wich are protectable.
+   autolock:
+     default_5: true
+     item_6: 'LIME_WOOL'
+
+# Database settings
+database:
+  # Database purger
+  # Delete protections from
+  # inactive players
+  purger:
+    # Set this to false, to disable it.
+    enabled: true
+    # Time in days how long
+    # an players must be offline to
+    # be marked as inactive.
+    offlineDays: 120
+
+# Events options
+event:
+  # If an player opens for example
+  # an protected chest.
+  openProtection:
+    # Should the owner get an
+    # message if he opens an
+    # protection of from him?
+    notifyOwner: false
+    # Should an member of an
+    # protection get an message, if he
+    # opens the protection?
+    notifyMember: true
+    # Should it be possible to
+    # open iron doors if player
+    # is trusted to it?
+    # NOTE: Players need the permission
+    # 'chestprotect.openirondoors' to do that.
+    # Of course this works only, if the
+    # player is trusted or has bypass permission.
+    openIronDoors: true
+  # If someone places a protectable block
+  blockPlace:
+    # Notify player that he can lock the object.
+    # Won't appear if he has autolock enabled
+    # and object is already locked.
+    notify: true
+
+# Integrations settings
+integration:
+  # Management integrations
+  manager:
+  # Lands
+  # Link: https://www.spigotmc.org/resources/53313
+    Lands:
+      enabled_2: true
+      # Should ChestProtect only
+      # allow protections on chunks
+      # claimed protected by Lands?
+      onlyLand: false
+      # Should ChestProtect delete all
+      # protections in the chunk,
+      # if the players deletes the chunk
+      # protection?
+      removeOnLandDelete: false
+      # Allow hopper transfer on
+      # protections in an protected chunk?
+      hopperTransfer: true
+
+    # Towny
+    Towny:
+      enabled_3: true
+      # Allows protections only in
+      # towns?
+      onlyTown: false
+      # Delete protection in town if town
+      # get's deleted?
+      removeProtectionsUnclaim: false
+    Residence:
+      enabled_9: true
+      # Allow protections only
+      # in an residence?
+      onlyInClaim: false
+      # Delete protections in residence, if
+      # it get's deleted?
+      unclaimDelete: true
+
+  # Economy integrations
+  economy:
+    # Default currency
+    # Will be used, if no economy
+    # plugins from below where found.
+    # NOTE: This currency is item based.
+    default:
+      # Item wich should be used as currency.
+      # Materials can be found here:
+      # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+      item: 'DIAMOND'
+
+    # CoinsAPI
+    CoinsApi:
+      enabled_4: true
+
+    # Vault
+    Vault:
+      enabled_5: true
+
+  # Chat integrations
+  chat:
+    # PlaceholderAPI
+    PlaceholderAPI:
+      enabled_6: true
+
+  # Web integrations
+  web:
+    # Dynmap
+    dynmap:
+      enabled_8: true
+      # Layer name
+      layer: 'ChestProtect'
+      icon: 'Protections X: %x% Z: %z%'

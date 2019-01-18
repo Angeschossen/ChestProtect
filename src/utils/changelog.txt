@@ -1,0 +1,12 @@
+1.6.7.3 Bugfixes and Reload Command
+
++ Added /Chectprotect reload gui command
+Now you can reload the GUI
+
+NOTE: You also can reload the GUI by executing
+/ChestProtect reload language
+It reloads all language files. Also chat messages.
+
+[#] Fixed empty lines in /Chestprotect help
+
+[#] Fixed wrong next page message in default translation
