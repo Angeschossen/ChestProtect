@@ -33,4 +33,4 @@ Description: Edit own player settings
 Note: Setting name can be found in GUI
 
 chestprotect.protection.setting.<Setting>
-Note: Setting name can be found in GUI
+Note: Setting name can be found in GUIs
