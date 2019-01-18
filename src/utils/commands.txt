@@ -1,0 +1,27 @@
+Protect lock
+  Description: Enable lock mode
+  Permission: chestprotect.command.lock
+
+Protect unlock
+  Description: Enable unlock mode
+  Permission: chestprotect.command.unlock
+
+Protect trust
+  Description: Enable trust mode
+  Permission: chestprotect.command.trust
+
+Protect untrust
+  Description: Enable untrust mode
+  Permission: chestprotect.command.untrust
+
+Protect menu
+  Description: Open GUI main menu
+  Permission: chestprotect.command.menu
+
+Protect admin
+  Description: Admin commands
+  Permission: chestprotect.command.admin
+
+Protect reload
+  Description: Reload configurations, messages and GUI
+  Permission: chestprotect.command.reload
