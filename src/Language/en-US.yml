@@ -45,7 +45,7 @@ general:
 
 help:
   general:
-    prefix: '&8[&eProtect&8] &7Usage: '
+    prefix: '&8[&eChestProtect&8] &7Usage: '
     header: '&7------------<- &5Protect Help &7Page&6 {page} &8/&e {pages} &7->------------'
     page: '&7Use &8/&dProtect help {next} &7for the next page.'
     footer: '&7------------<- &5Protect Help &7Page&6 {page} &8/&e {pages} &7->------------'
@@ -64,46 +64,47 @@ help:
       about: '&8/&7Protect about &8- &eShow information about SuperProtect'
 
 message:
-  no-permission: '&8[&eProtect&8] &cYou don''t have permission to do this. &7You need permission&b {permission}&7.'
-  world-invalid: '&8[&eProtect&8] &cThis is deactivated in this world.'
+  no-permission: '&8[&eChestProtect&8] &cYou don''t have permission to do this. &7You need permission&b {permission}&7.'
+  world-invalid: '&8[&eChestProtect&8] &cThis is deactivated in this world. &7An administrator needs to enable it in config. Name of world:&b {world}'
+  block-invalid: '&8[&eChestProtect&8] &cYou can''t protect this block. &7An administrator needs to add it to the config. Name of block:&b {block}'
   noaccess:
-    protection: '&8[&eProtect&8] &cYou''re not allowed to do this at this protection. &7It belongs to&b {player}&7.'
-    action: '&8[&eProtect&8] &cYou''re not allowed to run this action at this protection. &7Owner&b {player} &7needs to give you permission to do so.'
+    protection: '&8[&eChestProtect&8] &cYou''re not allowed to do this at this protection. &7It belongs to&b {player}&7.'
+    action: '&8[&eChestProtect&8] &cYou''re not allowed to run this action at this protection. &7Owner&b {player} &7needs to give you permission to do so.'
   event:
-    open-owner: '&8[&eProtect&8] &7This block belongs to &byou&7.'
-    open-trusted: '&8[&eProtect&8] &7This block is protected by&b {player}&7.'
-    protectable: '&8[&eProtect&8] &7You placed an protectable block. Execute &8/&eLock &7to lock it.'
+    open-owner: '&8[&eChestProtect&8] &7This block belongs to &byou&7.'
+    open-trusted: '&8[&eChestProtect&8] &7This block is protected by&b {player}&7.'
+    protectable: '&8[&eChestProtect&8] &7You placed an protectable block. Execute &8/&eLock &7to lock it.'
 
 command:
   general:
-    money-cost: '&8[&eProtect&8] &cYou don''t have enough to pay the cost. &7You need&b ${cost}&7.'
-    pos-not-allowed: '&8[&eProtect&8] &cYou''re not allowed to do this at this position. &7Go somewhere else.'
-    player-not-exist: '&8[&eProtect&8] &cThere''s no player with the name&e {player}&c. &7Please check your input.'
-    not-protected: '&8[&eProtect&8] &cYou can''t do that. &7This block isn''t protected.'
+    money-cost: '&8[&eChestProtect&8] &cYou don''t have enough to pay the cost. &7You need&b ${cost}&7.'
+    pos-not-allowed: '&8[&eChestProtect&8] &cYou''re not allowed to do this at this position. &7Go somewhere else.'
+    player-not-exist: '&8[&eChestProtect&8] &cThere''s no player with the name&e {player}&c. &7Please check your input.'
+    not-protected: '&8[&eChestProtect&8] &cYou can''t do that. &7This block isn''t protected.'
   help:
-    help: '&8[&eProtect&8] &7Use &8/&aLand help &7for help.'
-    cmd-not-exist: '&8[&eProtect&8] &cThis subcommand doesn''t exist. &7Command&b {command} &7wasn''t found.'
-    page-not-exist: '&8[&eProtect&8] &cThe page&e {page} &cdoesn''t exist. &7Typo?'
+    help: '&8[&eChestProtect&8] &7Use &8/&aLand help &7for help.'
+    cmd-not-exist: '&8[&eChestProtect&8] &cThis subcommand doesn''t exist. &7Command&b {command} &7wasn''t found.'
+    page-not-exist: '&8[&eChestProtect&8] &cThe page&e {page} &cdoesn''t exist. &7Typo?'
   lock:
     activated: '#t#!!1!!1!!1!!&7Lock-Mode:;;&aActivated'
     deactivated: '#t#!!1!!1!!1!!&7Lock-Mode:;;&cDeactivated'
-    already: '&8[&6Protect&8] &cYou can''t protect this block. &7It''s already protected.'
-    max-protections: '&8[&6Protect&8] &cYou can''t create any more protections. &7The maximum for you is&b {max}&7. Contact an administrator for help.'
-    success: '&8[&6Protect&8] &7Successful protected this block for&b ${cost}&7.'
+    already: '&8[&eChestProtect&8] &cYou can''t protect this block. &7It''s already protected.'
+    max-protections: '&8[&eChestProtect&8] &cYou can''t create any more protections. &7The maximum for you is&b {max}&7. Contact an administrator for help.'
+    success: '&8[&eChestProtect&8] &7Successful protected this block for&b ${cost}&7.'
   unlock:
     activated: '#t#!!1!!1!!1!!&7Unlock-Mode:;;&aActivated'
     deactivated: '#t#!!1!!1!!1!!&7Unlock-Mode:;;&cDeactivated'
-    success: '&8[&6Protect&8] &7Successful unlocked this objective.'
+    success: '&8[&eChestProtect&8] &7Successful unlocked this objective.'
   trust:
     activated: '#t#!!1!!1!!1!!&7Trust-Mode:;;&aActivated'
     deactivated: '#t#!!1!!1!!1!!&7Trust-Mode:;;&cDeactivated'
-    already: '&8[&6Protect&8] &cYou can''t do this. &7Player&b {player} &7is already trusted at this protection.'
-    max-members: '&8[&6Protect&8] &cYou can''t add any more members. &7The maximum for you is&b {max}&7. Contact an administrator for help.'
-    success: '&8[&6Protect&8] &7Successful trusted player&b {player} &7at this protection.'
+    already: '&8[&eChestProtect&8] &cYou can''t do this. &7Player&b {player} &7is already trusted at this protection.'
+    max-members: '&8[&eChestProtect&8] &cYou can''t add any more members. &7The maximum for you is&b {max}&7. Contact an administrator for help.'
+    success: '&8[&eChestProtect&8] &7Successful trusted player&b {player} &7at this protection.'
   untrust:
     activated: '#t#!!1!!1!!1!!&7Untrust-Mode:;;&aActivated'
     deactivated: '#t#!!1!!1!!1!!&7Untrust-Mode:;;&cDeactivated'
-    already: '&8[&6Protect&8] &cYou can''t do this. &7Player&b {player} &7is already untrusted at this protection.'
-    success: '&8[&6Protect&8] &7Successful untrusted player&b {player} &7at this protection.'
+    already: '&8[&eChestProtect&8] &cYou can''t do this. &7Player&b {player} &7is already untrusted at this protection.'
+    success: '&8[&eChestProtect&8] &7Successful untrusted player&b {player} &7at this protection.'
 
 

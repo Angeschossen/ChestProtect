@@ -1,5 +1,4 @@
-1.6.7.4 Moved all data to /plugins/ChestProtect
-After initial run, you'll need to restart your server.
-
-+ Moved all data to plugin/ChestProtect
-+ Added loaded addons info to /ChestProtect about
+1.6.8.6 GUI Improvements
+[#] The cursor won't reset anymore to the middle of the screen
+[#] Fixed protected levers, buttons etc. not working
+[#] Fixed protected levers, buttons etc. can be bypassed

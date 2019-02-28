@@ -15,6 +15,8 @@
 
 general:
   # Language
+  # Pre translated:
+  # Chinese: zh-CN
   language: 'en-US'
   # Should ChestProtect check for updates?
   # Will only send an notification to console
@@ -91,11 +93,6 @@ protection:
       # Enable or disable
       # for default setting
       enabled_7: false
-      # Material which should
-      # be displayed for this setting.
-      # Materials can be found here:
-      # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
-      item_7: 'HOPPER'
 
   # Role default settings
   # Can be changed later in GUI
@@ -148,28 +145,19 @@ player:
      # Default value
      # Players can change that later
      default: false
-     # Item wich should be displayed
-     # in the GUI for this setting.
-     # Materials can be found here:
-     # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
-     item_2: 'IRON_BARS'
    # Make the command /Unlock persistent.
    unlock_persistent:
      default_2: false
-     item_3: 'LIME_WOOL'
    # Make the command /Trust persistent.
    trust_persistent:
      default_3: false
-     item_4: 'PLAYER_HEAD'
    # Make the command /Untrust persistent.
    untrust_persistent:
      default_4: false
-     item_5: 'RED_WOOL'
    # Auto lock placed blocks
    # wich are protectable.
    autolock:
      default_5: true
-     item_6: 'LIME_WOOL'
 
 # Database settings
 database:

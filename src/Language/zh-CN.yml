@@ -1,0 +1,89 @@
+# 你可以在这里编辑消息
+# GUI界面的消息可以在 <对应语言>_gui.yml 文件中修改
+# 如果你遇到任何问题，请联系作者
+# 插件地址： https://www.spigotmc.org/resources/.53494
+# Discord: https://discord.gg/jF9NJmw
+# 
+# ####################
+# 消息发送机制原理解释
+# 只在message和command
+# 部分有效
+# ####################
+# 
+# 你可以通过增加提示符来修改插件发送的形式
+# 比如聊天框消息 title消息 actionbar消息
+# 
+# 若要以 title 的形式发送消息 只需要在消息的前面加上 #t#
+# 例如： 设置 general.noPermission 为 '#t#&c权限不足。'
+# 若要设置淡入，停留，淡出的秒数，请看下面的例子
+# 例如： 设置 general.prefix 为 '#t#!!1!!5!!2!!&c权限不足。'
+# 显示效果： 淡入1秒 停留5秒 淡出2秒
+# 
+# 若要以 actionbar 的形式发送消息 只需要在消息的前面加上 #a#
+general:
+  role:
+    owner: '&4所有者'
+    admin: '&c管理者'
+    member: '&e成员'
+    visitor: '&5拜访者'
+help:
+  general:
+    prefix: '&8[&eChestProtect&8] &7指令： '
+    header: '&7------------<- &5保护锁 帮助 &7页数&6 {page} &8/&e {pages} &7->------------'
+    page: '&7Use &8/&dProtect help {next} &7来查看更多帮助'
+    footer: '&7------------<- &5保护锁 帮助 &7页数&6 {page} &8/&e {pages} &7->------------'
+  command:
+    lock: '&8/&7Protect lock &8- &e给一个方块上锁'
+    unlock: '&8/&7Protect unlock &8- &e给一个方块解锁'
+    trust: '&8/&7Protect trust &8<&a玩家名&8> - &e添加信任玩家'
+    untrust: '&8/&7Protect untrust &8<&a玩家名&8> - &e移除信任玩家'
+    delete: '&8/&7Protect delete &8- &e删除该保护'
+    menu: '&8/&7Protect menu &8[&a玩家名&8] - &e打开菜单'
+    help: '&8/&7Protect help &8[&a页数&8] - &e获取帮助'
+    admin:
+      import: '&8/&7Protect import &8<&a插件名&8> &8- &e从其他插件中导入数据'
+      reload: '&8/&7Protect reload &8<&aConfig&8, &aLanguage&8> - &e重载配置文件'
+      admin: '&8/&7Protect admin &8<&aAction&8> - &e执行管理员操作'
+      about: '&8/&7Protect about &8- &eS显示关于ChestProtect的信息'
+message:
+  no-permission: '&8[&eChestProtect&8] &c权限拒绝 &7你缺少权限&b {permission}'
+  world-invalid: '&8[&eChestProtect&8] &c该世界中保护锁被禁用 &7管理员需要在设置中添加保护方块： &b {world}'
+  block-invalid: '&8[&eChestProtect&8] &c你不能给该方块上锁。 &7管理员需要在设置中添加保护方块： &b {block}'
+  noaccess:
+    protection: '&8[&eChestProtect&8] &c你不能这样做。 &7所有者为：&b {player}&7.'
+    action: '&8[&eChestProtect&8] &c你不能这样做。 &7所有者&b {player} &7需要给你权限后才能这样做'
+  event:
+    open-owner: '&8[&eChestProtect&8] &7该方块当前属于 &b你&7'
+    open-trusted: '&8[&eChestProtect&8] &7该方块被玩家&b {player}&7 保护'
+    protectable: '&8[&eChestProtect&8] &7你放置了一个可以上锁的方块。 输入 &8/&eLock &7来上锁'
+command:
+  general:
+    money-cost: '&8[&eChestProtect&8] &c服务器币不足。 &7你需要&b ${cost}&7 服务器币'
+    pos-not-allowed: '&8[&eChestProtect&8] &c你不能在这个位置上这样做。 &7请到别的地方重试。'
+    player-not-exist: '&8[&eChestProtect&8] &c未找到玩家&e {player}&c &7请检查名字是否正确'
+    not-protected: '&8[&eChestProtect&8] &c你不能这样做 &7该方块未被保护。'
+  help:
+    help: '&8[&eChestProtect&8] &7使用 &8/&aProtect help &7来查看帮助。'
+    cmd-not-exist: '&8[&eChestProtect&8] &c该子指令&b {command} &c不存在。'
+    page-not-exist: '&8[&eChestProtect&8] &c页数&e {page} &c不存在。'
+  lock:
+    deactivated: '#t#!!1!!3!!1!!&7上锁模式;;&c已取消'
+    activated: '#t#!!1!!3!!1!!&7上锁模式;;&a已激活 &7右键对应方块上锁'
+    already: '&8[&eChestProtect&8] &c该方块已被保护'
+    max-protections: '&8[&eChestProtect&8] &c你不能再创建更多的保护了。 &7当前最大限制为：&a {max}&7。'
+    success: '&8[&eChestProtect&8] &7成功的为其创建了保护，花费了&a {cost}&7 服务器币'
+  unlock:
+    deactivated: '#t#!!1!!3!!1!!&7解锁模式;;&c已取消'
+    activated: '#t#!!1!!3!!1!!&7解锁模式;;&a已激活 &7右键对应方块解锁'
+    success: '&8[&eChestProtect&8] &7成功解锁了该方块'
+  trust:
+    activated: '#t#!!1!!3!!1!!&7添加信任;;&a已激活 &7右键对应上锁方块添加信任玩家'
+    deactivated: '#t#!!1!!3!!1!!&7添加信任;;&c已取消'
+    already: '&8[&eChestProtect&8] &c玩家&b {player} 已可以使用该上锁方块'
+    max-members: '&8[&eChestProtect&8] &c你不能再添加更多的信任玩家了。 &7信任数量已达上限&b {max}'
+    success: '&8[&eChestProtect&8] &7成功地信任了玩家&b {player}'
+  untrust:
+    activated: '#t#!!1!!3!!1!!&7取消信任;;&a已激活 &7右键对应上锁方块取消信任玩家'
+    deactivated: '#t#!!1!!3!!1!!&7取消信任;;&c已取消'
+    already: '&8[&eChestProtect&8] &c玩家&b {player} &c不在信任列表中'
+    success: '&8[&eChestProtect&8] &7成功地移除了玩家&b {player}'

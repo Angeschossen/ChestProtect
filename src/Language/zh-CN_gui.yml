@@ -1,0 +1,647 @@
+#   _____ _               _  ______          _            _
+#  /  __ \ |             | | | ___ \        | |          | |
+#  | /  \/ |__   ___  ___| |_| |_/ / __ ___ | |_ ___  ___| |_
+#  | |   | '_ \ / _ \/ __| __|  __/ '__/ _ \| __/ _ \/ __| __|
+#  | \__/\ | | |  __/\__ \ |_| |  | | | (_) | ||  __/ (__| |_
+#   \____/_| |_|\___||___/\__\_|  |_|  \___/ \__\___|\___|\__|
+general:
+  wYes: '&a是'
+  wNo: '&c否'
+  none: '&c无'
+  now: '&a现在'
+  enabled: '&a已启用'
+  disabled: '&c已禁用'
+  others: 其他
+gui:
+  mainMenu:
+    title: '&8主菜单'
+    size: 27
+    s:
+      protections:
+        name: '&b保护锁'
+        lore:
+        - '&7查看你所有保护锁'
+        material: CHEST
+        slot: 11
+      settings:
+        name: '&b设置'
+        lore:
+        - '&7编辑个人设置'
+        material: COMMAND_BLOCK
+        slot: 17
+      close:
+        name: '&c关闭'
+        lore:
+        - '&7关闭该菜单'
+        - ' '
+        - '&8- &7你可以稍后使用'
+        - '  &8/&aProtect menu&7 重新打开'
+        material: RED_STAINED_GLASS_PANE
+        slot: 9
+    f:
+      info:
+        name: '&b信息'
+        lore:
+        - '&7统计数据：'
+        - ' '
+        - '&8- &7保护锁：'
+        - '  &e{current} &8/ &c{max}'
+        material: PAPER
+        slot: 14
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 27
+  settings_player:
+    title: '&8你的设置'
+    size: 27
+    s:
+      back:
+        name: '&c返回'
+        lore:
+        - '&7返回到'
+        - '&e主菜单&7'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    f:
+      page_previous:
+        name: '&9上一页'
+        lore:
+        - '&7前往上一页：&9 {previous}'
+        - ' '
+        - '&8- &7当前：&b {current}'
+        material: ARROW
+        slot: 21
+      page_next:
+        name: '&a下一页'
+        lore:
+        - '&7前往下一页：&9 {next}'
+        - ' '
+        - '&8- &7当前：&b {current}'
+        material: ARROW
+        slot: 25
+    l:
+      lock_persistent:
+        name: '&b持续上锁'
+        lore:
+        - '&7状态： {enabled}'
+        - '&7是否有权限更改： {unlocked}'
+        - ' '
+        - '&7保持上锁模式'
+        - '&7直到输入指令取消'
+        material: IRON_BARS
+        from: 10
+        to: 18
+      unlock_persistent:
+        name: '&b持续解锁'
+        lore:
+        - '&7状态： {enabled}'
+        - '&7是否有权限更改： {unlocked}'
+        - ' '
+        - '&7保持解锁模式'
+        - '&7直到输入指令取消'
+        material: GRASS
+        from: 10
+        to: 18
+      trust_persistent:
+        name: '&b持续信任'
+        lore:
+        - '&7状态： {enabled}'
+        - '&7是否有权限更改： {unlocked}'
+        - ' '
+        - '&7保持信任模式'
+        - '&7直到输入指令取消'
+        material: CACTUS_GREEN
+        from: 10
+        to: 18
+      untrust_persistent:
+        name: '&b持续取消信任'
+        lore:
+        - '&7状态： {enabled}'
+        - '&7是否有权限更改： {unlocked}'
+        - ' '
+        - '&7保持取消信任模式'
+        - '&7直到输入指令取消'
+        material: ROSE_RED
+        from: 10
+        to: 18
+      autolock:
+        name: '&b自动上锁'
+        lore:
+        - '&7状态： {enabled}'
+        - '&7是否有权限更改： {unlocked}'
+        - ' '
+        - '&7放置可上锁方块时自动上锁'
+        material: OBSERVER
+        from: 10
+        to: 18
+    a:
+      failure_permission:
+        name: '&4失败： &c权限拒绝'
+        lore:
+        - '&7你你不能修改该设置'
+        - ' '
+        - '&8- &7你需要权限：'
+        - '  &e{permission}&7'
+        material: RED_STAINED_GLASS_PANE
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 19
+        to: 27
+  protection-types:
+    title: '&8保护种类'
+    size: 27
+    s:
+      type-chests:
+        name: '&b箱子'
+        lore:
+        - '&7点击查看详情'
+        material: CHEST
+        slot: 11
+      type-doors:
+        name: '&b门'
+        lore:
+        - '&7点击查看详情'
+        material: OAK_DOOR
+        slot: 13
+      type-furnaces:
+        name: '&b熔炉'
+        lore:
+        - '&7点击查看详情'
+        material: FURNACE
+        slot: 15
+      type-others:
+        name: '&b其他'
+        lore:
+        - '&7点击查看详情'
+        material: PAPER
+        slot: 17
+      back:
+        name: '&c返回'
+        lore:
+        - '&7返回到'
+        - '&e主菜单&7'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 27
+  protection-type:
+    title: '&8保护类型 -> {material}'
+    size: 45
+    s:
+      back:
+        name: '&c返回'
+        lore:
+        - '&7返回到'
+        - '&e保护类型&7'
+        material: RED_STAINED_GLASS_PANE
+        slot: 37
+    f:
+      page_previous:
+        name: '&9上一页'
+        lore:
+        - '&7前往上一页：&9 {previous}'
+        - ' '
+        - '&8- &7当前：&b {current}'
+        material: ARROW
+        slot: 39
+      page_next:
+        name: '&a下一页'
+        lore:
+        - '&7前往下一页：&9 {next}'
+        - ' '
+        - '&8- &7当前：&b {current}'
+        material: ARROW
+        slot: 43
+    l:
+      protection:
+        name: '&7世界： &b {world} &7X：&b {x} &7Y：&b {y} &7Z：&b {z}'
+        lore:
+        - '&7左键编辑该保护锁'
+        - ' '
+        - '&8- &7若要传送到该'
+        - '  &7保护锁位置请右键'
+        - ' '
+        - '&8- &7所在区块： '
+        - '  &7X：&e {chunk-x}'
+        - '  &7Z：&e {chunk-z}'
+        material: CHEST
+        from: 10
+        to: 36
+      noProtection:
+        name: '&8保护锁 &7-> &c无'
+        lore:
+        - '&7如何设置一个保护锁？'
+        - ' '
+        - '&81: &7输入 &8/&aLock'
+        - '&82: &7点击要上锁的方块'
+        - ' '
+        - '&7还有问题？'
+        - '&7寻找管理员帮助。'
+        material: PAPER
+        from: 10
+        to: 36
+    a:
+      failure_bypass:
+        name: '&4失败： &c权限拒绝'
+        lore:
+        - '&7你你不能修改该设置'
+        - '&7因为你不在该保护锁的信任列表中'
+        - ' '
+        - '&8- &7你需要权限'
+        - '  &e{permission}&7'
+        material: RED_STAINED_GLASS_PANE
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 38
+        to: 45
+  protection:
+    title: '&7X：&b {x} &7Y：&b {y} &7Z：&b {z}'
+    size: 27
+    s:
+      members:
+        name: '&b成员'
+        lore:
+        - '&7点击查看详情'
+        material: PLAYER_HEAD
+        slot: 11
+      settings:
+        name: '&b设置'
+        lore:
+        - '&7编辑该保护的设置'
+        - ' '
+        - '&8- &7你可以编辑角色'
+        - '  &7和保护设置'
+        material: COMMAND_BLOCK
+        slot: 14
+      delete:
+        name: '&c删除'
+        lore:
+        - '&7解锁该保护'
+        material: ROSE_RED
+        slot: 17
+      back:
+        name: '&c返回'
+        lore:
+        - '&7返回到'
+        - '&e保护类型&7'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 27
+  actionConfirm:
+    title: '&8再次确认'
+    size: 27
+    s:
+      info:
+        name: '&b请再次确认当前操作'
+        lore:
+        - '&7点击 &a是 &7来确认'
+        - '&7点击 &c否 &7来取消'
+        material: IRON_BARS
+        slot: 14
+    l:
+      yes_protection:
+        name: '&a是'
+        lore:
+        - 点击确认
+        material: LIME_STAINED_GLASS_PANE
+        from: 10
+        to: 13
+      no_protection:
+        name: '&c否'
+        lore:
+        - '&7点击取消'
+        material: RED_STAINED_GLASS_PANE
+        from: 15
+        to: 18
+      yes_player:
+        name: '&a是'
+        lore:
+        - '&7点击确认'
+        material: LIME_STAINED_GLASS_PANE
+        from: 10
+        to: 13
+      no_player:
+        name: '&c否'
+        lore:
+        - '&7点击取消'
+        material: RED_STAINED_GLASS_PANE
+        from: 15
+        to: 18
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 19
+        to: 27
+  roles:
+    title: '&8角色设置'
+    size: 27
+    f:
+      owner:
+        name: '&4所有者 &7->&b {player}'
+        lore:
+        - '&7拥有该保护的所有权'
+        material: PLAYER_HEAD
+        slot: 14
+    s:
+      admin:
+        name: '&c管理者'
+        lore:
+        - '&7点击查看或编辑管理者'
+        material: ENCHANTED_GOLDEN_APPLE
+        slot: 11
+      member:
+        name: '&e成员'
+        lore:
+        - '&7点击查看或编辑成员'
+        material: APPLE
+        slot: 17
+      visitor:
+        name: '&5拜访者'
+        lore:
+        - '&7点击此处编辑拜访者角色'
+        material: WHEAT
+        slot: 14
+      back:
+        name: '&c返回'
+        lore:
+        - '&7返回到'
+        - '&e该保护&7'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 27
+  settings:
+    title: '&8选择设置选项'
+    size: 27
+    s:
+      role:
+        name: '&b角色设置'
+        lore:
+        - '&7编辑玩家角色'
+        material: PLAYER_HEAD
+        slot: 12
+      protection:
+        name: '&b保护设置'
+        lore:
+        - '&7编辑保护设置'
+        - '&7如： 漏斗运输'
+        material: GRASS_BLOCK
+        slot: 16
+      back:
+        name: '&c返回'
+        lore:
+        - '&7返回到'
+        - '&e该保护&7'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 27
+  settings_protection:
+    title: '&8保护锁 Settings'
+    size: 27
+    s:
+      back:
+        name: '&c返回'
+        lore:
+        - '&7返回到'
+        - '&e选择设置选项&7。'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    f:
+      page_previous:
+        name: '&9上一页'
+        lore:
+        - '&7前往上一页：&9 {previous}'
+        - ' '
+        - '&8- &7当前：&b {current}'
+        material: ARROW
+        slot: 21
+      page_next:
+        name: '&a下一页'
+        lore:
+        - '&7前往下一页：&9 {next}'
+        - ' '
+        - '&8- &7当前：&b {current}'
+        material: ARROW
+        slot: 25
+    l:
+      hopper_transfer:
+        name: '&b漏斗运输'
+        lore:
+        - '&7状态： {enabled}'
+        - '&7是否有权限更改： {unlocked}'
+        - ' '
+        - '&7是否允许漏斗运输'
+        - '&7被保护方块中物品？'
+        material: HOPPER
+        from: 10
+        to: 18
+    a:
+      failure_permission:
+        name: '&4失败： &c权限拒绝'
+        lore:
+        - '&7你不能修改该设置'
+        - ' '
+        - '&8- &7你需要权限：'
+        - '  &e{permission}&7'
+        material: RED_STAINED_GLASS_PANE
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 19
+        to: 27
+  settings_role:
+    title: '&8设置 &7-> {role}'
+    size: 27
+    s:
+      back:
+        name: '&c返回'
+        lore:
+        - '&7返回到'
+        - '&e选择角色&7'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    f:
+      page_previous:
+        name: '&9上一页'
+        lore:
+        - '&7前往上一页：&9 {previous}'
+        - ' '
+        - '&8- &7当前：&b {current}'
+        material: ARROW
+        slot: 21
+      page_next:
+        name: '&a下一页'
+        lore:
+        - '&7前往下一页：&9 {next}'
+        - ' '
+        - '&8- &7当前：&b {current}'
+        material: ARROW
+        slot: 25
+    l:
+      player_trust:
+        name: '&b信任玩家'
+        lore:
+        - '&7状态： {enabled}'
+        - '&7是否有权限更改： {unlocked}'
+        - ' '
+        - '&7是否允许该角色信任其他玩家？'
+        material: CACTUS_GREEN
+        from: 10
+        to: 18
+      player_untrust:
+        name: '&b取消信任玩家'
+        lore:
+        - '&7状态： {enabled}'
+        - '&7是否有权限更改： {unlocked}'
+        - ' '
+        - '&7是否取消允许该角色信任其他玩家？'
+        material: ROSE_RED
+        from: 10
+        to: 18
+    a:
+      failure_permission:
+        name: '&4失败： &c权限拒绝'
+        lore:
+        - '&7你不能修改该设置'
+        - ' '
+        - '&8- &7你需要权限：'
+        - '  &e{permission}&7'
+        material: RED_STAINED_GLASS_PANE
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 20
+        to: 27
+  role:
+    title: '&8角色 &7->&a {role}'
+    size: 36
+    s:
+      back:
+        name: '&c返回'
+        lore:
+        - '&7返回到'
+        - '&e选择角色&7'
+        material: RED_STAINED_GLASS_PANE
+        slot: 28
+    f:
+      page_previous:
+        name: '&9上一页'
+        lore:
+        - '&7前往上一页：&9 {previous}'
+        - ' '
+        - '&8- &7当前：&b {current}'
+        material: ARROW
+        slot: 30
+      page_next:
+        name: '&a下一页'
+        lore:
+        - '&7前往下一页：&9 {next}'
+        - ' '
+        - '&8- &7当前：&b {current}'
+        material: ARROW
+        slot: 34
+    l:
+      player:
+        name: '&8被信任玩家 &7->&a {player}'
+        lore:
+        - '&7点击取消信任或查看信息'
+        material: PLAYER_HEAD
+        from: 10
+        to: 27
+      noPlayer:
+        name: '&8被信任玩家 &7-> &c无'
+        lore:
+        - '&7该保护锁还未添加信任玩家'
+        - ' '
+        - '&8- &7若要信任玩家可以'
+        - '  &81: &7输入 &8/&aProtect trust &8<&a玩家名&8>'
+        - '  &82: &7点击要设置的方块'
+        material: PAPER
+        from: 10
+        to: 27
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 27
+        to: 36
+  player:
+    title: '&8玩家 &7->&a {player}'
+    size: 27
+    s:
+      untrust:
+        name: '&b取消信任'
+        lore:
+        - '&7取消信任该玩家对该方块的操作权'
+        material: ROSE_RED
+        slot: 12
+      back:
+        name: '&c返回'
+        lore:
+        - '&7返回到'
+        - '&e角色&7'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    f:
+      player:
+        name: '&b信息'
+        lore:
+        - '&7最后一次登录：'
+        - '&c{seen}'
+        material: SIGN
+        slot: 16
+    a:
+      untrust_noAccess:
+        name: '&4操作拒绝： &b取消信任'
+        lore:
+        - '&c你不能取消信任玩家'
+        - ' '
+        - '&8- &7你需要权限来这样做'
+        - '&8- &7你也可以联系该方块主人'
+        material: ROSE_RED
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 27
