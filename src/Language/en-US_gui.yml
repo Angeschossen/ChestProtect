@@ -32,10 +32,10 @@
 #       to: 27
 #
 # Please note: You need to set all values
-# otherwise Lands will auto generate values.
+# otherwise ChestProtect will auto generate values.
 # Also you can't set items where list items
 # are configured. Means if for example the
-# list in the Lands GUI goes from slot
+# list in the ChestProtect GUI goes from slot
 # 10 - 12 you can set any items with
 # the slot 10, 11, 12. They will be ignored.
 #
@@ -48,6 +48,7 @@ general:
   wYes: '&aYes'
   wNo: '&cNo'
   none: '&cNone'
+  all: '&aAll'
   now: '&aNow'
   enabled: '&aEnabled'
   disabled: '&cDisabled'
@@ -161,6 +162,18 @@ gui:
         material: 'CACTUS_GREEN'
         from: 10
         to: 18
+      set_role_persistent:
+        name: '&bPersistent set-Role'
+        lore:
+          - '&7Status: {enabled}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&7Keep set-role mode'
+          - '&7activated until'
+          - '&7manual deactivation?'
+        material: 'CYAN_DYE'
+        from: 10
+        to: 18
       untrust_persistent:
         name: '&bPersistent Untrust'
         lore:
@@ -171,6 +184,18 @@ gui:
         - '&7activated until'
         - '&7manual deactivation?'
         material: 'ROSE_RED'
+        from: 10
+        to: 18
+      setrole_persistent:
+        name: '&bPersistent set-Role'
+        lore:
+          - '&7Status: {enabled}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&7Keep set-role mode'
+          - '&7activated until'
+          - '&7manual deactivation?'
+        material: 'CYAN_DYE'
         from: 10
         to: 18
       autolock:
@@ -559,6 +584,17 @@ gui:
         material: 'HOPPER'
         from: 10
         to: 18
+      redstone_ignore:
+        name: '&bIgnore Redstone Signals'
+        lore:
+          - '&7Status: {enabled}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&7Should redstone signals'
+          - '&7be ignored?'
+        material: 'REDSTONE'
+        from: 10
+        to: 18
     a:
       failure_permission:
         name: '&4Failure: &cNo permission'
@@ -629,6 +665,24 @@ gui:
         material: 'ROSE_RED'
         from: 10
         to: 18
+      player_set_role:
+        name: '&bSet Role'
+        lore:
+          - '&7Status: {enabled}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&7Allow this role to'
+          - '&7set roles for other players?'
+          - ' '
+          - '&8- &7They won''t be able to'
+          - '  &7edit players which have'
+          - '  &7an higher role.'
+          - '&8- &7Also they won''t be able'
+          - '  &7to set an role which is'
+          - '  &7higher than their own role.'
+        material: 'CYAN_DYE'
+        from: 10
+        to: 18
     a:
       failure_permission:
         name: '&4Failure: &cNo permission'
@@ -677,12 +731,21 @@ gui:
         material: 'ARROW'
         slot: 34
     l:
-      player:
-        name: '&8Player &7->&a {player}'
+      member:
+        name: '&8Member &7->&a {player}'
         lore:
         - '&7Click on this player'
         - '&7to untrust him or to'
         - '&7get some information.'
+        material: 'PLAYER_HEAD'
+        from: 10
+        to: 27
+      admin:
+        name: '&cAdmin &7->&a {player}'
+        lore:
+          - '&7Click on this player'
+          - '&7to untrust him or to'
+          - '&7get some information.'
         material: 'PLAYER_HEAD'
         from: 10
         to: 27

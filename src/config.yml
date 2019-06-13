@@ -93,7 +93,13 @@ protection:
       # Enable or disable
       # for default setting
       enabled_7: false
-
+    # Prevent redstone signals
+    redstone_ignore:
+      enabled_10: false
+  # Should all members of a protection
+  # be displayed in one GUI, no matter which role
+  # they have?
+  roles-mixed: true
   # Role default settings
   # Can be changed later in GUI
   role:
@@ -107,6 +113,10 @@ protection:
         # Allow visitors to untrust players?
         player_untrust:
           default_7: false
+        # Allow visitors to set roles?
+        # /Protect setRole
+        player_set_role:
+          default_11: false
     # Members (trusted players)
     member:
       setting:
@@ -115,7 +125,11 @@ protection:
           default_8: false
         # Allow members to untrust players?
         player_untrust:
-          default_9: false
+          default_15: false
+        # Allow members to set roles?
+        # /Protect setRole
+        player_set_role:
+          default_12: false
     # Admins (role that can be set)
     admin:
       setting:
@@ -125,6 +139,10 @@ protection:
         # Allow admins to untrust players?
         player_untrust:
           default_10: true
+        # Allow admins to set roles?
+        # /Protect setRole
+        player_set_role:
+          default_13: false
 
   # General options
   option:
@@ -135,29 +153,32 @@ protection:
 
 # Player settings
 player:
- # Here you can set defaults
- # Player will be able to change these
- # in the GUI, if they have permission
- # to do so.
- setting:
-   # Make the command /Lock persistent
-   lock_persistent:
-     # Default value
-     # Players can change that later
-     default: false
-   # Make the command /Unlock persistent.
-   unlock_persistent:
-     default_2: false
-   # Make the command /Trust persistent.
-   trust_persistent:
-     default_3: false
-   # Make the command /Untrust persistent.
-   untrust_persistent:
-     default_4: false
-   # Auto lock placed blocks
-   # wich are protectable.
-   autolock:
-     default_5: true
+  # Here you can set defaults
+  # Player will be able to change these
+  # in the GUI, if they have permission
+  # to do so.
+  setting:
+    # Make the command /Lock persistent
+    lock_persistent:
+      # Default value
+      # Players can change that later
+      default: false
+    # Make the command /Unlock persistent.
+    unlock_persistent:
+      default_2: false
+    # Make the command /Trust persistent.
+    trust_persistent:
+      default_3: false
+    # Make the command /Protect setRole persistent.
+    set_role_persistent:
+      default_14: false
+    # Make the command /Untrust persistent.
+    untrust_persistent:
+      default_4: false
+    # Auto lock placed blocks
+    # wich are protectable.
+    autolock:
+      default_5: true
 
 # Database settings
 database:
@@ -204,8 +225,8 @@ event:
 integration:
   # Management integrations
   manager:
-  # Lands
-  # Link: https://www.spigotmc.org/resources/53313
+    # Lands
+    # Link: https://www.spigotmc.org/resources/53313
     Lands:
       enabled_2: true
       # Should ChestProtect only
@@ -250,10 +271,6 @@ integration:
       # Materials can be found here:
       # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
       item: 'DIAMOND'
-
-    # CoinsAPI
-    CoinsApi:
-      enabled_4: true
 
     # Vault
     Vault:

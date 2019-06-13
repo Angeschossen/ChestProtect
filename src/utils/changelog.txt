@@ -1,4 +1,4 @@
-1.6.8.6 GUI Improvements
-[#] The cursor won't reset anymore to the middle of the screen
-[#] Fixed protected levers, buttons etc. not working
-[#] Fixed protected levers, buttons etc. can be bypassed
+1.7.0.7 Added Roles Mixed Option
++ Added option to mix roles together
+into tone GUI instead of 3. If enabled ChestProtect
+will display all trusted players in one GUI

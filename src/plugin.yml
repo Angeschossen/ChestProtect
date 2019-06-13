@@ -1,0 +1,22 @@
+name: ChestProtect
+main: me.angeschossen.chestprotect.ChestProtect
+version: 1.7.0.7
+author: Angeschossen
+api-version: 1.13
+
+commands:
+  chestprotect:
+    aliases: [chestprotect, pr, protect, cp]
+    description: Protect objectives
+  lock:
+    aliases: [l]
+    description: Lock objects
+  unlock:
+    aliases: [ul]
+    description: Unlock objects
+  trust:
+    aliases: [tr]
+    description: Trust player to objective
+  untrust:
+    aliases: [utr]
+    description: Untrust player from objective

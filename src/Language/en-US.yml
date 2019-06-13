@@ -50,11 +50,11 @@ help:
     page: '&7Use &8/&dProtect help {next} &7for the next page.'
     footer: '&7------------<- &5Protect Help &7Page&6 {page} &8/&e {pages} &7->------------'
   command:
-    lock: '&8/&7Protect lock &8- &eLock an objects'
-    unlock: '&8/&7Protect unlock &8- &eUnlock an object'
-    trust: '&8/&7Protect trust &8<&aPlayer&8> - &eAdd protection member'
-    untrust: '&8/&7Protect untrust &8<&aPlayer&8> - &eRemove protection member'
-    delete: '&8/&7Protect delete &8- &eDelete protection'
+    lock: '&8/&7Protect lock &8- &eLock object'
+    unlock: '&8/&7Protect unlock &8- &eUnlock object'
+    trust: '&8/&7Protect trust &8<&aPlayer&8> - &eTrust player'
+    untrust: '&8/&7Protect untrust &8<&aPlayer&8> - &eUntrust player'
+    setRole: '&8/&7Protect setrole &8<&aPlayer&8> <&aRole&8> - &eSet role'
     menu: '&8/&7Protect menu &8[&aPlayer&8] - &eOpen menu'
     help: '&8/&7Protect help &8[&aSite&8] - &eGet help'
     admin:
@@ -81,8 +81,9 @@ command:
     pos-not-allowed: '&8[&eChestProtect&8] &cYou''re not allowed to do this at this position. &7Go somewhere else.'
     player-not-exist: '&8[&eChestProtect&8] &cThere''s no player with the name&e {player}&c. &7Please check your input.'
     not-protected: '&8[&eChestProtect&8] &cYou can''t do that. &7This block isn''t protected.'
+    player-untrusted: '&8[&eChestProtect&8] &cYou can''t do this. &7Player&b {player} &7isn''t trusted at this protection.'
   help:
-    help: '&8[&eChestProtect&8] &7Use &8/&aLand help &7for help.'
+    help: '&8[&eChestProtect&8] &7Use &8/&aProtect help &7for help.'
     cmd-not-exist: '&8[&eChestProtect&8] &cThis subcommand doesn''t exist. &7Command&b {command} &7wasn''t found.'
     page-not-exist: '&8[&eChestProtect&8] &cThe page&e {page} &cdoesn''t exist. &7Typo?'
   lock:
@@ -104,7 +105,11 @@ command:
   untrust:
     activated: '#t#!!1!!1!!1!!&7Untrust-Mode:;;&aActivated'
     deactivated: '#t#!!1!!1!!1!!&7Untrust-Mode:;;&cDeactivated'
-    already: '&8[&eChestProtect&8] &cYou can''t do this. &7Player&b {player} &7is already untrusted at this protection.'
     success: '&8[&eChestProtect&8] &7Successful untrusted player&b {player} &7at this protection.'
-
-
+  setRole:
+    activated: '#t#!!1!!1!!1!!&7SetRole-Mode:;;&aActivated'
+    deactivated: '#t#!!1!!1!!1!!&7SetRole-Mode:;;&cDeactivated'
+    role-weight: '&8[&eChestProtect&8] &cYou can''t set this role since your own role isn''t higher than the target role. &7Ask someone with a higher role for help.'
+    role-weight-target: '&8[&eChestProtect&8] &cYou can''t edit the role of this player. &7His role is higher than yours or equal.'
+    role-not-exist: '&8[&eChestProtect&8] &cThe role&e {role} &cdoesn''t exist. &7Typo?'
+    -success: '&8[&eChestProtect&8] &7Successful set role&b {role} &7for player&b {player}&7.'
