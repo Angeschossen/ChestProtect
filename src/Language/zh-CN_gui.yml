@@ -8,6 +8,7 @@ general:
   wYes: '&a是'
   wNo: '&c否'
   none: '&c无'
+  all: '&a所有'
   now: '&a现在'
   enabled: '&a已启用'
   disabled: '&c已禁用'
@@ -115,6 +116,17 @@ gui:
         material: CACTUS_GREEN
         from: 10
         to: 18
+      set_role_persistent:
+        name: '&b持续设置角色'
+        lore:
+        - '&7状态： {enabled}'
+        - '&7是否有权限更改： {unlocked}'
+        - ' '
+        - '&7保持设置角色模式'
+        - '&7直到输入指令取消'
+        material: 'CYAN_DYE'
+        from: 10
+        to: 18
       untrust_persistent:
         name: '&b持续取消信任'
         lore:
@@ -123,7 +135,18 @@ gui:
         - ' '
         - '&7保持取消信任模式'
         - '&7直到输入指令取消'
-        material: ROSE_RED
+        material: 'ROSE_RED'
+        from: 10
+        to: 18
+      setrole_persistent:
+        name: '&b持续设置角色'
+        lore:
+        - '&7状态： {enabled}'
+        - '&7是否有权限更改： {unlocked}'
+        - ' '
+        - '&7保持设置角色模式'
+        - '&7直到输入指令取消'
+        material: 'CYAN_DYE'
         from: 10
         to: 18
       autolock:
@@ -133,7 +156,7 @@ gui:
         - '&7是否有权限更改： {unlocked}'
         - ' '
         - '&7放置可上锁方块时自动上锁'
-        material: OBSERVER
+        material: 'OBSERVER'
         from: 10
         to: 18
     a:
@@ -465,6 +488,16 @@ gui:
         material: HOPPER
         from: 10
         to: 18
+      redstone_ignore:
+        name: '&b无视红石信号'
+        lore:
+        - '&7状态： {enabled}'
+        - '&7是否有权限更改： {unlocked}'
+          - ' '
+          - '&7是否无视红石信号'
+        material: 'REDSTONE'
+        from: 10
+        to: 18
     a:
       failure_permission:
         name: '&4失败： &c权限拒绝'
@@ -530,6 +563,20 @@ gui:
         - ' '
         - '&7是否取消允许该角色信任其他玩家？'
         material: ROSE_RED
+        from: 10
+        to: 18
+      player_set_role:
+        name: '&b设置角色'
+        lore:
+        - '&7状态： {enabled}'
+        - '&7是否有权限更改： {unlocked}'
+          - ' '
+          - '&7是否允许该角色修改其他人的角色类型？'
+          - ' '
+          - '&8- &7请注意： 在允许状态下玩家'
+          - '  &7也不能更改或设置一个'
+          - '  &7比自己角色等级高的玩家'
+        material: 'CYAN_DYE'
         from: 10
         to: 18
     a:
