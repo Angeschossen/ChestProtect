@@ -493,8 +493,8 @@ gui:
         lore:
         - '&7状态： {enabled}'
         - '&7是否有权限更改： {unlocked}'
-          - ' '
-          - '&7是否无视红石信号'
+        - ' '
+        - '&7是否无视红石信号'
         material: 'REDSTONE'
         from: 10
         to: 18
@@ -570,12 +570,12 @@ gui:
         lore:
         - '&7状态： {enabled}'
         - '&7是否有权限更改： {unlocked}'
-          - ' '
-          - '&7是否允许该角色修改其他人的角色类型？'
-          - ' '
-          - '&8- &7请注意： 在允许状态下玩家'
-          - '  &7也不能更改或设置一个'
-          - '  &7比自己角色等级高的玩家'
+        - ' '
+        - '&7是否允许该角色修改其他人的角色类型？'
+        - ' '
+        - '&8- &7请注意： 在允许状态下玩家'
+        - '  &7也不能更改或设置一个'
+        - '  &7比自己角色等级高的玩家'
         material: 'CYAN_DYE'
         from: 10
         to: 18
@@ -627,10 +627,17 @@ gui:
         slot: 34
     l:
       player:
-        name: '&8被信任玩家 &7->&a {player}'
+        name: '&8成员 &7->&a {player}'
         lore:
         - '&7点击取消信任或查看信息'
-        material: PLAYER_HEAD
+        material: 'PLAYER_HEAD'
+        from: 10
+        to: 27
+      admin:
+        name: '&c管理者 &7->&a {player}'
+        lore:
+          - '&7点击取消信任或查看信息'
+        material: 'PLAYER_HEAD'
         from: 10
         to: 27
       noPlayer:
