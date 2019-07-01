@@ -42,6 +42,7 @@ general:
     admin: '&cAdmin'
     member: '&eMember'
     visitor: '&5Visitor'
+    all: '&dAll'
 
 help:
   general:
@@ -56,6 +57,7 @@ help:
     untrust: '&8/&7Protect untrust &8<&aPlayer&8> - &eUntrust player'
     setRole: '&8/&7Protect setrole &8<&aPlayer&8> <&aRole&8> - &eSet role'
     menu: '&8/&7Protect menu &8[&aPlayer&8] - &eOpen menu'
+    exit: '&8/&7Protect exit &8- &eExit mode'
     help: '&8/&7Protect help &8[&aSite&8] - &eGet help'
     admin:
       import: '&8/&7Protect import &8<&aPlugin&8> &8- &eImport data from other plugins'
@@ -113,3 +115,4 @@ command:
     role-weight-target: '&8[&eChestProtect&8] &cYou can''t edit the role of this player. &7His role is higher than yours or equal.'
     role-not-exist: '&8[&eChestProtect&8] &cThe role&e {role} &cdoesn''t exist. &7Typo?'
     -success: '&8[&eChestProtect&8] &7Successful set role&b {role} &7for player&b {player}&7.'
+  exit: '#t#&7Mode:;;&cDeactivated'

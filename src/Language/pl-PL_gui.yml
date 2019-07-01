@@ -6,7 +6,7 @@ general:
   now: '&aTeraz'
   enabled: '&aWłączone'
   disabled: '&cWyłączone'
-  others: Inni
+  others: 'Inni'
 gui:
   mainMenu:
     title: '&8Menu główne'

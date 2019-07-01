@@ -135,7 +135,7 @@ gui:
         - '&7Keep lock mode'
         - '&7activated until'
         - '&7manual deactivation?'
-        material: 'IRON_BARS'
+        material: 'OAK_SIGN'
         from: 10
         to: 18
       unlock_persistent:
@@ -159,7 +159,7 @@ gui:
         - '&7Keep trust mode'
         - '&7activated until'
         - '&7manual deactivation?'
-        material: 'CACTUS_GREEN'
+        material: 'GREEN_DYE'
         from: 10
         to: 18
       set_role_persistent:
@@ -183,7 +183,7 @@ gui:
         - '&7Keep untrust mode'
         - '&7activated until'
         - '&7manual deactivation?'
-        material: 'ROSE_RED'
+        material: 'RED_DYE'
         from: 10
         to: 18
       setrole_persistent:
@@ -288,6 +288,14 @@ gui:
         - '&eProtection Types&7.'
         material: 'RED_STAINED_GLASS_PANE'
         slot: 37
+      trust:
+        name: '&aTrust Player'
+        lore:
+          - '&7Trust a player to'
+          - '&7all protections of'
+          - '&7this type.'
+        material: 'GREEN_DYE'
+        slot: 38
     f:
       page_previous:
         name: '&9Previous Page'
@@ -370,9 +378,11 @@ gui:
         name: '&bMembers'
         lore:
         - '&7Get a list of all'
-        - '&7players which are'
-        - '&7trusted at this'
-        - '&7protection.'
+        - '&7players which are trusted'
+        - '&7at this protection.'
+        - ' '
+        - '&8- &7Use &aright click'
+        - '  &7to open the select role menu.'
         material: 'PLAYER_HEAD'
         slot: 11
       settings:
@@ -389,7 +399,7 @@ gui:
         name: '&cDelete'
         lore:
         - '&7Unlock this protection.'
-        material: 'ROSE_RED'
+        material: 'RED_DYE'
         slot: 17
       back:
         name: '&cBack'
@@ -412,7 +422,7 @@ gui:
         lore:
         - '&7Click &aYes &7to confirm or'
         - '&cNo &7to abort this action.'
-        material: 'IRON_BARS'
+        material: 'OAK_SIGN'
         slot: 14
     l:
       yes_protection:
@@ -651,7 +661,7 @@ gui:
         - ' '
         - '&7Allow this role to'
         - '&7trust other players?'
-        material: 'CACTUS_GREEN'
+        material: 'GREEN_DYE'
         from: 10
         to: 18
       player_untrust:
@@ -662,7 +672,7 @@ gui:
         - ' '
         - '&7Allow this role to'
         - '&7untrust members?'
-        material: 'ROSE_RED'
+        material: 'RED_DYE'
         from: 10
         to: 18
       player_set_role:
@@ -713,6 +723,13 @@ gui:
         - '&eSelect Role&7.'
         material: 'RED_STAINED_GLASS_PANE'
         slot: 28
+      trust:
+        name: '&aTrust Player'
+        lore:
+          - '&7Trust a player to'
+          - '&7this protection.'
+        material: 'GREEN_DYE'
+        slot: 29
     f:
       page_previous:
         name: '&9Previous Page'
@@ -731,17 +748,8 @@ gui:
         material: 'ARROW'
         slot: 34
     l:
-      member:
-        name: '&8Member &7->&a {player}'
-        lore:
-        - '&7Click on this player'
-        - '&7to untrust him or to'
-        - '&7get some information.'
-        material: 'PLAYER_HEAD'
-        from: 10
-        to: 27
-      admin:
-        name: '&cAdmin &7->&a {player}'
+      player:
+        name: '{role} &7->&a {player}'
         lore:
           - '&7Click on this player'
           - '&7to untrust him or to'
@@ -781,7 +789,7 @@ gui:
         lore:
         - '&7Untrust this player from'
         - '&7this protection.'
-        material: 'ROSE_RED'
+        material: 'RED_DYE'
         slot: 12
       back:
         name: '&cBack'
@@ -796,7 +804,7 @@ gui:
         lore:
         - '&7Last seen:'
         - '&c{seen}'
-        material: 'SIGN'
+        material: 'OAK_SIGN'
         slot: 16
     a:
       untrust_noAccess:
@@ -812,12 +820,73 @@ gui:
         - '&8- &7Contact the owner of'
         - '  &7this protection for help.'
         - '  &7He can allow you to do so.'
-        material: 'ROSE_RED'
+        material: 'RED_DYE'
     p:
       placeholder_1:
         material: 'GRAY_STAINED_GLASS_PANE'
         from: 1
         to: 27
+  player-selector:
+    title: 'Select Player'
+    size: 45
+    a:
+      failure_trusted:
+        name: '&4Failure: &cAlready trusted'
+        lore:
+          - '&7This player is already trusted.'
+        material: 'PLAYER_HEAD'
+      failure_max-members:
+        name: '&4Failure: &cMax Members'
+        lore:
+          - '&7You can''t trust this player'
+          - '&7since you reached the maximum'
+          - '&7of&b {players} &7trusted players.'
+          - ' '
+          - '&8- &7Permission: &bchestprotect.members.NUMBER'
+        material: 'PLAYER_HEAD'
+    s:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '&eprevious menu&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 37
+    f:
+      page_previous:
+        name: '&9Previous Page'
+        lore:
+          - '&7Go to previous page:&9 {previous}'
+          - ' '
+          - '&8- &7Current:&b {current}'
+        material: 'ARROW'
+        slot: 39
+      page_next:
+        name: '&aNext Page'
+        lore:
+          - '&7Go to next page:&9 {next}'
+          - ' '
+          - '&8- &7Current:&b {current}'
+        material: 'ARROW'
+        slot: 43
+    l:
+      player:
+        name: '&b{player}'
+        lore:
+          - '&7Click here to select'
+          - '&7this player.'
+        material: 'PLAYER_HEAD'
+        from: 10
+        to: 36
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 9
+      placeholder_2:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 38
+        to: 45
 
 
 
