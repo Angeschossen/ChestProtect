@@ -16,7 +16,10 @@
 general:
   # Language
   # Pre translated:
+  # English: en-US
   # Chinese: zh-CN
+  # Polish: pl-PL
+  # French: fr-FR
   language: 'en-US'
   # Should ChestProtect check for updates?
   # Will only send an notification to console
