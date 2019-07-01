@@ -1,0 +1,85 @@
+general:
+  role:
+    owner: '&4Właściciel'
+    admin: '&cAdministrator'
+    member: '&eCzłonek'
+    visitor: '&5Gość'
+    all: '&dWszyscy'
+help:
+  general:
+    prefix: '&8[&eChestProtect&8] &7Poprawne uzycie: '
+    header: '&7------<- &5Zabezpieczenia Pomoc &dStrona&6 {page} &8/&e {pages} &7->------'
+    page: '&7Wpisz &8/&dProtect help {next} &7by wyświetlić następną stronę.'
+    footer: '&7------<- &5Zabezpieczenia Pomoc &dStrona&6 {page} &8/&e {pages} &7->------'
+  command:
+    lock: '&8/&7Protect lock &8- &eZabezpiecz obiekt'
+    unlock: '&8/&7Protect unlock &8- &eOdblokuj obiekt'
+    trust: '&8/&7Protect trust &8<&aGracz&8> - &eDodaj zaufaną osobę'
+    untrust: '&8/&7Protect untrust &8<&aGracz&8> - &eUsuń zaufaną osobę'
+    setRole: '&8/&7Protect setrole &8<&aGracz&8> <&aRola&8> - &eUstaw rolę'
+    menu: '&8/&7Protect menu &8[&aGracz&8] - &eOtwórz menu'
+    exit: '&8/&7Protect exit &8- &eWyjdź z dowolnego trybu edycji'
+    help: '&8/&7Protect help &8[&aSite&8] - &eUzyskaj pomoc'
+    admin:
+      import: '&8/&7Protect import &8<&aNazwaPluginu&8> &8- &eImportuj dane z innych pluginów'
+      reload: '&8/&7Protect reload &8<&aConfig&8, &aLanguage&8> - &ePrzeładuj konfigurację'
+      admin: '&8/&7Protect admin &8<&aKomenda&8> - &eUżyj komend administracyjnych'
+      about: '&8/&7Protect about &8- &eWyświetl informacje o SuperProtect'
+message:
+  no-permission: '&8[&eChestProtect&8] &cNie masz do tego uprawnień. &7You
+    need permission&b {permission}&7.'
+  world-invalid: '&8[&eChestProtect&8] &cTo nie jest dostępne dla tego świata. &7Administrator musi na to zezwolić w konfiguracji. Nazwa świata:&b {world}'
+  block-invalid: '&8[&eChestProtect&8] &cNie możesz zabezpieczać bloków tego typu. &7Administrator musi na to zezwolić w konfiguracji. Nazwa bloku:&b {block}'
+  noaccess:
+    protection: '&8[&eChestProtect&8] &cNie możesz tego zrobić dla danego zabezpieczenia.
+      &7Należy ono do&b {player}&7.'
+    action: '&8[&eChestProtect&8] &cNie możesz wykonać tej operacji dla tego zabezpieczenia. &7Właściciel&b {player} &7musi Ci dać na to pozwolenie.'
+  event:
+    open-owner: '&8[&eChestProtect&8] &7Ten blok należy do &bciebie&7.'
+    open-trusted: '&8[&eChestProtect&8] &7Na ten blok jest nałożona ochrona przez&b {player}&7.'
+    protectable: '&8[&eChestProtect&8] &7Właśnie postawiłeś blok, który można chronić przed innymi graczami. Wpisz &8/&eLock &7aby go zablokować.'
+command:
+  general:
+    money-cost: '&8[&eChestProtect&8] &cBrak wystarczających środków, aby opłacić koszty. Potrzebujesz jeszcze ${cost}&7.'
+    pos-not-allowed: '&8[&eChestProtect&8] &cNie możesz tego zrobić w tym miejscu. &7Idź gdzie indziej.'
+    player-not-exist: '&8[&eChestProtect&8] &cNie istnieje gracz o nazwie&e {player}&c.
+      &7Sprawdź czy nie zrobiłeś literówki.'
+    not-protected: '&8[&eChestProtect&8] &cNie możesz tego zrobić. &7Ten blok nie jest chroniony.'
+    player-untrusted: '&8[&eChestProtect&8] &cNie możesz tego zrobić. &7Gracz&b {player}
+      &7nie jest dodany do zaufanych.'
+  help:
+    help: '&8[&eChestProtect&8] &7Wpisz &8/&aProtect help &7aby uzyskać pomoc.'
+    cmd-not-exist: '&8[&eChestProtect&8] &cNie ma takiej komendy. &7Komenda&b
+      {command} &7nie została znaleziona.'
+    page-not-exist: '&8[&eChestProtect&8] &cStrona&e {page} &cnie istnieje.'
+  lock:
+    activated: '#t#!!1!!1!!1!!&7Tryb blokowania:;;&aWŁĄCZONY'
+    deactivated: '#t#!!1!!1!!1!!&7Tryb blokowania:;;&cWYŁĄCZONY'
+    already: '&8[&eChestProtect&8] &cNie możesz zabezpieczyć tego bloku. &7On jest już zabezpiecziony.'
+    max-protections: '&8[&eChestProtect&8] &cNie możesz zakładać więcej zabezpieczeń.
+      &7Maksymalny limit dla ciebie to&b {max}&7. Skontaktuj się z administratorem w celu uzyskania więcej informacji.'
+    success: '&8[&eChestProtect&8] &7Pomyślnie zabezpieczono ten blok za&b ${cost}&7.'
+  unlock:
+    activated: '#t#!!1!!1!!1!!&7Tryb Odblokowywania:;;&aWŁĄCZONY'
+    deactivated: '#t#!!1!!1!!1!!&7Tryb Odblokowywania:;;&cWYŁĄCZONY'
+    success: '&8[&eChestProtect&8] &7Pomyślnie odblokowano ten blok.'
+  trust:
+    activated: '#t#!!1!!1!!1!!&7Tryb zaufania:;;&aWŁĄCZONY'
+    deactivated: '#t#!!1!!1!!1!!&7Trust-Mode:;;&cWYŁĄCZONY'
+    already: '&8[&eChestProtect&8] &cNie możesz tego zrobić. &7Gracz&b {player} &7jest już dodany do tego zabezpieczenia.'
+    max-members: '&8[&eChestProtect&8] &cNie możesz dodać więcej członków. &7Ich maksymalna ilość to&b {max}&7. Skontaktuj się z administratorem, aby uzyskać pomoc.'
+    success: '&8[&eChestProtect&8] &7Pomyślnie dodano gracza&b {player}&7 jako zaufanego &7dla tego zabezpieczenia.'
+  untrust:
+    activated: '#t#!!1!!1!!1!!&7Tryb niezaufania:;;&aWŁĄCZONY'
+    deactivated: '#t#!!1!!1!!1!!&7Tryb niezaufania:;;&cWYŁĄCZONY'
+    success: '&8[&eChestProtect&8] &7Pomyślnie usunięto gracza&b {player}&7 z listy zaufanych dla tego zabezpieczenia.'
+  setRole:
+    activated: '#t#!!1!!1!!1!!&7Tryb ustawiania roli:;;&aWŁĄCZONY'
+    deactivated: '#t#!!1!!1!!1!!&7Tryb ustawiania roli:;;&cWYŁĄCZONY'
+    role-weight: '&8[&eChestProtect&8] &cNie możesz ustawić takiej roli, ponieważ byłaby wyższa niż twoja obecna rola. &7Poproś o pomoc osobę, która ma wyższą rolę niż ty.'
+    role-weight-target: '&8[&eChestProtect&8] &cNie możesz edytować roli tego gracza.
+      &7Jego rola jest wyższa lub równa twojej.'
+    role-not-exist: '&8[&eChestProtect&8] &cRola&e {role} &cnie istnieje. &7Literówka?'
+    -success: '&8[&eChestProtect&8] &7Pomyślnie ustawiono rolę&b {role} &7dla gracza&b
+      {player}&7.'
+  exit: '#t#&7Tryb:;;&cDezaktywowany'
