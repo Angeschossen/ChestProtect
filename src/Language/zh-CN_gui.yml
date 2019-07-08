@@ -12,7 +12,7 @@ general:
   now: '&a现在'
   enabled: '&a已启用'
   disabled: '&c已禁用'
-  others: 其他
+  others: '其他'
 gui:
   mainMenu:
     title: '&8主菜单'
