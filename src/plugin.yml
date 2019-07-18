@@ -15,12 +15,14 @@ commands:
     aliases: [ul]
     description: Unlock objects
   trust:
-    aliases: [tr]
+    aliases: [t]
     description: Trust player to objective
   untrust:
-    aliases: [utr]
+    aliases: [ut]
     description: Untrust player from objective
-
+  setrole:
+    aliases: [sr]
+    description: Untrust player from objective
 
 permissions:
   chestprotect.*:
