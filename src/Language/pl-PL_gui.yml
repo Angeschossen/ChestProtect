@@ -149,7 +149,7 @@ gui:
         material: CYAN_DYE
         from: 10
         to: 18
-      autolock:
+      auto-lock:
         name: '&bAutomatyczne blokowanie'
         lore:
         - '&7Stan: {enabled}'

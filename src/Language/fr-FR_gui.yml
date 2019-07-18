@@ -126,7 +126,7 @@ gui:
         material: ROSE_RED
         from: 10
         to: 18
-      autolock:
+      auto-lock:
         name: '&bVerrou Auto'
         lore:
         - '&7Statut: {enabled}'

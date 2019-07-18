@@ -1,2 +1,2 @@
-# FIXED Protection can be created in non protection worlds
-# FIXED Save issue
++ ADDED Option to enable /Setrole command:
+general.option.command.setrole

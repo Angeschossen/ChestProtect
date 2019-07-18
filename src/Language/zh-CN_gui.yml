@@ -148,7 +148,7 @@ gui:
         material: CYAN_DYE
         from: 10
         to: 18
-      autolock:
+      auto-lock:
         name: '&b自动上锁'
         lore:
         - '&7状态： {enabled}'

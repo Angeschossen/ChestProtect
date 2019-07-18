@@ -1,6 +1,6 @@
 name: ChestProtect
 main: me.angeschossen.chestprotect.ChestProtect
-version: 2.0.2.3
+version: 2.1.3.1
 author: Angeschossen
 api-version: 1.13
 
@@ -20,3 +20,107 @@ commands:
   untrust:
     aliases: [utr]
     description: Untrust player from objective
+
+
+permissions:
+  chestprotect.*:
+    description: Gives access to all ChestProtect actions
+    default: op
+    children:
+      chestprotect.protections.NUMBER:
+        description: Set maximum protections amount
+        default: op
+      chestprotect.members.NUMBER:
+        description: Set maximum protection member amount
+        default: op
+      chestprotect.command.*:
+        description: Get access to all commands
+        default: op
+        children:
+          chestprotect.command.exit:
+            description: Exit /Lock, /Unlock, /Untrust, /Trust, /SetRole mode
+            default: op
+          chestprotect.command.help:
+            description: Get command information, help
+            default: op
+          chestprotect.command.lock:
+            description: Enter /Lock mode
+            default: op
+          chestprotect.command.unlock:
+            description: Enter /Unlock mode
+            default: op
+          chestprotect.command.trust:
+            description: Enter /Trust mode
+            default: op
+          chestprotect.command.untrust:
+            description: Enter /Untrust mode
+            default: op
+          chestprotect.command.setrole:
+            description: Enter /SetRole mode
+            default: op
+      chestprotect.bypass.*:
+        description: Bypass all protections
+        default: op
+        children:
+          chestprotect.bypass.edit:
+            description: Edit other players protections
+            default: op
+          chestprotect.bypass.open:
+            description: Open other players protections
+            default: op
+          chestprotect.bypass.delete:
+            description: Delete other players protections
+            default: op
+      chestprotect.setting.*:
+        description: Access to all protection and player settings
+        default: op
+        children:
+          chestprotect.setting.player.*:
+            description: Access to all player settings
+            default: op
+            children:
+              chestprotect.setting.player.lock_persistent:
+                description: Access to toggle lock persistent setting
+                default: op
+              chestprotect.setting.player.unlock_persistent:
+                description: Access to toggle unlock persistent setting
+                default: op
+              chestprotect.setting.player.trust_persistent:
+                description: Access to toggle trust persistent setting
+                default: op
+              chestprotect.setting.player.untrust_persistent:
+                description: Access to toggle untrust persistent setting
+                default: op
+              chestprotect.setting.player.setrole_persistent:
+                description: Access to toggle setrole persistent setting
+                default: op
+          chestprotect.setting.protection.*:
+            description: Access to all protection settings
+            default: op
+            children:
+              chestprotect.setting.protection.player_trust:
+                description: Access to toggle role player trust setting
+                default: op
+              chestprotect.setting.protection.player_untrust:
+                description: Access to toggle role player untrust setting
+                default: op
+              chestprotect.setting.protection.player_setrole:
+                description: Access to toggle role player setrole setting
+                default: op
+      chestprotect.admin.*:
+        description: Access to all admin actions and commands
+        default: op
+        children:
+          chestprotect.admin.command.*:
+            description: Access to all admin commands
+            default: op
+          chestprotect.admin.command.player:
+            description: Access to /Lands admin player command
+            default: op
+            children:
+              chestprotect.admin.command.player.delete:
+                description: Access to /Lands admin player <player> delete command
+                default: op
+          chestprotect.admin.command.import:
+            description: Import other plugins protections. /Lands admin import lwc
+            default: op

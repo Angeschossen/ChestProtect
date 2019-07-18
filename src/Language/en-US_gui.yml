@@ -198,7 +198,7 @@ gui:
         material: 'CYAN_DYE'
         from: 10
         to: 18
-      autolock:
+      auto-lock:
         name: '&bAuto Lock'
         lore:
         - '&7Status: {enabled}'
@@ -207,6 +207,11 @@ gui:
         - '&7Automatically lock'
         - '&7protectable blocks'
         - '&7on placement?'
+        - ' '
+        - '&8- &7This only works, if you have'
+        - '  &2enough money &7and permission'
+        - '  &2chestprotect.protections.NUMBER'
+        - '  &7to create a protection.'
         material: 'OBSERVER'
         from: 10
         to: 18

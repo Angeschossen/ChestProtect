@@ -147,13 +147,6 @@ protection:
         player_set_role:
           default_13: false
 
-  # General options
-  option:
-    # Prevent hoppers steal items from protections
-    # NOTE: Players need to enable that in the
-    # settings to take action
-    preventHopperTransfer: true
-
 # Player settings
 player:
   # Here you can set defaults
@@ -180,7 +173,7 @@ player:
       default_4: false
     # Auto lock placed blocks
     # wich are protectable.
-    autolock:
+    auto-lock:
       default_5: true
 
 # Database settings
@@ -220,7 +213,7 @@ event:
   # If someone places a protectable block
   blockPlace:
     # Notify player that he can lock the object.
-    # Won't appear if he has autolock enabled
+    # Won't appear if he has auto-lock enabled
     # and object is already locked.
     notify: true
 
@@ -233,35 +226,38 @@ integration:
     Lands:
       enabled_2: true
       # Should ChestProtect only
-      # allow protections on chunks
-      # claimed protected by Lands?
-      onlyLand: false
+      # allow protections in claims?
+      only-claim: false
       # Should ChestProtect delete all
-      # protections in the chunk,
-      # if the players deletes the chunk
-      # protection?
-      removeOnLandDelete: false
-      # Allow hopper transfer on
-      # protections in an protected chunk?
-      hopperTransfer: true
+      # protections of the deleted claim?
+      remove-unclaim: false
+      # Allow hopper transfer
+      # if is in claim?
+      hopper-transfer: true
 
     # Towny
     Towny:
       enabled_3: true
-      # Allows protections only in
-      # towns?
-      onlyTown: false
-      # Delete protection in town if town
-      # get's deleted?
-      removeProtectionsUnclaim: false
+      # Should ChestProtect only
+      # allow protections in claims?
+      only-claim_2: false
+      # Should ChestProtect delete all
+      # protections of the deleted claim?
+      remove-unclaim_2: false
+      # Allow hopper transfer
+      # if is in claim?
+      hopper-transfer_2: true
     Residence:
       enabled_9: true
-      # Allow protections only
-      # in an residence?
-      onlyInClaim: false
-      # Delete protections in residence, if
-      # it get's deleted?
-      unclaimDelete: true
+      # Should ChestProtect only
+      # allow protections in claims?
+      only-claim_3: false
+      # Should ChestProtect delete all
+      # protections of the deleted claim?
+      remove-unclaim_3: false
+      # Allow hopper transfer
+      # if is in claim?
+      hopper-transfer_3: true
 
   # Economy integrations
   economy:
