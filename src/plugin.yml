@@ -117,12 +117,12 @@ permissions:
             description: Access to all admin commands
             default: op
           chestprotect.admin.command.player:
-            description: Access to /Lands admin player command
+            description: Access to /Protect admin player command
             default: op
             children:
               chestprotect.admin.command.player.delete:
-                description: Access to /Lands admin player <player> delete command
+                description: Access to /Protect admin player <player> delete command
                 default: op
           chestprotect.admin.command.import:
-            description: Import other plugins protections. /Lands admin import lwc
+            description: Import other plugins protections. /Protect admin import lwc
             default: op
