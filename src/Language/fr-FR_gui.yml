@@ -158,7 +158,7 @@ gui:
         from: 19
         to: 27
   protection-types:
-    title: '&8Types de Protection'
+    title: '&8Types de BlockProtection'
     size: 27
     s:
       type-chests:
@@ -206,14 +206,14 @@ gui:
         from: 1
         to: 27
   protection-type:
-    title: '&8Type de Protection -> {material}'
+    title: '&8Type de BlockProtection -> {material}'
     size: 45
     s:
       back:
         name: '&cRetour'
         lore:
         - '&7Retour aux'
-        - '&eTypes de Protection&7.'
+        - '&eTypes de BlockProtection&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 37
     f:
@@ -323,7 +323,7 @@ gui:
         name: '&cRetour'
         lore:
         - '&7Retourner aux'
-        - '&eTypes de Protection&7.'
+        - '&eTypes de BlockProtection&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
     p:

@@ -1,2 +1,1 @@
-+ ADDED Option to enable /Setrole command:
-general.option.command.setrole
++ ADDED Unlock sound when you unlock a protection by breaking it.
