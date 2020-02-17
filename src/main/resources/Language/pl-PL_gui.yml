@@ -1,0 +1,834 @@
+general:
+  wYes: '&aTak'
+  wNo: '&cNie'
+  none: '&cBrak'
+  all: '&aWszyscy'
+  now: '&aTeraz'
+  enabled: '&aWłączone'
+  disabled: '&cWyłączone'
+  others: 'Inni'
+gui:
+  mainMenu:
+    title: '&8Menu główne'
+    size: 27
+    s:
+      protections:
+        name: '&bZabezpieczenia'
+        lore:
+        - '&7Wyświetl wszystkie swoje'
+        - '&7nałozone zabezpieczenia.'
+        material: CHEST
+        slot: 11
+      settings:
+        name: '&bUstawienia'
+        lore:
+        - '&7Edytuj swoje osobiste'
+        - '&7ustawienia.'
+        material: COMMAND_BLOCK
+        slot: 17
+      close:
+        name: '&cZamknij'
+        lore:
+        - '&7Zamknij to menu.'
+        - ' '
+        - '&8- &7Możesz otworzyć je ponownie'
+        - '  &7używając komendy &8/&aProtect menu&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 9
+    f:
+      info:
+        name: '&bInformacje'
+        lore:
+        - '&7Statystyki:'
+        - ' '
+        - '&8- &7Ilość stworzonych zabezpieczeń:'
+        - '  &e{current} &8/ &c{max}'
+        material: PAPER
+        slot: 14
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 27
+  settings_player:
+    title: '&8Twoje ustawienia'
+    size: 27
+    s:
+      back:
+        name: '&cPowrót'
+        lore:
+        - '&7Wróć do'
+        - '&emenu głównego&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    f:
+      page_previous:
+        name: '&9Poprzednia strona'
+        lore:
+        - '&7Wróc do poprzedniej strony:&9 {previous}'
+        - ' '
+        - '&8- &7Obecna:&b {current}'
+        material: ARROW
+        slot: 21
+      page_next:
+        name: '&aNastępna strona'
+        lore:
+        - '&7Przejdź do następnej strony:&9 {next}'
+        - ' '
+        - '&8- &7Obecna:&b {current}'
+        material: ARROW
+        slot: 25
+    l:
+      lock_persistent:
+        name: '&bUtrzymuj tryb blokowania'
+        lore:
+        - '&7Stan: {enabled}'
+        - '&7Odblokowane: {unlocked}'
+        - ' '
+        - '&7Pozostawić tryb blokowania'
+        - '&7włączonym, aż nie wyłączysz'
+        - '&7go ręcznie?'
+        material: IRON_BARS
+        from: 10
+        to: 18
+      unlock_persistent:
+        name: '&bUtrzymuj tryb odblokowywania'
+        lore:
+        - '&7Stan: {enabled}'
+        - '&7Odblokowane: {unlocked}'
+        - ' '
+        - '&7Pozostawić tryb odblokowywania'
+        - '&7włączonym, aż nie wyłączysz'
+        - '&7go ręcznie?'
+        material: GRASS
+        from: 10
+        to: 18
+      trust_persistent:
+        name: '&bUtrzymuj tryb dodawania do zaufanych'
+        lore:
+        - '&7Stan: {enabled}'
+        - '&7Odblokowane: {unlocked}'
+        - ' '
+        - '&7Pozostawić tryb dodawania do zaufanych'
+        - '&7włączonym, aż nie wyłączysz go ręcznie?'
+        material: CACTUS_GREEN
+        from: 10
+        to: 18
+      set_role_persistent:
+        name: '&bUtrzymuj tryb ustawiania roli'
+        lore:
+        - '&7Stan: {enabled}'
+        - '&7Odblokowane: {unlocked}'
+        - ' '
+        - '&7Pozostawić tryb ustawiania roli'
+        - '&7włączonym, aż nie wyłączysz'
+        - '&7go ręcznie?'
+        material: CYAN_DYE
+        from: 10
+        to: 18
+      untrust_persistent:
+        name: '&bUtrzymuj tryb usuwania z zaufanych'
+        lore:
+        - '&7Stan: {enabled}'
+        - '&7Odblokowane: {unlocked}'
+        - ' '
+        - '&7Pozostawić tryb usuwania z zaufanych'
+        - '&7włączonym, aż nie wyłączysz go ręcznie?'
+        material: ROSE_RED
+        from: 10
+        to: 18
+      setrole_persistent:
+        name: '&bUtrzymuj tryb ustawiania roli'
+        lore:
+        - '&7Stan: {enabled}'
+        - '&7Odblokowane: {unlocked}'
+        - ' '
+        - '&7Pozostawić tryb ustawiania roli'
+        - '&7włączonym, aż nie wyłączysz'
+        - '&7go ręcznie?'
+        material: CYAN_DYE
+        from: 10
+        to: 18
+      auto-lock:
+        name: '&bAutomatyczne blokowanie'
+        lore:
+        - '&7Stan: {enabled}'
+        - '&7Odblokowane: {unlocked}'
+        - ' '
+        - '&7Automatycznie blokować'
+        - '&7bloki, które można zabezpieczyć'
+        - '&7kiedy zostaną postawione?'
+        material: OBSERVER
+        from: 10
+        to: 18
+    a:
+      failure_permission:
+        name: '&4Błąd: &cBrak uprawnień'
+        lore:
+        - '&7Nie możesz edytować'
+        - '&7tego ustawienia.'
+        - ' '
+        - '&8- &7Potrzebujesz uprawnienia'
+        - '  &e{permission}&7.'
+        material: RED_STAINED_GLASS_PANE
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 19
+        to: 27
+  protection-types:
+    title: '&8Rodzaje zabezpieczeń'
+    size: 27
+    s:
+      type-chests:
+        name: '&bSkrzynie'
+        lore:
+        - '&7Wyświetl i edytuj'
+        - '&7wszystkie chronione'
+        - '&7skrzynie.'
+        material: CHEST
+        slot: 11
+      type-doors:
+        name: '&bDrzwi'
+        lore:
+        - '&7Wyświetl i edytuj'
+        - '&7wszystkie chronione'
+        - '&7drzwi.'
+        material: OAK_DOOR
+        slot: 13
+      type-furnaces:
+        name: '&bPiece'
+        lore:
+        - '&7Wyświetl i edytuj'
+        - '&7wszystkie chronione'
+        - '&7piece.'
+        material: FURNACE
+        slot: 15
+      type-others:
+        name: '&bInne'
+        lore:
+        - '&7Wyświetl i edytuj'
+        - '&7pozosotałe rodzaje'
+        - '&7chronionych bloków.'
+        material: PAPER
+        slot: 17
+      back:
+        name: '&cPowrót'
+        lore:
+        - '&7Wróć do'
+        - '&emenu głównego&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 27
+  protection-type:
+    title: '&8Rodzaj zabezpieczeń -> {material}'
+    size: 45
+    s:
+      back:
+        name: '&cPowrót'
+        lore:
+        - '&7Wróć do listy'
+        - '&ez rodzajami zabezpieczeńs&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 37
+      trust:
+        name: '&aDodaj do zaufanych'
+        lore:
+        - '&7Dodaj gracza do zaufanych'
+        - '&7dla wszystkich zabezpieczeń'
+        - '&7tego typu.'
+        material: GREEN_DYE
+        slot: 38
+    f:
+      page_previous:
+        name: '&9Poprzednia strona'
+        lore:
+        - '&7Wróć do poprzedniej strony:&9 {previous}'
+        - ' '
+        - '&8- &7Obecna::&b {current}'
+        material: ARROW
+        slot: 39
+      page_next:
+        name: '&aNastępna strona'
+        lore:
+        - '&7Przejdź do następnej storny:&9 {next}'
+        - ' '
+        - '&8- &7Obecna::&b {current}'
+        material: ARROW
+        slot: 43
+    l:
+      protection:
+        name: '&7Świat:&b {world} &7X:&b {x} &7Y:&b {y} &7Z:&b {z}'
+        lore:
+        - '&7Edytuj to zabezpieczenie.'
+        - ' '
+        - '&8- &7Teleportuj się w to miejsce'
+        - '  &7klikając &aprawym przyciskiem myszki&7.'
+        - ' '
+        - '&8- &7Chunk: '
+        - '  &7X:&e {chunk-x}'
+        - '  &7Z:&e {chunk-z}'
+        material: CHEST
+        from: 10
+        to: 36
+      noProtection:
+        name: '&8Zabezpieczenie &7-> &cBrak'
+        lore:
+        - '&7Jak zabezpieczyć blok?'
+        - ' '
+        - '&81: &7Użyj komendy &8/&aLock'
+        - '&82: &7Dotknij obiektu'
+        - ' '
+        - '&7Masz jeszcze jakieś pytania?'
+        - '&7Poproś administrację o pomoc.'
+        material: PAPER
+        from: 10
+        to: 36
+    a:
+      failure_bypass:
+        name: '&4Błąd: &cBrak uprawnień'
+        lore:
+        - '&7Nie możesz otworzyć tego GUI'
+        - '&7ponieważ nie zostałeś dodany'
+        - '&7jako osoba zaufana dla tego zabezpieczenia.'
+        - ' '
+        - '&8- &7Potrzebujesz uprawnienia'
+        - '  &e{permission}&7.'
+        material: RED_STAINED_GLASS_PANE
+      failure_teleport:
+        name: '&4Błąd: &cBrak uprawnień'
+        lore:
+        - '&7Nie możesz teleportować się'
+        - '&7do tego zabezpieczenia.'
+        - ' '
+        - '&8- &7Potrzebujesz uprawnienia'
+        - '  &e{permission}&7.'
+        material: RED_STAINED_GLASS_PANE
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 38
+        to: 45
+  protection:
+    title: '&7X:&b {x} &7Y:&b {y} &7Z:&b {z}'
+    size: 27
+    s:
+      members:
+        name: '&bCzłonkowie'
+        lore:
+        - '&7Sprawdź listę wszystkich'
+        - '&7graczy, którzy zostali'
+        - '&7dodani jako zaufani'
+        - '&7dla tego zabezpieczenia.'
+        material: PLAYER_HEAD
+        slot: 11
+      settings:
+        name: '&bUstawienia'
+        lore:
+        - '&7Edytuj ustawienia'
+        - '&7tego zabezpieczenia.'
+        - ' '
+        - '&8- &7Możesz edytować uprawnienia dla'
+        - '  &7poszczególnych ról oraz'
+        - '  &7ustawienia bezpieczeństwa.'
+        material: COMMAND_BLOCK
+        slot: 14
+      delete:
+        name: '&cUsuń'
+        lore:
+        - '&7Usuń to zabezpieczenie.'
+        material: ROSE_RED
+        slot: 17
+      back:
+        name: '&cPowrót'
+        lore:
+        - '&7Wróć do listy'
+        - '&erodzajów zabezpieczeń&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 27
+  actionConfirm:
+    title: '&8Potwierdź operację'
+    size: 27
+    s:
+      info:
+        name: '&bProsimy potwierdzić wykonanie tej operacji.'
+        lore:
+        - '&7Kliknij w &aTak&7, aby potwierdzić lub'
+        - 'w &cNie&7, aby anulować operację.'
+        material: IRON_BARS
+        slot: 14
+    l:
+      yes_protection:
+        name: '&aTak'
+        lore:
+        - '&7Potwierdź operację.'
+        - ' '
+        - '&7Czy na pewno chcesz'
+        - '&7odlobkować ten obiekt?'
+        material: LIME_STAINED_GLASS_PANE
+        from: 10
+        to: 13
+      no_protection:
+        name: '&cNie'
+        lore:
+        - '&7Potwierdź operację.'
+        - ' '
+        - '&7Czy na pewno chcesz'
+        - '&7odlobkować ten obiekt?'
+        material: RED_STAINED_GLASS_PANE
+        from: 15
+        to: 18
+      yes_player:
+        name: '&aYes'
+        lore:
+        - '&7Potwierdź operację.'
+        - ' '
+        - '&7Czy na pewno chcesz'
+        - '&7usunąc tą osobę z zaufanych?'
+        material: LIME_STAINED_GLASS_PANE
+        from: 10
+        to: 13
+      no_player:
+        name: '&cNo'
+        lore:
+        - '&7Abort this action.'
+        - ' '
+        - '&7Czy na pewno chcesz'
+        - '&7usunąc tą osobę z zaufanych?'
+        material: RED_STAINED_GLASS_PANE
+        from: 15
+        to: 18
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 19
+        to: 27
+  roles:
+    title: '&8Wybierz rolę'
+    size: 27
+    f:
+      owner:
+        name: '&4Właściciel &7->&b {player}'
+        lore:
+        - '&7Jest właścicielem tego zabezpieczenia.'
+        - '&7Jeśli masz jakiekolwiek pytania'
+        - '&7poproś jego o pomoc.'
+        material: PLAYER_HEAD
+        slot: 14
+    s:
+      admin:
+        name: '&cAdministrator'
+        lore:
+        - '&7Kliknij, aby wyświetlić lub'
+        - '&7edytować listę administratorów.'
+        material: ENCHANTED_GOLDEN_APPLE
+        slot: 11
+      member:
+        name: '&eCzłonek'
+        lore:
+        - '&7Kliknij, aby wyświetlić lub'
+        - '&7edytować listę członków.'
+        material: APPLE
+        slot: 17
+      visitor:
+        name: '&5Visitor'
+        lore:
+        - '&7Kliknij, aby wyświetlić lub'
+        - '&7edytować listę gości.'
+        material: WHEAT
+        slot: 14
+      back:
+        name: '&cPowrót'
+        lore:
+        - '&7Wróć do'
+        - '&ezabezpieczenia&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 27
+  settings:
+    title: '&8Wybierz ustawienia'
+    size: 27
+    s:
+      role:
+        name: '&bUstawienia ról'
+        lore:
+        - '&7Edytuj ustawienia dla poszczególnych'
+        - '&7ról takie jak: dodawanie / usuwanie'
+        - '&7zaufanych osób, edycja roli innych członków'
+        material: PLAYER_HEAD
+        slot: 12
+      protection:
+        name: '&bUstawienia bezpieczeństwa'
+        lore:
+        - '&7Edytuj ustawienia zapewniające bezpieczeństwo'
+        - '&7takie jak: trensfer bloków poprzez leje'
+        - '&7oraz aktywacja bloku przez redstone'
+        material: GRASS_BLOCK
+        slot: 16
+      back:
+        name: '&cPowrót'
+        lore:
+        - '&7Wróć do'
+        - '&ezabezpieczenia&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 27
+  settings_protection:
+    title: '&8Ustawienia bezpieczeństwa'
+    size: 27
+    s:
+      back:
+        name: '&cPowrót'
+        lore:
+        - '&7Wróć do'
+        - '&ewyboru ustawień&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    f:
+      page_previous:
+        name: '&9Poprzednia strona'
+        lore:
+        - '&7Wróć do poprzedniej strony:&9 {previous}'
+        - ' '
+        - '&8- &7Obecna::&b {current}'
+        material: ARROW
+        slot: 21
+      page_next:
+        name: '&aNastępna strona'
+        lore:
+        - '&7Przejdź do następnej storny:&9 {next}'
+        - ' '
+        - '&8- &7Obecna::&b {current}'
+        material: ARROW
+        slot: 25
+    l:
+      hopper_transfer:
+        name: '&bTransfer lejem'
+        lore:
+        - '&7Stan: {enabled}'
+        - '&7Odblokowane: {unlocked}'
+        - ' '
+        - '&7Pozwalać lejkom'
+        - '&7na wyciąganie bloków'
+        - '&7z tego zabezpieczenia?'
+        material: HOPPER
+        from: 10
+        to: 18
+      redstone_ignore:
+        name: '&bIgnorowanie sygnałów redstone''a'
+        lore:
+        - '&7Stan: {enabled}'
+        - '&7Odblokowane: {unlocked}'
+        - ' '
+        - '&7Czy sygnały redstone''a'
+        - '&7powinny być ignorowane?'
+        material: REDSTONE
+        from: 10
+        to: 18
+    a:
+      failure_permission:
+        name: '&4Błąd: &cBrak uprawnień'
+        lore:
+        - '&7Nie możesz edytować'
+        - '&7tego ustawienia'
+        - ' '
+        - '&8- &7Potrzebujesz uprawnienia'
+        - '  &e{permission}&7.'
+        material: RED_STAINED_GLASS_PANE
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 19
+        to: 27
+  settings_role:
+    title: '&8Ustawienia &7-> {role}'
+    size: 27
+    s:
+      back:
+        name: '&cPowrót'
+        lore:
+        - '&7Wróć do'
+        - '&ewyboru roli&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    f:
+      page_previous:
+        name: '&9Poprzednia strona'
+        lore:
+        - '&7Wróć do poprzedniej strony:&9 {previous}'
+        - ' '
+        - '&8- &7Obecna::&b {current}'
+        material: ARROW
+        slot: 21
+      page_next:
+        name: '&aNastępna strona'
+        lore:
+        - '&7Przejdź do następnej storny:&9 {next}'
+        - ' '
+        - '&8- &7Obecna::&b {current}'
+        material: ARROW
+        slot: 25
+    l:
+      player_trust:
+        name: '&bDodawaj do zaufanych'
+        lore:
+        - '&7Stan: {enabled}'
+        - '&7Odblokowane: {unlocked}'
+        - ' '
+        - '&7Pozwalać tej roli na'
+        - '&7dodawanie nowych graczy do zaufanych?'
+        material: CACTUS_GREEN
+        from: 10
+        to: 18
+      player_untrust:
+        name: '&bUsuwanie z zaufanych'
+        lore:
+        - '&7Stan: {enabled}'
+        - '&7Odblokowane: {unlocked}'
+        - ' '
+        - '&7Pozwalać tej roli na'
+        - '&7usuwanie graczy z zaufanych?'
+        material: ROSE_RED
+        from: 10
+        to: 18
+      player_set_role:
+        name: '&bUstawianie roli'
+        lore:
+        - '&7Stan: {enabled}'
+        - '&7Odblokowane: {unlocked}'
+        - ' '
+        - '&7Pozwalaj tej roli na edycję'
+        - '&7roli innych graczy?'
+        - ' '
+        - '&8- &7Nie będą mogli'
+        - '  &7edytować roli graczy z'
+        - '  &7wyższą rolą'
+        - '&8- &7Nie będą mogli również'
+        - '  &7ustawiać roli wyższej niż'
+        - '  &7tą, którą posiadają.'
+        material: CYAN_DYE
+        from: 10
+        to: 18
+    a:
+      failure_permission:
+        name: '&4Błąd: &cBrak uprawnień'
+        lore:
+        - '&7Nie możesz edytować'
+        - '&7tego ustawienia.'
+        - ' '
+        - '&8- &7Potrzebujesz uprawnienia'
+        - '  &e{permission}&7.'
+        material: RED_STAINED_GLASS_PANE
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 20
+        to: 27
+  role:
+    title: '&8Role &7->&a {role}'
+    size: 36
+    s:
+      back:
+        name: '&cPowrót'
+        lore:
+        - '&7Wróć do'
+        - '&ewyboru roli&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 28
+      trust:
+        name: '&aDodaj do zaufanych'
+        lore:
+        - '&7Dodaj nowego gracza'
+        - '&7do zaufanych dla'
+        - '&7tego zabezpieczenia.'
+        material: GREEN_DYE
+        slot: 29
+    f:
+      page_previous:
+        name: '&9Poprzednia strona'
+        lore:
+        - '&7Wróć do poprzedniej strony:&9 {previous}'
+        - ' '
+        - '&8- &7Obecna::&b {current}'
+        material: ARROW
+        slot: 30
+      page_next:
+        name: '&aNastępna strona'
+        lore:
+        - '&7Przejdź do następnej storny:&9 {next}'
+        - ' '
+        - '&8- &7Obecna::&b {current}'
+        material: ARROW
+        slot: 34
+    l:
+      noPlayer:
+        name: '&8Gracz &7-> &cBrak'
+        lore:
+        - '&7To zabezpieczenie nie ma'
+        - '&7żadnych graczy z taką rolą'
+        - ' '
+        - '&8- &7Dodawanie do zaufanych:'
+        - '  &81: &8/&aProtect trust &8<&aNazwaGracza&8>'
+        - '  &82: &7Dotknij zabezpieczenia'
+        material: PAPER
+        from: 10
+        to: 27
+      player:
+        name: '{role} &7->&a {player}'
+        lore:
+        - '&7Kliknij tutaj, aby wyświetlić'
+        - '&7informację o tym graczu'
+        - '&7lub usunąć go z zaufanych'
+        material: PLAYER_HEAD
+        from: 10
+        to: 27
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 27
+        to: 36
+  player:
+    title: '&8Gracz &7->&a {player}'
+    size: 27
+    s:
+      untrust:
+        name: '&bUsuń z zaufanych'
+        lore:
+        - '&7Usuń wybranego gracza'
+        - '&7z tego zabezpieczenia'
+        material: ROSE_RED
+        slot: 12
+      back:
+        name: '&cPowrót'
+        lore:
+        - '&7Wróć do'
+        - '&eról&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 19
+    f:
+      player:
+        name: '&bInformacje'
+        lore:
+        - '&7Ostatnio widziany:'
+        - '&c{seen}'
+        material: SIGN
+        slot: 16
+    a:
+      untrust_noAccess:
+        name: '&4Odmowa: &bUsuń z zaufanych'
+        lore:
+        - '&cNie możesz usunąć tego gracza'
+        - '&cz zabezpieczenia – nie masz do tego'
+        - '&cwystarczających uprawnień'
+        - ' '
+        - '&8- &7Skontaktuj się z właścicielem'
+        - '  &7zabezpieczenia, w celu uzyskania pomocy.'
+        - '  &7Może nadać Ci nadać odpowiednie uprawnienia.'
+        material: ROSE_RED
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 27
+  player-selector:
+    title: Wybierz gracza
+    size: 45
+    a:
+      failure_trusted:
+        name: '&4Błąd: &cJuż dodany'
+        lore:
+        - '&7Ten gracz został już dodany do zaufanych.'
+        material: PLAYER_HEAD
+      failure_max-members:
+        name: '&4Błąd: &cPrzekroczono ilość członków'
+        lore:
+        - '&7Nie możesz dodać tego gracza,'
+        - '&7ponieważ przekroczona została liczba'
+        - '&b{players} &7zaufanych osób.'
+        - ' '
+        - '&8- &7Uprawnienie: &bchestprotect.members.ILOSC'
+        material: PLAYER_HEAD
+    s:
+      back:
+        name: '&cPowrót'
+        lore:
+        - '&7Wróć do'
+        - '&epoprzedniego menu&7.'
+        material: RED_STAINED_GLASS_PANE
+        slot: 37
+    f:
+      page_previous:
+        name: '&9Poprzednia strona'
+        lore:
+        - '&7Wróć do poprzedniej strony:&9 {previous}'
+        - ' '
+        - '&8- &7Obecna::&b {current}'
+        material: ARROW
+        slot: 39
+      page_next:
+        name: '&aNastępna strona'
+        lore:
+        - '&7Przejdź do następnej storny:&9 {next}'
+        - ' '
+        - '&8- &7Obecna::&b {current}'
+        material: ARROW
+        slot: 43
+    l:
+      player:
+        name: '&b{player}'
+        lore:
+        - '&7Kliknij tutaj,'
+        - '&7aby wybrać tego gracza.'
+        material: PLAYER_HEAD
+        from: 10
+        to: 36
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 38
+        to: 45

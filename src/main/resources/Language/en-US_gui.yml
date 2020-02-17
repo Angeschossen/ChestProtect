@@ -1,0 +1,897 @@
+general:
+  wYes: 'Yes'
+  wNo: 'No'
+  none: '&cNone'
+  all: '&aAll'
+  now: '&aNow'
+  enabled: '&aEnabled'
+  disabled: '&cDisabled'
+  others: 'Others'
+  unlimited: '&aUnlimited'
+  online: '&aOnline'
+  previous: '&8Previous'
+
+skull:
+  entity:
+    cow: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWQ2YzZlZGE5NDJmN2Y1ZjcxYzMxNjFjNzMwNmY0YWVkMzA3ZDgyODk1ZjlkMmIwN2FiNDUyNTcxOGVkYzUifX19'
+    sheep: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjMxZjljY2M2YjNlMzJlY2YxM2I4YTExYWMyOWNkMzNkMThjOTVmYzczZGI4YTY2YzVkNjU3Y2NiOGJlNzAifX19=='
+    pig: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIxNjY4ZWY3Y2I3OWRkOWMyMmNlM2QxZjNmNGNiNmUyNTU5ODkzYjZkZjRhNDY5NTE0ZTY2N2MxNmFhNCJ9fX0='
+    armor_stand: 'ARMOR_STAND'
+    others: 'PAPER'
+
+
+gui:
+  main:
+    title: '&8Main Menu'
+    size: 27
+    s:
+      protections:
+        name: '&8> &6Protections'
+        lore:
+          - '&7View all your protected'
+          - '&7containers and doors.'
+          - ' '
+          - '&7Here you can find blocks.'
+        material: 'CHEST'
+        slot: 11
+      entities:
+        name: '&8> &6Entities'
+        lore:
+          - '&7View all your'
+          - '&7protected entities.'
+          - ' '
+          - '&7Here you can find'
+          - '&7animals and monsters.'
+        material: 'HAY_BLOCK'
+        slot: 13
+      settings:
+        name: '&8> &6Settings'
+        lore:
+          - '&7Edit your personal'
+          - '&7settings.'
+        material: 'COMMAND_BLOCK'
+        slot: 15
+      close:
+        name: '&cClose'
+        lore:
+          - '&7Close this menu.'
+          - ' '
+          - '&8- &7You can open it again'
+          - '  &7with &8/&3Protect menu&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 9
+    f:
+      info:
+        name: '&8> &6Information'
+        lore:
+          - '&7Stats:'
+          - ' '
+          - '&8- &7Protections:'
+          - '  &e{current} &8/ &6{max}'
+          - '  &8(&7Created &8/ &7Max&8)'
+        material: 'PAPER'
+        slot: 17
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 27
+
+  settings_player:
+    title: '&8Your Settings'
+    size: 27
+    f:
+      page_previous:
+        name: '&9Previous Page'
+        lore:
+          - '&7Go to previous page:&9 {previous}'
+          - ' '
+          - '&8- &7Current:&3 {current}'
+        material: 'ARROW'
+        slot: 21
+      page_next:
+        name: '&aNext Page'
+        lore:
+          - '&7Go to next page:&9 {next}'
+          - ' '
+          - '&8- &7Current:&3 {current}'
+        material: 'ARROW'
+        slot: 25
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 19
+    l:
+      lock_persistent:
+        name: '&8> &6Persistent Lock'
+        lore:
+          - '&7Status: {enabled}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&7Keep lock mode'
+          - '&7activated until'
+          - '&7manual deactivation?'
+        material: 'OAK_SIGN'
+        from: 10
+        to: 18
+      unlock_persistent:
+        name: '&8> &6Persistent Unlock'
+        lore:
+          - '&7Status: {enabled}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&7Keep unlock mode'
+          - '&7activated until'
+          - '&7manual deactivation?'
+        material: 'GRASS'
+        from: 10
+        to: 18
+      trust_persistent:
+        name: '&8> &6Persistent Trust'
+        lore:
+          - '&7Status: {enabled}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&7Keep trust mode'
+          - '&7activated until'
+          - '&7manual deactivation?'
+        material: 'GREEN_DYE'
+        from: 10
+        to: 18
+      set_role_persistent:
+        name: '&8> &6Persistent set-Role'
+        lore:
+          - '&7Status: {enabled}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&7Keep set-role mode'
+          - '&7activated until'
+          - '&7manual deactivation?'
+        material: 'CYAN_DYE'
+        from: 10
+        to: 18
+      untrust_persistent:
+        name: '&8> &6Persistent Untrust'
+        lore:
+          - '&7Status: {enabled}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&7Keep untrust mode'
+          - '&7activated until'
+          - '&7manual deactivation?'
+        material: 'RED_DYE'
+        from: 10
+        to: 18
+      setrole_persistent:
+        name: '&8> &6Persistent set-Role'
+        lore:
+          - '&7Status: {enabled}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&7Keep set-role mode'
+          - '&7activated until'
+          - '&7manual deactivation?'
+        material: 'CYAN_DYE'
+        from: 10
+        to: 18
+      auto-lock:
+        name: '&8> &6Auto Lock'
+        lore:
+          - '&7Status: {enabled}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&7Automatically lock'
+          - '&7protectable blocks'
+          - '&7when you place them?'
+          - ' '
+          - '&8- &7This only works, if you have'
+          - '  &2enough money &7and permission'
+          - '  &2chestprotect.protections.NUMBER'
+          - '  &7to create a protection.'
+        material: 'OBSERVER'
+        from: 10
+        to: 18
+    a:
+      failure_permission:
+        name: '&4Failure: &cNo permission'
+        lore:
+          - '&7You''re not allowed to'
+          - '&7edit this setting.'
+          - ' '
+          - '&8- &7You need permission'
+          - '  &8{permission}&7.'
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 9
+      placeholder_2:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 19
+        to: 27
+
+  block-types:
+    title: '&8Protection Types'
+    size: 27
+    s:
+      chest:
+        name: '&8> &6Chests'
+        lore:
+          - '&7View and edit all'
+          - '&7your protected'
+          - '&7chests.'
+        material: 'CHEST'
+        slot: 11
+      door:
+        name: '&8> &6Doors'
+        lore:
+          - '&7View and edit all'
+          - '&7your protected'
+          - '&7doors.'
+        material: 'OAK_DOOR'
+        slot: 13
+      furnace:
+        name: '&8> &6Furnaces'
+        lore:
+          - '&7View and edit all'
+          - '&7your protected'
+          - '&7furnaces.'
+        material: 'FURNACE'
+        slot: 15
+      others:
+        name: '&8> &6Others'
+        lore:
+          - '&7View and edit all'
+          - '&7the other types of'
+          - '&7protected blocks.'
+        material: 'PAPER'
+        slot: 17
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 19
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 27
+
+  entity-types:
+    title: '&8Entity Types'
+    size: 27
+    s:
+      armor_stand:
+        name: '&8> &6Armor Stands'
+        lore:
+          - '&7View and edit all'
+          - '&7your protected'
+          - '&7armor stands.'
+        material: 'ARMOR_STAND'
+        slot: 10
+      sheep:
+        name: '&8> &6Sheeps'
+        lore:
+          - '&7View and edit all'
+          - '&7your protected'
+          - '&7sheeps.'
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjMxZjljY2M2YjNlMzJlY2YxM2I4YTExYWMyOWNkMzNkMThjOTVmYzczZGI4YTY2YzVkNjU3Y2NiOGJlNzAifX19=='
+        slot: 12
+      cow:
+        name: '&8> &6Cows'
+        lore:
+          - '&7View and edit all'
+          - '&7your protected'
+          - '&7cows.'
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWQ2YzZlZGE5NDJmN2Y1ZjcxYzMxNjFjNzMwNmY0YWVkMzA3ZDgyODk1ZjlkMmIwN2FiNDUyNTcxOGVkYzUifX19'
+        slot: 14
+      pig:
+        name: '&8> &6Pigs'
+        lore:
+          - '&7View and edit all'
+          - '&7your protected'
+          - '&7pigs.'
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIxNjY4ZWY3Y2I3OWRkOWMyMmNlM2QxZjNmNGNiNmUyNTU5ODkzYjZkZjRhNDY5NTE0ZTY2N2MxNmFhNCJ9fX0='
+        slot: 16
+      others:
+        name: '&8> &6Others'
+        lore:
+          - '&7View and edit all'
+          - '&7the other types of'
+          - '&7protected entities.'
+        material: 'PAPER'
+        slot: 18
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 19
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 27
+
+  protection-type:
+    title: '&8Type {material}'
+    size: 45
+    s:
+      trust:
+        name: '&8> &aTrust Player'
+        lore:
+          - '&7Click here to trust'
+          - '&7a player for these protections.'
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0='
+        slot: 41
+      untrust:
+        name: '&8> &cUntrust Player'
+        lore:
+          - '&7Click here to untrust'
+          - '&7a player from these protections.'
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0='
+        slot: 42
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 37
+      page_previous:
+        name: '&9Previous Page'
+        lore:
+          - '&7Go to previous page:&9 {previous}'
+          - ' '
+          - '&8- &7Current:&3 {current}'
+        material: 'ARROW'
+        slot: 39
+      page_next:
+        name: '&aNext Page'
+        lore:
+          - '&7Go to next page:&9 {next}'
+          - ' '
+          - '&8- &7Current:&3 {current}'
+        material: 'ARROW'
+        slot: 44
+    l:
+      block:
+        name: '&7World:&b {world} &7X:&b {x} &7Y:&b {y} &7Z:&b {z}'
+        lore:
+          - '&7Edit this block protection.'
+          - ' '
+          - '&9RIGHT CLICK'
+          - '&7Teleport to this protection'
+          - ' '
+          - '&8- &7Chunk: '
+          - '  &7X:&e {chunk-x}'
+          - '  &7Z:&e {chunk-z}'
+          - ' '
+          - '&7Use &bLEFT CLICK + SHIFT'
+          - '&7to delete this protection.'
+        material: 'CHEST'
+        from: 10
+        to: 36
+      entity:
+        name: '&6{entity}'
+        lore:
+          - '&7Edit this entity protection.'
+          - ' '
+          - '&7Last seen at:'
+          - '&7X:&e {x}'
+          - '&7Y:&e {y}'
+          - '&7Z:&e {z}'
+        material: 'PLAYER_HEAD'
+        from: 10
+        to: 36
+      no-entity:
+        name: '&cNo locked Entities'
+        lore:
+          - '&7How to protect a entity?'
+          - ' '
+          - '&81: &7Execute &8/&3Lock'
+          - '&82: &7Click on the entity'
+        material: 'PAPER'
+        from: 10
+        to: 36
+      no-block:
+        name: '&cNo locked Containers'
+        lore:
+          - '&7How to protect an object?'
+          - ' '
+          - '&81: &7Execute &8/&3Lock'
+          - '&82: &7Touch the object'
+        material: 'PAPER'
+        from: 10
+        to: 36
+    a:
+      failure_bypass:
+        name: '&4Failure: &cNo permission'
+        lore:
+          - '&7You''re not allowed to'
+          - '&7open this GUI, since you''re'
+          - '&7not trusted at this protection.'
+          - ' '
+          - '&8- &7You need permission'
+          - '  &8{permission}&7.'
+      failure_teleport:
+        name: '&4Failure: &cNo permission'
+        lore:
+          - '&7You''re not allowed to'
+          - '&7teleport to this protection.'
+          - ' '
+          - '&8- &7You need permission'
+          - '  &8{permission}&7.'
+      failure_unloaded:
+        name: '&4Failure: &cChunk not loaded'
+        lore:
+          - '&7Through minecraft restrictions'
+          - '&7you can''t edit animals / mobs,'
+          - '&7if their chunk isn''t loaded.'
+          - ' '
+          - '&8- &7You can only edit them, if'
+          - '  &7their chunk is loaded.'
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 9
+      placeholder_2:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 38
+        to: 45
+
+  protection:
+    title: '&7X:&b {x} &7Y:&b {y} &7Z:&b {z}'
+    size: 27
+    s:
+      members:
+        name: '&8> &6Members'
+        lore:
+          - '&7Get a list of all'
+          - '&7players which are trusted'
+          - '&7at this protection.'
+          - ' '
+          - '&8- &7Use &aright click'
+          - '  &7to open the select role menu.'
+        material: 'PLAYER_HEAD'
+        slot: 11
+        glow: true
+      settings:
+        name: '&8> &6Settings'
+        lore:
+          - '&7Edit the settings'
+          - '&7of this protection.'
+          - ' '
+          - '&8- &7You can edit role'
+          - '  &7and protections settings.'
+        material: 'COMMAND_BLOCK'
+        slot: 14
+      delete:
+        name: '&8> &cDelete'
+        lore:
+          - '&7Unlock this protection.'
+        material: 'RED_DYE'
+        slot: 17
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 19
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 27
+
+  action-confirm:
+    title: '&8Confirm Action'
+    size: 27
+    s:
+      info:
+        name: '&bPlease confirm this action.'
+        lore:
+          - '&7Click &aYes &7to confirm or'
+          - '&cNo &7to abort this action.'
+        material: 'OAK_SIGN'
+        slot: 14
+    l:
+      yes_protection:
+        name: '&aYes'
+        lore:
+          - '&7Confirm this action.'
+          - ' '
+          - '&7Do you really want to'
+          - '&7unlock this protection?'
+        material: 'LIME_STAINED_GLASS_PANE'
+        from: 10
+        to: 13
+      no_protection:
+        name: '&cNo'
+        lore:
+          - '&7Confirm this action.'
+          - ' '
+          - '&7Do you really want to'
+          - '&7unlock this protection?'
+        material: 'RED_STAINED_GLASS_PANE'
+        from: 15
+        to: 18
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 9
+      placeholder_2:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 19
+        to: 27
+
+  protection_roles:
+    title: '&8Select Role'
+    size: 27
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 19
+      owner:
+        name: '&4Owner&c {player}'
+        lore:
+          - '&7This player is the'
+          - '&7owner of this protection.'
+        material: 'GOLDEN_APPLE'
+        slot: 14
+    s:
+      admin:
+        name: '&cAdmin'
+        lore:
+          - '&7Click here to view'
+          - '&7get all admins.'
+        material: 'ENCHANTED_GOLDEN_APPLE'
+        slot: 11
+      member:
+        name: '&eMember'
+        lore:
+          - '&7Click here to view'
+          - '&7all members.'
+        material: 'APPLE'
+        slot: 17
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 27
+
+  settings_roles:
+    title: '&8Select Role'
+    size: 27
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 19
+    s:
+      admin:
+        name: '&cAdmin'
+        lore:
+          - '&7Click here to edit'
+          - '&7the admin role.'
+        material: 'ENCHANTED_GOLDEN_APPLE'
+        slot: 11
+      member:
+        name: '&eMember'
+        lore:
+          - '&7Click here to edit'
+          - '&7the member role.'
+        material: 'APPLE'
+        slot: 17
+      visitor:
+        name: '&7Visitor'
+        lore:
+          - '&7Click here to edit'
+          - '&7the visitor role.'
+        material: 'WHEAT'
+        slot: 14
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 27
+
+  protection_setting-types:
+    title: '&8Select Setting'
+    size: 27
+    s:
+      role:
+        name: '&8> &6Role Settings'
+        lore:
+          - '&7Edit role restrictions, like'
+          - '&7trust or untrust players,'
+          - '&7for an role.'
+        material: 'PLAYER_HEAD'
+        slot: 12
+      protection:
+        name: '&8> &6Protection Settings'
+        lore:
+          - '&7Edit protection settings,'
+          - '&7like allowing hopper transfer,'
+          - '&7for this protection.'
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDVjNmRjMmJiZjUxYzM2Y2ZjNzcxNDU4NWE2YTU2ODNlZjJiMTRkNDdkOGZmNzE0NjU0YTg5M2Y1ZGE2MjIifX19'
+        slot: 16
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 19
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 27
+
+  protection_settings:
+    title: '&8Protection Settings'
+    size: 27
+    f:
+      page_previous:
+        name: '&9Previous Page'
+        lore:
+          - '&7Go to previous page:&9 {previous}'
+          - ' '
+          - '&8- &7Current:&3 {current}'
+        material: 'ARROW'
+        slot: 21
+      page_next:
+        name: '&aNext Page'
+        lore:
+          - '&7Go to next page:&9 {next}'
+          - ' '
+          - '&8- &7Current:&3 {current}'
+        material: 'ARROW'
+        slot: 25
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 19
+    l:
+      redstone_ignore:
+        name: '&8> &6Ignore Redstone Signals'
+        lore:
+          - '&7Status: {enabled}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&7Should redstone signals'
+          - '&7be ignored?'
+        material: 'REDSTONE'
+        from: 10
+        to: 18
+    a:
+      failure_permission:
+        name: '&4Failure: &cNo permission'
+        lore:
+          - '&7You''re not allowed to'
+          - '&7edit this setting.'
+          - ' '
+          - '&8- &7You need permission'
+          - '  &8{permission}&7.'
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 9
+      placeholder_2:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 19
+        to: 27
+
+  role_settings:
+    title: '{role} &7- &8Settings'
+    size: 27
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 19
+      page_previous:
+        name: '&9Previous Page'
+        lore:
+          - '&7Go to previous page:&9 {previous}'
+          - ' '
+          - '&8- &7Current:&3 {current}'
+        material: 'ARROW'
+        slot: 21
+      page_next:
+        name: '&aNext Page'
+        lore:
+          - '&7Go to next page:&9 {next}'
+          - ' '
+          - '&8- &7Current:&3 {current}'
+        material: 'ARROW'
+        slot: 25
+    l:
+      player_trust:
+        name: '&8> &6Trust Players'
+        lore:
+          - '&7Status: {enabled}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&7Allow this role to'
+          - '&7trust other players?'
+        material: 'GREEN_DYE'
+        from: 10
+        to: 18
+      player_untrust:
+        name: '&8> &6Untrust Members'
+        lore:
+          - '&7Status: {enabled}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&7Allow this role to'
+          - '&7untrust members?'
+        material: 'RED_DYE'
+        from: 10
+        to: 18
+      player_set_role:
+        name: '&8> &6Set Role'
+        lore:
+          - '&7Status: {enabled}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&7Allow this role to'
+          - '&7set roles for other players?'
+          - ' '
+          - '&8- &7They won''t be able to'
+          - '  &7edit players which have'
+          - '  &7an higher role.'
+          - '&8- &7Also they won''t be able'
+          - '  &7to set an role which is'
+          - '  &7higher than their own role.'
+        material: 'CYAN_DYE'
+        from: 10
+        to: 18
+      hopper_transfer:
+        name: '&8> &6Hopper Transfer'
+        lore:
+          - '&7Status: {enabled}'
+          - '&7Unlocked: {unlocked}'
+          - ' '
+          - '&7Allow this role to get'
+          - '&7items out of this protection'
+          - '&7by using hoppers?'
+          - ' '
+          - '&cNOTE: &eThrough server API restrictions,'
+          - '&ethis feature is only supported'
+          - '&efor spigot &n1.14 or newer&e.'
+        material: 'HOPPER'
+        from: 10
+        to: 18
+    a:
+      failure_permission:
+        name: '&4Failure: &cNo permission'
+        lore:
+          - '&7You''re not allowed to'
+          - '&7edit this setting.'
+          - ' '
+          - '&8- &7You need permission'
+          - '  &e{permission}&7.'
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 9
+      placeholder_2:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 20
+        to: 27
+
+  role_players:
+    title: '&8Role &7- {role}'
+    size: 36
+    s:
+      trust:
+        name: '&8> &aTrust Player'
+        lore:
+          - '&7Click here to trust'
+          - '&7a player for these protections.'
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0='
+        slot: 32
+      untrust:
+        name: '&8> &cUntrust Player'
+        lore:
+          - '&7Click here to untrust'
+          - '&7a player from these protections.'
+        material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0='
+        slot: 33
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 28
+      page_previous:
+        name: '&9Previous Page'
+        lore:
+          - '&7Go to previous page:&9 {previous}'
+          - ' '
+          - '&8- &7Current:&3 {current}'
+        material: 'ARROW'
+        slot: 30
+      page_next:
+        name: '&aNext Page'
+        lore:
+          - '&7Go to next page:&9 {next}'
+          - ' '
+          - '&8- &7Current:&3 {current}'
+        material: 'ARROW'
+        slot: 35
+    l:
+      object:
+        name: '{role} &7-&a {player}'
+        lore:
+          - '&7Click on this player'
+          - '&7to untrust him or to'
+          - '&7get some information.'
+        material: 'PLAYER_HEAD'
+        from: 10
+        to: 27
+      no-player:
+        name: '&cNo trusted Players'
+        lore:
+          - '&7This protection doesn''t'
+          - '&7have any players in this'
+          - '&7role.'
+          - ' '
+          - '&8- &7Trust an player for'
+          - '  &7this protection.'
+          - '  &81: &8/&3Protect trust &8<&3player&8>'
+          - '  &82: &7Touch the protection'
+        material: 'PAPER'
+        from: 10
+        to: 27
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 9
+      placeholder_2:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 27
+        to: 36
+
+
+
+
+
+
+
+
+

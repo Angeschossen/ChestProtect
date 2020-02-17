@@ -1,0 +1,85 @@
+general:
+  role:
+    owner: '&4Proprio'
+    admin: '&cAdmin'
+    member: '&eMembre'
+    visitor: '&5Visiteur'
+help:
+  general:
+    prefix: '&8[&eChestProtect&8] &7Usage: '
+    header: '&7------------<- &5Protect Help &7Page&6 {page} &8/&e {pages} &7->------------'
+    page: '&7Use &8/&dProtect help {next} &7for the next page.'
+    footer: '&7------------<- &5Protect Help &7Page&6 {page} &8/&e {pages} &7->------------'
+  command:
+    lock: '&8/&7Protect lock &8- &eVerrouille un objet'
+    unlock: '&8/&7Protect unlock &8- &eDéverrouille un objet'
+    trust: '&8/&7Protect trust &8<&aPlayer&8> - &eAjoute un membre à la protection'
+    untrust: '&8/&7Protect untrust &8<&aPlayer&8> - &eSupprime un membre de la protection'
+    delete: '&8/&7Protect delete &8- &eSupprime la protection'
+    menu: '&8/&7Protect menu &8[&aPlayer&8] - &eOuvre le menu'
+    help: '&8/&7Protect help &8[&aSite&8] - &eObtenir de l''aide'
+    admin:
+      import: '&8/&7Protect import &8<&aPlugin&8> &8- &eImporte des données d''autres
+        plugins'
+      reload: '&8/&7Protect reload &8<&aConfig&8, &aLanguage&8> - &eRecharge la configuration'
+      admin: '&8/&7Protect admin &8<&aAction&8> - &eEffectue des actions administratives'
+      about: '&8/&7Protect about &8- &eMontre des informations à propos de SuperProtect'
+message:
+  no-permission: '&8[&eChestProtect&8] &cVous n''avez pas la permission de faire ça.
+    &7Il vous faut la permission &b {permission}&7.'
+  world-invalid: '&8[&eChestProtect&8] &cCeci est désactivé dans ce monde. &7Il faut
+    qu''un admin l''ajoute dans la config. Nom du monde:&b {world}'
+  block-invalid: '&8[&eChestProtect&8] &cVous ne pouvez pas protéger ce bloc. &7Il
+    faut qu''un admin l''ajoute dans la config. Nom du bloc:&b {block}'
+  noaccess:
+    protection: '&8[&eChestProtect&8] &cVous n''êtes pas autorisé à interagir avec
+      cette protection.&7Ceci appartient à&b {player}&7.'
+    action: '&8[&eChestProtect&8] &cVous n''êtes pas autorisé à faire cette action
+      à cette protection. &7Le Propriéraire&b {player} &7doit vous en donner l''autorisation.'
+  event:
+    open-owner: '&8[&eChestProtect&8] &7Ce bloc &bvous&7 appartient.'
+    open-trusted: '&8[&eChestProtect&8] &7Ce bloc est protégé par&b {player}&7.'
+    protectable: '&8[&eChestProtect&8] &7Ce bloc peut être protégé. Entrez &8/&eLock
+      &7pour le verrouiller.'
+command:
+  general:
+    money-cost: '&8[&eChestProtect&8] &cVous n''avez pas assez d''argent. &7Il vous
+      faut&b ${cost}&7.'
+    pos-not-allowed: '&8[&eChestProtect&8] &cVous n''êtes pas autorisé à protéger
+      ce bloc ici. &7Allez ailleurs.'
+    player-not-exist: '&8[&eChestProtect&8] &cIl n''y pas de joueurs s''appelant {player}&c.
+      &7SVP vérifiez la typo.'
+    not-protected: '&8[&eChestProtect&8] &cVous ne pouvez pas faire ça. &7Ce bloc
+      n''est pas protégé.'
+  help:
+    help: '&8[&eChestProtect&8] &7Utilisez &8/&aLand help &7pour de l''aide.'
+    cmd-not-exist: '&8[&eChestProtect&8] &cCette sous-commande n''existe pas. &7La
+      commande&b {command} &7n''a pas été trouvée.'
+    page-not-exist: '&8[&eChestProtect&8] &cLa page&e {page} &cn''existe pas. &7Typo?'
+  lock:
+    activated: '#t#!!1!!1!!1!!&7Mode-Verrouillé:;;&aActivé'
+    deactivated: '#t#!!1!!1!!1!!&7Mode-Verrouillé:;;&cDésactivé'
+    already: '&8[&eChestProtect&8] &cVous ne pouvez pas protéger ce bloc. &7Il est déja
+      protégé.'
+    max-protections: '&8[&eChestProtect&8] &cVous ne pouvez pas créer plus de protections.
+      &7Le maximum pour vous est de&b {max}&7. Contactez un admin pour de l''aide.'
+    success: '&8[&eChestProtect&8] &7Bloc protégé avec succés pour&b ${cost}&7.'
+  unlock:
+    activated: '#t#!!1!!1!!1!!&7Mode-Déverrouillé:;;&aActivé'
+    deactivated: '#t#!!1!!1!!1!!&7Mode-Déverrouillé:;;&cDésactivaté'
+    success: '&8[&eChestProtect&8] &7Déverrouillé avec succés.'
+  trust:
+    activated: '#t#!!1!!1!!1!!&7Mode-Confiance:;;&aActivé'
+    deactivated: '#t#!!1!!1!!1!!&7Mode-Confiance:;;&cDésactivaté'
+    already: '&8[&eChestProtect&8] &cVous ne pouvez pas faire ça.&b {player} &7est déja
+      ajouté à la protection.'
+    max-members: '&8[&eChestProtect&8] &cVous ne pouvez pas ajouter plus de membres. &7Le
+      maximum pour vous est de&b {max}&7. Contactez un admin pour de l''aide.'
+    success: '&8[&eChestProtect&8] &b {player} &7 ajouté avec succés à cette protection.'
+  untrust:
+    activated: '#t#!!1!!1!!1!!&7Mode-Non-Confiance:;;&aActivé'
+    deactivated: '#t#!!1!!1!!1!!&7Mode-Non-Confiance:;;&cDésactivaté'
+    already: '&8[&eChestProtect&8] &cVous ne pouvez pas faire ça. &b {player} &7est déja
+      sorti de la confiance de cette protection.'
+    success: '&8[&eChestProtect&8] &b {player} &7enlevé avec succés de la confiance de
+      cette protection.'

@@ -1,0 +1,125 @@
+# Here you can edit all chat messages
+# GUI strings can be found in <language>_gui.yml
+# If you encounter any issues, contact plugin support.
+# Plugin page: https://www.spigotmc.org/resources/.53494
+# Discord: https://discord.gg/jF9NJmw
+
+# ###############################
+# About chat message type system:
+# Does only work for messages in
+# "message" or "command" section.
+# ###############################
+
+# You can use some codes to set the type
+# of a message to title, actionbar or chat.
+# How does it work:
+
+# For example we want to print the prefix as a title:
+# Set general.noPermission to: '#t#&cYou''re not allowed to do this.' (Set "#t#" in front of it)
+# This would just print it as a title.
+
+# You also can set in, stay and out fade timings in seconds:
+# Set for example general.prefix to: '#t#!!1!!2!!3!!&cYou''re not allowed to do this.'
+# This would display this message as a title with
+# a fade in delay of 1 seconds, a stay time with 2 seconds
+# and a fade out delay of 3 seconds.
+
+# You also can display it as a actionbar message:
+# Just add "#a#" in front of it.
+# If you want to display it in chat, just don't set any
+# of these in front of it or use "#c#".
+
+# Also you can combine these modes:
+# Set for example general.noPermission to: '#c#a#t#!!1!!2!!3!!&cYou''re not allowed to do this.'
+# This would print this message as chat, actionbar and an title with an in delay (1 seconds),
+# stay time (2 seconds) and fade out delay (3 seconds)
+# For any questions or issues, please contact me on discord or via pm.
+
+
+general:
+  prefix: '&8[&eChestProtect&8] '
+  role:
+    owner: '&4Owner'
+    admin: '&cAdmin'
+    member: '&eMember'
+    visitor: '&7Visitor'
+    all: '&dAll'
+
+help:
+  general:
+    help-prefix: '&7Usage: '
+    header: '&7----------<- &6ChestProtect Help &7Page&6 {page} &8/&6 {pages} &7->----------'
+    page: '&7Use &8/&5Protect help {next} &7for the next page.'
+    footer: '&7----------<- &6ChestProtect Help &7Page&6 {page} &8/&6 {pages} &7->----------'
+  command:
+    lock: '&8/&aProtect lock &8- &7Lock object'
+    unlock: '&8/&aProtect unlock &8- &7Unlock object'
+    trust: '&8/&aProtect trust &8<&aplayer&8> - &7Trust player'
+    untrust: '&8/&aProtect untrust &8<&aplayer&8> - &7Untrust player'
+    setRole: '&8/&aProtect setrole &8<&aplayer&8> <&arole&8> - &7Set role'
+    menu: '&8/&aProtect menu &8[&aplayer&8] - &7Open menu'
+    exit: '&8/&aProtect exit &8- &7Exit mode'
+    help: '&8/&aProtect help &8[&asite&8] - &7Get help'
+    admin:
+      import: '&8/&aProtect import &8<&aplugin&8> &8- &7Import data from other plugins'
+      reload: '&8/&aProtect reload &8- &7Reload configurations'
+      admin: '&8/&aProtect admin &8<&aaction&8> - &7Run admin actions'
+      about: '&8/&aProtect about &8- &7Show information'
+
+
+message:
+  no-permission: '&cYou don''t have permission to do this. &7You need permission&b {permission}&7.'
+  world-invalid: '&cThis is deactivated in this world. &7A administrator needs to add it in config. Name of world:&b {world}'
+  object-invalid: '&cYou can''t protect this object. &7A administrator needs to add it to the config. Name:&b {object}'
+  noaccess:
+    protection: '&cYou''re not allowed to do this at this protection. &7It belongs to&b {player}&7.'
+    action: '&cYou''re not allowed to run this action at this protection. &7Owner&b {player} &7needs to give you permission to do so.'
+    hopper: '&cYour hopper has been removed from a protection. &bYour role is not allowed to use hoppers at this protection. &7World: {world} X: {x} Y: {y} Z: {z}'
+  event:
+    open-owner: '&7This block belongs to &byou&7.'
+    open-trusted: '&7This block is protected by&b {player}&7.'
+    protectable: '&7You placed a protectable block. Execute &8/&eLock &7to lock it.'
+  chat-action:
+    cancelled: '#t#&c&lCancelled{newline}&c&lChat Action'
+    player: '&7Please enter the name of the target player.'
+
+command:
+  general:
+    money-cost: '&cYou don''t have enough to pay the cost. &7You need&b ${cost}&7.'
+    pos-not-allowed: '&cYou''re not allowed to do this at this position. &7Go somewhere else.'
+    player-not-exist: '&cThere''s no player with the name&4 {player}&c. &7Typo?'
+    not-protected: '&cYou can''t do that. &7This block isn''t protected.'
+    player-untrusted: '&cYou can''t do this. &7Player&b {player} &7isn''t trusted at this protection.'
+  help:
+    help: '&7Use &8/&aProtect help &7for help.'
+    cmd-not-exist: '&cThis subcommand doesn''t exist. &7Command&b {command} &7wasn''t found.'
+    page-not-exist: '&cThe page&e {page} &cdoesn''t exist. &7Typo?'
+  lock:
+    activated: '#t#&2Lock-Mode{newline}&a&lActivated'
+    deactivated: '#t#&2Lock-Mode{newline}&4&lDeactivated'
+    already: '&cYou can''t protect this block. &7It''s already protected.'
+    max-protections: '&cYou can''t create any more protections. &7The maximum for you is&b {max}&7. Permission: chestprotect.protections.NUMBER'
+    npc: '&cYou can''t lock this entity because it is an NPC. &7An administrator can change this in config.'
+    success: '&7You successful protected this object for&b ${cost}&7.'
+  unlock:
+    activated: '#t#&cUnlock-Mode{newline}&a&lActivated'
+    deactivated: '#t#&cUnlock-Mode{newline}&4&lDeactivated'
+    success: '&7Successful unlocked this object.'
+  trust:
+    activated: '#t#&2Trust-Mode{newline}&a&lActivated &8&l->&7 {player}'
+    deactivated: '#t#&2Trust-Mode{newline}&4&lDeactivated'
+    already: '&cYou can''t do this. &7Player&b {player} &7is already trusted at this protection.'
+    max-members: '&cYou can''t add any more members. &7The maximum for you is&b {max}&7. Permission: chestprotect.members.NUMBER'
+    success: '&7You successful trusted player&b {player} &7to this protection.'
+  untrust:
+    activated: '#t#&cUntrust-Mode{newline}&a&lActivated &8&l->&7 {player}'
+    deactivated: '#t#&cUntrust-Mode{newline}&4&lDeactivated'
+    success: '&7You successful untrusted player&b {player} &7from this protection.'
+  setRole:
+    activated: '#t#&7SetRole-Mode:{newline}&aActivated'
+    deactivated: '#t#&7SetRole-Mode:{newline}&cDeactivated'
+    role-weight: '&cYou can''t set this role since your own role isn''t higher than the target role. &7Ask someone with a higher role for help.'
+    role-weight-target: '&cYou can''t edit the role of this player. &7His role is higher than yours or equal.'
+    role-not-exist: '&cThe role&e {role} &cdoesn''t exist. &7Typo?'
+    success: '&7Successful set role&b {role} &7for player&b {player}&7.'
+  exit: '#t#&7Mode:{newline}&cDeactivated'
