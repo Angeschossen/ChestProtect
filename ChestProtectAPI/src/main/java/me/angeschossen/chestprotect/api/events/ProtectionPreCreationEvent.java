@@ -12,7 +12,7 @@ public class ProtectionPreCreationEvent extends Event implements Cancellable {
     private final Location location;
     private final Player player;
     private boolean cancelled = false;
-///dd
+
     public ProtectionPreCreationEvent(Location location, Player player) {
         this.location = location;
         this.player = player;
