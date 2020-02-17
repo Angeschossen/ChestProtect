@@ -1,118 +1,52 @@
 package me.angeschossen.chestprotect.api.objects;
 
-
 import me.angeschossen.chestprotect.api.enums.ProtectAction;
 import me.angeschossen.chestprotect.api.enums.ProtectRole;
-import org.bukkit.Location;
-import org.bukkit.Material;
+import me.angeschossen.chestprotect.api.enums.Type;
+import org.bukkit.entity.Player;
 
 import java.util.Collection;
+import java.util.UUID;
 
 public interface Protection {
 
-    /**
-     * Check that player can do action
-     * @param playerUUID UUID of player
-     * @param action Action
-     * @return Boolean can action
-     */
-    boolean canAction(String playerUUID, ProtectAction action);
+    boolean canAction(UUID playerUUID, ProtectAction action);
 
-    /**
-     * Get members of an role
-     * @param protectRole Role
-     * @return Collection with members of role
-     */
-    Collection<String> getRoleMembers(ProtectRole protectRole);
+    Collection<UUID> getRoleMembers(ProtectRole protectRole);
 
-    /**
-     * Get chunk the protection is in
-     * @return ProtectionChunk
-     */
-    ProtectionChunk getProtectionChunk();
-
-    /**
-     * Get material of protection
-     * @return Material
-     */
-    Material getType();
-
-    /**
-     * Get UUID of owner
-     * @return UUID
-     */
-    String getOwnerUUID();
-
-    /**
-     * Get x coordinate
-     * @return X coordinate
-     */
     int getX();
 
-    /**
-     * Get y coordinate
-     * @return Y coordinate
-     */
     int getY();
 
-    /**
-     * Get z coordinate
-     * @return Z coordinate
-     */
     int getZ();
 
-    /**
-     * Get location of protection
-     * @return Location
-     */
-    Location getLocation();
+    UUID getOwnerUUID();
 
-    /**
-     * Trust an player
-     * @param playerUUID UUID of player
-     */
-    void trustPlayer(String playerUUID);
+    void trustPlayer(UUID playerUUID);
 
-    /**
-     * Get role of player
-     * @param playerUUID UUID of player
-     * @return Role
-     */
-    ProtectRole getRole(String playerUUID);
+    ProtectRole getRole(UUID playerUUID);
 
-    /**
-     * Untrust player
-     * @param playerUUID UUID of player
-     */
-    void untrustPlayer(String playerUUID);
+    void untrustPlayer(UUID playerUUID);
 
-    /**
-     * Get all trusted players
-     * @return All trusted players
-     */
-    Collection<String> getTrustedPlayers();
+    Collection<UUID> getTrustedPlayers();
 
-    /**
-     * Set an role for player
-     * @param memberUUID UUID of player
-     * @param protectRole Role to set
-     */
-    void setRole(String memberUUID, ProtectRole protectRole);
+    void setRole(UUID memberUUID, ProtectRole protectRole);
 
-    /**
-     * Check is player trusted
-     * @param playerUUID UUID of player
-     * @return Boolean
-     */
-    boolean isTrusted(String playerUUID);
+    boolean isTrusted(UUID playerUUID);
 
-    /**
-     * Load protection
-     */
-    void load();
+    Collection<String> getActiveSettings();
 
-    /**
-     * Unload protection
-     */
+    boolean load(boolean initial);
+
     void unload();
+
+    Type type();
+
+    void delete(boolean save, Player player);
+
+    void save(boolean force);
+
+    boolean getSetting(String iD);
+
+    boolean toggleSetting(String iD);
 }

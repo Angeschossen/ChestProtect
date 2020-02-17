@@ -1,9 +1,9 @@
 package me.angeschossen.chestprotect.api.objects;
 
 
-import java.util.Collection;
-
 public interface ProtectionChunk {
+
+    void delete();
 
     /**
      * Get protectionWorld of chunk
@@ -32,42 +32,9 @@ public interface ProtectionChunk {
      * @param x X block coordinate
      * @param y Y block coordinate
      * @param z Z block coordinate
-     * @return Protection or null, if none found.
+     * @return BlockProtection or null, if none found.
      */
-    Protection getProtection(int x, int y, int z);
-
-    /**
-     * Load an protection to chunk
-     *
-     * @param protection Protection
-     */
-    void loadProtection(Protection protection);
-
-    /**
-     * Unload an protection from chunk
-     *
-     * @param x X block coordinate
-     * @param y Y block coordinate
-     * @param z Z block coordinate
-     */
-    void unloadProtection(int x, int y, int z);
-
-    /**
-     * Get all protection in this chunk
-     *
-     * @return Protections in this chunk
-     */
-    Collection<Protection> getProtections();
-
-    /**
-     * Unload all protection in this chunk
-     */
-    void unload();
-
-    /**
-     * Load all protection in this chunk
-     */
-    void load();
+    BlockProtection getProtection(int x, int y, int z);
 
     /**
      * Check if chunk has any protections in it
@@ -75,9 +42,4 @@ public interface ProtectionChunk {
      * @return Boolean
      */
     boolean isEmpty();
-
-    /**
-     * Save all protection in this chunk
-     */
-    void save();
 }

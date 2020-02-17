@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>groupId</groupId>
+    <groupId>com.github.Angeschossen</groupId>
     <artifactId>ChestProtectAPI</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
+    <version>3.1.1.2</version>
+    <name>ChestProtectAPI</name>
 
     <dependencies>
         <!-- Spigot MAIN 1.15 -->
@@ -17,6 +17,15 @@
             <version>1.15</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.realityforge.org.jetbrains.annotations/org.jetbrains.annotations -->
+        <dependency>
+            <groupId>org.realityforge.org.jetbrains.annotations</groupId>
+            <artifactId>org.jetbrains.annotations</artifactId>
+            <version>1.2.0</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
