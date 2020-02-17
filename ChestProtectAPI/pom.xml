@@ -6,7 +6,7 @@
 
     <groupId>com.github.Angeschossen</groupId>
     <artifactId>ChestProtectAPI</artifactId>
-    <version>3.1.1.3</version>
+    <version>3.1.1.4</version>
     <name>ChestProtectAPI</name>
 
     <repositories>
@@ -25,14 +25,6 @@
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.14.4-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Spigot MAIN 1.15 -->
-        <dependency>
-            <groupId>local_spigot-115</groupId>
-            <artifactId>local_spigot-115</artifactId>
-            <version>1.15</version>
             <scope>provided</scope>
         </dependency>
 
