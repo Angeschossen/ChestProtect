@@ -15,7 +15,7 @@ How to include the API with Maven:
     <dependency>
         <groupId>com.github.Angeschossen</groupId>
         <artifactId>ChestProtectAPI</artifactId>
-        <version>3.1.1.2</version>
+        <version>3.1.1.3</version>
         <scope>provided</scope>
     </dependency>
 </dependencies>
@@ -27,7 +27,7 @@ repositories {
 	maven { url 'https://jitpack.io' }
 }
 dependencies {
-    compileOnly "com.github.Angeschossen:ChestProtectAPI:3.1.1.2"
+    compileOnly "com.github.Angeschossen:ChestProtectAPI:3.1.1.3"
 }
 ```
 
