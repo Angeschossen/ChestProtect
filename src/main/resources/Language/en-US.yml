@@ -101,6 +101,9 @@ command:
     max-protections: '&cYou can''t create any more protections. &7The maximum for you is&b {max}&7. Permission: chestprotect.protections.NUMBER'
     npc: '&cYou can''t lock this entity because it is an NPC. &7An administrator can change this in config.'
     success: '&7You successful protected this object for&b ${cost}&7.'
+    auto:
+      limit: '&cCouldn''t auto protect this block. &7You''ve reached your max protection limit of&3 {max} &7protections. &8Permission: chestprotect.protections.NUMBER'
+      cost: '&cCouldn''t auto protect this block. &7You don''t have anought money to pay the cost. Cost:&c ${cost}'
   unlock:
     activated: '#t#&cUnlock-Mode{newline}&a&lActivated'
     deactivated: '#t#&cUnlock-Mode{newline}&4&lDeactivated'

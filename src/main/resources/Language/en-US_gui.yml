@@ -9,7 +9,7 @@ general:
   others: 'Others'
   unlimited: '&aUnlimited'
   online: '&aOnline'
-  previous: '&8Previous'
+  previous: '&8previous'
 
 skull:
   entity:
