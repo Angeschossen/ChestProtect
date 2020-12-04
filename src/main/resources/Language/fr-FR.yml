@@ -1,41 +1,56 @@
+# Ici, vous pouvez modifier tous les messages de chat
+# Articles et menus GUI peuvent être trouvés dans <language>_gui.yml
+# Si vous rencontrez des problèmes ou avez des questions, contactez le support plugin.
+# Plugin page: https://www.spigotmc.org/resources/authors/315463/
+# Discord: https://discord.gg/B4MAJVk
+# ###############################
+#À propos du système de type de message de chat :
+# Ne fonctionne que pour les messages dans
+# Section « message » ou « commande ».
+# ###############################
+# Vous pouvez utiliser certains codes pour définir le type
+# d’un message au titre, barre d’action ou chat.
+# Comment cela fonctionne-t-il:
+# Par exemple, nous voulons imprimer un message comme un titre:
+# Définir le message à: '#t#Title[newline]Subtitle'(Set « #t# » en face de lui; utiliser [newline] pour définir le sous-titre)
+# Vous envoyez également un message à la barre d’action:
+# Définir le message à: '#a#This is a actionbar message.'
+# (Réglez #a# en face de lui.)
+# Plus d’informations: https://github.com/Angeschossen/General/wiki/Messages
 general:
+  prefix:
+    normal: '&8[&6ChestProtect&8] '
+    help: '&8[&6ChestProtect&8] &7Utilisation : '
+  unlimited: '&aIllimité'
   role:
-    owner: '&4Proprio'
+    owner: '&4Propriétaire'
     admin: '&cAdmin'
     member: '&eMembre'
     visitor: '&5Visiteur'
+    all: '&dTout'
 help:
-  general:
-    prefix: '&8[&eChestProtect&8] &7Usage: '
-    header: '&7------------<- &5Protect Help &7Page&6 {page} &8/&e {pages} &7->------------'
-    page: '&7Use &8/&dProtect help {next} &7for the next page.'
-    footer: '&7------------<- &5Protect Help &7Page&6 {page} &8/&e {pages} &7->------------'
   command:
     lock: '&8/&7Protect lock &8- &eVerrouille un objet'
     unlock: '&8/&7Protect unlock &8- &eDéverrouille un objet'
     trust: '&8/&7Protect trust &8<&aPlayer&8> - &eAjoute un membre à la protection'
     untrust: '&8/&7Protect untrust &8<&aPlayer&8> - &eSupprime un membre de la protection'
-    delete: '&8/&7Protect delete &8- &eSupprime la protection'
     menu: '&8/&7Protect menu &8[&aPlayer&8] - &eOuvre le menu'
-    help: '&8/&7Protect help &8[&aSite&8] - &eObtenir de l''aide'
+    exit: '&8/&3Protect exit &8- &7Sort du mode protection'
+    help: '&8/&7Protect help &8[&aSite&8] - &eAffiche la page d''aide'
+    view: '&8/&3Protect view - &7Affiche les protection proche'
     admin:
-      import: '&8/&7Protect import &8<&aPlugin&8> &8- &eImporte des données d''autres
-        plugins'
-      reload: '&8/&7Protect reload &8<&aConfig&8, &aLanguage&8> - &eRecharge la configuration'
+      reload: '&8/&7Protect reload &8<&aConfiguration&8, &aLangage&8> - &eRecharge la configuration'
       admin: '&8/&7Protect admin &8<&aAction&8> - &eEffectue des actions administratives'
-      about: '&8/&7Protect about &8- &eMontre des informations à propos de SuperProtect'
+      about: '&8/&7Protect about &8- &eMontre des informations à propos de ChestProtect'
 message:
-  no-permission: '&8[&eChestProtect&8] &cVous n''avez pas la permission de faire ça.
-    &7Il vous faut la permission &b {permission}&7.'
-  world-invalid: '&8[&eChestProtect&8] &cCeci est désactivé dans ce monde. &7Il faut
-    qu''un admin l''ajoute dans la config. Nom du monde:&b {world}'
-  block-invalid: '&8[&eChestProtect&8] &cVous ne pouvez pas protéger ce bloc. &7Il
-    faut qu''un admin l''ajoute dans la config. Nom du bloc:&b {block}'
+  world-invalid: '&cCeci est désactivé dans ce monde. &7Un administrateur doit l''ajouter dans la configuration. Monde : &b{world}'
+  object-invalid: '&cVous ne pouvez pas protéger cette objet. &7Un administrateur doit l''ajouter à la configuration. Nom : &3{object}'
   noaccess:
-    protection: '&8[&eChestProtect&8] &cVous n''êtes pas autorisé à interagir avec
-      cette protection.&7Ceci appartient à&b {player}&7.'
-    action: '&8[&eChestProtect&8] &cVous n''êtes pas autorisé à faire cette action
-      à cette protection. &7Le Propriéraire&b {player} &7doit vous en donner l''autorisation.'
+    protection: '&cVous n''êtes pas autorisé à interagir avec cette protection .&7Elle appartient à &b{player}&7.'
+    untrusted: '&cVous n''êtes pas membre de confiance sur cette portection. &7Elle appartient à &3{player}&7.'
+    management: '&cVous n''êtes pas autorisé a faire cela sur cette protection. &7Elle appartient à &3{player}&7.'
+    action: 'cVous n''êtes pas autorisé à faire cette action sur cette protection. &7Le Propriéraire&b {player} &7doit vous en donner l''autorisation.'
+    hopper: '&cVotre hopper a été retiré de cette protection. &7Votre rôle de vous permet pas d''utiliser de hoppers sur cette protection. &7Monde : {world} X: {x} Y: {y} Z: {z}'
   event:
     open-owner: '&8[&eChestProtect&8] &7Ce bloc &bvous&7 appartient.'
     open-trusted: '&8[&eChestProtect&8] &7Ce bloc est protégé par&b {player}&7.'
