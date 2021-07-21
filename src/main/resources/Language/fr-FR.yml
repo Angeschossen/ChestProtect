@@ -39,56 +39,57 @@ general:
     all: '&dTout'
 help:
   command:
-    lock: '&8/&7Protect lock &8- &eVerrouille un objet'
-    unlock: '&8/&7Protect unlock &8- &eDéverrouille un objet'
-    trust: '&8/&7Protect trust &8<&aPlayer&8> - &eAjoute un membre à la protection'
-    untrust: '&8/&7Protect untrust &8<&aPlayer&8> - &eSupprime un membre de la protection'
-    menu: '&8/&7Protect menu &8[&aPlayer&8] - &eOuvre le menu'
-    exit: '&8/&3Protect exit &8- &7Sort du mode protection'
-    help: '&8/&7Protect help &8[&aSite&8] - &eAffiche la page d''aide'
-    view: '&8/&3Protect view - &7Affiche les protection proche'
+    lock: '&8/&7Protect lock &8- &eVerrouiller un objet'
+    unlock: '&8/&7Protect unlock &8- &eDéverrouiller un objet'
+    trust: '&8/&7Protect trust &8<&aPlayer&8> - &eAjouter un membre à la protection'
+    untrust: '&8/&7Protect untrust &8<&aPlayer&8> - &eSupprimer un membre de la protection'
+    menu: '&8/&7Protect menu &8[&aPlayer&8] - &eOuvrir le menu'
+    exit: '&8/&3Protect exit &8- &7Sortir du mode protection'
+    help: '&8/&7Protect help &8[&aSite&8] - &eAfficher la page d''aide'
+    view: '&8/&3Protect view - &7Afficher les protection proche'
     admin:
-      reload: '&8/&7Protect reload &8<&aConfiguration&8, &aLangage&8> - &eRecharge
+      reload: '&8/&7Protect reload &8<&aConfiguration&8, &aLangage&8> - &eRecharger
         la configuration'
-      admin: '&8/&7Protect admin &8<&aAction&8> - &eEffectue des actions administratives'
-      about: '&8/&7Protect about &8- &eMontre des informations à propos de ChestProtect'
+      admin: '&8/&7Protect admin &8<&aAction&8> - &eEffectuer des actions administratives'
+      about: '&8/&7Protect about &8- &eMontrer des informations à propos de ChestProtect'
 message:
   world-invalid: '&cCeci est désactivé dans ce monde. &7Un administrateur doit l''ajouter
     dans la configuration. Monde : &b{world}'
   object-invalid: '&cVous ne pouvez pas protéger cette objet. &7Un administrateur
     doit l''ajouter à la configuration. Nom : &3{object}'
   noaccess:
-    protection: '&cVous n''êtes pas autorisé à interagir avec cette protection .&7Elle
+    protection: '&cVous n''êtes pas autorisé à intéragir avec cette protection .&7Elle
       appartient à &b{player}&7.'
-    untrusted: '&cVous n''êtes pas membre de confiance sur cette portection. &7Elle
+    untrusted: '&cVous n''êtes pas un joueur de confiance sur cette portection. &7Elle
       appartient à &3{player}&7.'
-    management: '&cVous n''êtes pas autorisé a faire cela sur cette protection. &7Elle
+    management: '&cVous n''êtes pas autorisé à faire cela sur cette protection. &7Elle
       appartient à &3{player}&7.'
     action: cVous n'êtes pas autorisé à faire cette action sur cette protection. &7Le
       Propriéraire&b {player} &7doit vous en donner l'autorisation.
-    hopper: '&cVotre hopper a été retiré de cette protection. &7Votre rôle de vous
+    hopper: '&cVotre hopper a été retiré de cette protection. &7Votre rôle ne vous
       permet pas d''utiliser de hoppers sur cette protection. &7Monde : {world} X:
       {x} Y: {y} Z: {z}'
   event:
-    open-owner: '&7Ce bloc &bvous&7 appartient.'
-    open-trusted: '&7Ce bloc est protégé par&b {player}&7.'
-    protectable: '&7Ce bloc peut être protégé. Entrez &8/&eLock &7pour le verrouiller.'
-  chat-action:
-    name: '&7S''il vous plaît entrer le nom dans le chat.'
-    cancelled: '#t#&c&lAnnulation {newline} &c&ld''action dans le chat'
-    player: '&7S''il vous plaît entrer le nom du joueur ciblé.'
+    open-owner: '&7Cet objet &bvous&7 appartient.'
+    open-trusted: '&7Cet objet est protégé par&b {player}&7.'
+    protectable: '&7Cet objet peut être protégé. Entrez &8/&eLock &7pour le verrouiller.'
+  chat-input:
+    cancelled: '#t#&c&lAnnulation{newline}&c&laction de chat'
+    type:
+      name: '&7S''il vous plaît, entrez un nom dans le chat.'
+      player: '&7S''il vous plaît, entrez le nom du joueur cible.'
   teleportation:
-    already: '&cVous ne pouvez pas commencé une seconde téléportation. Une téléportation
-      est déjà en cours. &7S''il vous plaît patienter .'
+    already: '&cVous ne pouvez pas commencer une seconde téléportation. Une téléportation
+      est déjà en cours. &7S''il vous plaît patienter pendant qu''elle s''éffectue.'
     started: '&7Le processus de téléportation a commencé. Téléportation dans &5{sec}
       &7secondes. S''il vous plaît ne bouger pas .'
     cancelled: '&cVotre téléportation a été annulée. &7S''il vous plaît ne bouger
       pas pendant que vous patientez pendant&5{sec} &7secondes pour la téléportation.'
     plugin: '&cLa téléortation a été annulée par un plugin tier. &7S''il vous plaît
       contrôler vos autres plugin. &7Ce n''est pas une erreur de ChestProtect.'
-    unsafe: '&cLa téléportation a été annulée, car la destination n''est pas sécurisé.'
+    unsafe: '&cLa téléportation a été annulée, car la destination n''est pas sécurisée.'
     corrected: '&7La destination de téléportation n''est pas sécurisée. &7Votre destination
-      final a été placé correctement dans une zone sécurisé.'
+      final a été placée correctement dans une zone sécurisée.'
   role:
     not-exist: '&cLe rôle&e {role} &cn''existe pas dans cette aire.'
     delete:
@@ -97,28 +98,26 @@ message:
       entry: '&cVous ne pouvez pas supprimer le rôle de "Membre" de cette protection.
         &7Ce rôle est obligatoire pour les nouveaux joueurs.'
       visitor: '&cVous ne pouvez pas supprimer le rôle de "Visiteur" de cette protection.
-        &7Ce rôle est obligatoire pour les joueur de non-confiance.'
+        &7Ce rôle est obligatoire pour les joueurs de non-confiance.'
 command:
   general:
     no-permission: '&cVous n''avez pas la permission de faire cela. &8La permission
       {permission} est requise.'
     money-cost: '&cVous n''avez pas assez d''argent. &7Il vous faut&b ${cost}&7.'
-    pos-not-allowed: '&cVous n''êtes pas autorisé à protéger ce bloc ici. &7Allez
-      ailleurs.'
     player-not-exist: '&cIl n''y pas de joueurs s''appelant {player}&c. &7S''il vous
-      plaît la son orthographe.'
-    not-protected: '&&cVous ne pouvez pas faire cela. &7Ce bloc n''est pas protégé.'
+      plaît, vérifiez son orthographe.'
+    not-protected: '&&cVous ne pouvez pas faire cela. &7Cet objet n''est pas protégé.'
     player-untrusted: '&cVous ne pouvez pas faire cela. &7Le joueur &3{player} &7ne
-      fait pas partie des membre de confiance sur cette protection.'
+      fait pas partie des joueurs de confiance sur cette protection.'
   help:
     header: '[NoPrefix][T]&7----------&6<<<<&7-[H]&7Cliquer ici pour aller à la page
       précédente.[/H][C]Aide ChestProtect {previous}[/C][/T] &6Aide ChestProtect &7Page
       &3{page} &8/ &3{pages} [T]&7-&6>>>>&7----------[H]&7Cliquer ici pour aller à
       la page suivante.[/H][C]Aide ChestProtect {next}[/C][/T]'
-    footer: '[NoPrefix] &7Cliquer sur les flèche pour changer de page. [T]&7----------&6<<<<&7-[H]&7Cliquer
-      ici pour aller à la page précédente.[/H][C]Aide ChestProtect {previous}[/C][/T]
-      &6Aide ChestProtect &7Page &3{page} &8/ &3{pages} [T]&7-&6>>>>&7----------[H]&7Cliquer
-      ici pour aller à la page suivante.[/H][C]Aide ChestProtect {next}[/C][/T]'
+    footer: "[NoPrefix]\n&7Cliquer sur les flèche pour changer de page. \n[T]&7----------&6<<<<&7-[H]&7Cliquer\
+      \ ici pour aller à la page précédente.[/H][C]Aide ChestProtect {previous}[/C][/T]&6Aide\
+      \ ChestProtect &7Page &3{page} &8/ &3{pages} [T]&7-&6>>>>&7----------[H]&7Cliquer\
+      \ ici pour aller à la page suivante.[/H][C]Aide ChestProtect {next}[/C][/T]'\n"
     help: '&7Utilisez &8/&aChestProtect help &7pour de l''aide.'
     cmd-not-exist: '&cCette sous-commande n''existe pas. &7La commande&b {command}
       &7n''a pas été trouvée.'
@@ -126,41 +125,51 @@ command:
   lock:
     activated: '#t#&7Mode-Verrouillé :{newline}&aActivé'
     deactivated: '#t#&7Mode-Verrouillé :{newline}&cDésactivé'
-    already: '&&cVous ne pouvez pas protéger ce bloc. &7Il est déja protégé.'
-    max-protections: '&cVous ne pouvez pas créer plus de protections. &7Le maximum
-      pour vous est de &b{max}&7. Contactez un administrateur pour de l''aide.'
-    npc: '&cVous ne pouvez pas protéger cette antité car il s''agit d''un  NPC. &7Un
-      administrateur peut le changer dans la configuration.'
-    success: '&7Bloc protégé avec succés pour &b{cost}$&7.'
+    position: '&cVous n''êtes pas autorisé à créer de protection à cette position.
+      &7Le propriétaire du land doit vous donner le bon rôle de permission pour créer
+      des protections ici.'
+    already: '&&cVous ne pouvez pas protéger ce objet. &7Il est déja protégé.'
+    success: '&7Objet protégé avec succés pour &b{cost} $&7.'
+    max:
+      general: |
+        &cVous ne pouvez pas créer plus de protections. &7Votre maximum de protection disponible est de &3{max}&7.
+        &8Permission : chestprotect.protections.NUMBER
+      type: '&cVous ne pouvez pas créer plus de protections de ce type. &7Votre maximum
+        de protection diponible pour ce type d''objet est de : &3{max}&7.'
     auto:
-      limit: '&cVous ne pouvez pas protéger ce bloc automatiquement. &7Vous êtes arriver
-        à votre limitation de protection &3{max} &7protections. &8Permission : chestprotect.protections.NUMBER'
-      cost: '&cVous ne pouvez pas protéger ce bloc automatiquement. &7Vous n''avez
-        pas assez d''argent pour cela. Coût : &c{cost}$'
-      only-land: '[T]&c&cVous ne pouvez pas protéger ce bloc automatiquement. &7Le
-        protection ne peuvent être poser que dans votre land.[/T][T]&7Claim land :
-        &8/&3Lands claim &8[CLICK][H]&7Cliquer ici pour claim a votre position actuelle.[/H][C]lands
-        claim[/C][/T]'
+      cost: '&cVous ne pouvez pas protéger ce objet automatiquement. &7Vous n''avez
+        pas assez d''argent pour cela. Coût : &c{cost} $'
+      max:
+        general: |
+          [T]&cVous ne pouvez pas protéger ce objet automatiquement. &7Vous avez atteint la limite maximum de protection disponible qui est de : &3{max}.[/T]
+          [T]&8Permission : chestprotect.protections.NUMBER[/T]
+        type: '&cVous ne pouvez pas protéger cet objet automatiquement. &7Vous avez
+          atteint la limite maximum de protection de ce type disponible qui est de
+          : &3{max}.'
+      only-land: |
+        [T]&cVous ne pouvez pas protéger ce objet automatiquement. &7Les protections ne peuvent être poser que dans votre land.[/T]
+        [T]&7Claim land : &8/&3Lands claim &8[CLICK][H]&7Cliquer ici pour claim a votre position actuelle.[/H][C]lands claim[/C][/T]
   unlock:
     activated: '#t#&7Mode-Déverrouillé :{newline}&aActivé'
-    deactivated: '#t#&7Mode-Déverrouillé :{newline}&cDésactivaté'
+    deactivated: '#t#&7Mode-Déverrouillé :{newline}&cDésactivé'
     success: '&7Déverrouillé avec succés.'
   trust:
     activated: '#t#&7Mode-Confiance :{newline}&aActivé'
-    deactivated: '#t#&7Mode-Confiance :{newline}&cDésactivaté'
+    deactivated: '#t#&7Mode-Confiance :{newline}&cDésactivé'
     already: '&cVous ne pouvez pas faire cela.&b {player} &7est déja ajouté à la protection.'
     max-members: '&cVous ne pouvez pas ajouter plus de membres. &7Le maximum pour
       vous est de &b{max}&7. Contactez un administrateur pour de l''aide.'
     success: '&b{player} &7 ajouté avec succés à cette protection.'
   untrust:
+    already: '&cPlayer&4 {player} &cisn''t trusted at this position. &7Typo?'
     activated: '#t#&7Mode-Non-Confiance:{newline}&aActivé'
-    deactivated: '#t#&7Mode-Non-Confiance:{newline}&cDésactivaté'
-    success: '&b{player} &7rtiré avec succés des membres de confiance de cette protection.'
+    deactivated: '#t#&7Mode-Non-Confiance:{newline}&cDésactivé'
+    success: '&b{player} &7retiré avec succés des joueurs de confiance de cette protection.'
   setRole:
     activated: '#t#&7Rôle-Mode :{newline}&7Cliquer pour définir le rôle {role}&7.'
-    deactivated: '#t#&7Rôle-Mode :{newline}&cDésactivatée'
+    deactivated: '#t#&7Rôle-Mode :{newline}&cDésactivé'
     role-weight: '&cVous ne pouvez pas définir ce rôle car celui-ci est supérieur
-      au votre. &7Demander de l''aide un membre de confiance ayant un Rôle supérieur.'
+      au votre. &7Demander de l''aide à un joueur de confiance ayant un Rôle supérieur.'
     role-weight-target: '&cVous ne pouvez pas éditer le rôle de ce joueur. &7Son rôle
       est supérieur ou équivalent au votre.'
     role-not-exist: '&cLe rôle &e{role} &cn''éxiste pas.'
