@@ -24,7 +24,7 @@
 # 
 # More information: https://github.com/Angeschossen/General/wiki/Messages
 
-# MAJ : 2021/07/22
+# MAJ : 2021/08/04
 # Author : Nogapra
 # Discord : Nogapra#2800
 # Serveur Minecraft® : play.jaime-la-survie.fr
@@ -77,10 +77,10 @@ message:
     open-trusted: '&7Cet objet est protégé par&b {player}&7.'
     protectable: '&7Cet objet peut être protégé. Entrez &8/&eLock &7pour le verrouiller.'
   chat-input:
-    cancelled: '#t#&c&lAnnulation{newline}&c&laction de chat'
-    type:
-      name: '&7S''il vous plaît, entrez un nom dans le chat.'
-      player: '&7S''il vous plaît, entrez le nom du joueur cible.'
+    player: '#t#&6Entrer le nom [newline]&7du joueur dans le chat[newline]&7Entrer
+      "cancel" pour annuler.'
+    name: '#t#&6Entrer le nom[newline]&7dans le chat[newline]&7Entrer "cancel" pour
+      annuler.'
   teleportation:
     already: '&cVous ne pouvez pas commencer une seconde téléportation. Une téléportation
       est déjà en cours. &7S''il vous plaît patienter pendant qu''elle s''éffectue.'
