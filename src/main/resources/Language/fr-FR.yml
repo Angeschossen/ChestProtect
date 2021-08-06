@@ -24,10 +24,7 @@
 # 
 # More information: https://github.com/Angeschossen/General/wiki/Messages
 
-# MAJ : 2021/08/04
-# Author : Nogapra
-# Discord : Nogapra#2800
-# Serveur Minecraft® : play.jaime-la-survie.fr
+
 
 general:
   prefix:
@@ -114,13 +111,13 @@ command:
       fait pas partie des joueurs de confiance sur cette protection.'
   help:
     header: '[NoPrefix][T]&7----------&6<<<<&7-[H]&7Cliquer ici pour aller à la page
-      précédente.[/H][C]Aide ChestProtect {previous}[/C][/T] &6Aide ChestProtect &7Page
+      précédente.[/H][C]chestprotect help {previous}[/C][/T] &6Aide ChestProtect &7Page
       &3{page} &8/ &3{pages} [T]&7-&6>>>>&7----------[H]&7Cliquer ici pour aller à
-      la page suivante.[/H][C]Aide ChestProtect {next}[/C][/T]'
+      la page suivante.[/H][C]chestprotect help {next}[/C][/T]'
     footer: "[NoPrefix]\n&7Cliquer sur les flèche pour changer de page. \n[T]&7----------&6<<<<&7-[H]&7Cliquer\
-      \ ici pour aller à la page précédente.[/H][C]Aide ChestProtect {previous}[/C][/T]&6Aide\
+      \ ici pour aller à la page précédente.[/H][C]chestprotect help {previous}[/C][/T]&6Aide\
       \ ChestProtect &7Page &3{page} &8/ &3{pages} [T]&7-&6>>>>&7----------[H]&7Cliquer\
-      \ ici pour aller à la page suivante.[/H][C]Aide ChestProtect {next}[/C][/T]'\n"
+      \ ici pour aller à la page suivante.[/H][C]chestprotect help {next}[/C][/T]'\n"
     help: '&7Utilisez &8/&aChestProtect help &7pour de l''aide.'
     cmd-not-exist: '&cCette sous-commande n''existe pas. &7La commande&b {command}
       &7n''a pas été trouvée.'
@@ -164,7 +161,7 @@ command:
       vous est de &b{max}&7. Contactez un administrateur pour de l''aide.'
     success: '&b{player} &7 ajouté avec succés à cette protection.'
   untrust:
-    already: '&cPlayer&4 {player} &cisn''t trusted at this position. &7Typo?'
+    already: '&cPlayer&4 {player} &cisn''t trusted at this position. &7Typo ?'
     activated: '#t#&7Mode-Non-Confiance:{newline}&aActivé'
     deactivated: '#t#&7Mode-Non-Confiance:{newline}&cDésactivé'
     success: '&b{player} &7retiré avec succés des joueurs de confiance de cette protection.'
