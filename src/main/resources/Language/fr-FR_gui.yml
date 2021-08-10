@@ -70,10 +70,12 @@
 # some questions, contact me via PM or Discord.
 # Discord: https://discord.gg/B4MAJVk
 
-# MAJ : 2021/07/22
+# MAJ : 2021/08/04
+# Version plugin : 3.10.7
 # Author : Nogapra
 # Discord : Nogapra#2800
 # Serveur Minecraft® : play.jaime-la-survie.fr
+
 
 general:
   wYes: '&aOui'
@@ -95,7 +97,8 @@ general:
     flags:
       chestprotect_lock:
         name: Objets vérouillés
-        description: Autoriser les joueurs de ce rôle à vérouiller les objet dans cette area ?
+        description: Autoriser les joueurs de ce rôle à vérouiller les objet dans
+          cette area ?
 skull:
   entity:
     cow: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWQ2YzZlZGE5NDJmN2Y1ZjcxYzMxNjFjNzMwNmY0YWVkMzA3ZDgyODk1ZjlkMmIwN2FiNDUyNTcxOGVkYzUifX19
@@ -536,7 +539,7 @@ gui:
         name: '&8> &cSupprimer'
         lore:
         - '&7Déverrouiller cette protection.'
-        material: ROSE_RED
+        material: RED_WOOL
         slot: 17
     a:
       failure_unlock:
