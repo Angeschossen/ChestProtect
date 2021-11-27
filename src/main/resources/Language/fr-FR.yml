@@ -24,8 +24,8 @@
 # 
 # More information: https://github.com/Angeschossen/General/wiki/Messages
 
-# MAJ : 2021/08/04
-# Version plugin : 3.10.7
+# MAJ : 2021/10/30
+# Version plugin : 4.8.3
 # Author : Nogapra
 # Discord : Nogapra#2800
 # Serveur Minecraft® : play.jaime-la-survie.fr
@@ -103,6 +103,10 @@ message:
         &7Ce rôle est obligatoire pour les nouveaux joueurs.'
       visitor: '&cVous ne pouvez pas supprimer le rôle de "Visiteur" de cette protection.
         &7Ce rôle est obligatoire pour les joueurs de non-confiance.'
+  group:
+    create:
+      exists: Vous avez déjà un groupe avec le nom &4{group}&c. &7Veuillez choisir
+        un autre nom.
 command:
   general:
     no-permission: '&cVous n''avez pas la permission de faire cela. &8La permission
@@ -138,8 +142,10 @@ command:
       general: |
         &cVous ne pouvez pas créer plus de protections. &7Votre maximum de protection disponible est de &3{max}&7.
         &8Permission : chestprotect.protections.NUMBER
-      type: '&cVous ne pouvez pas créer plus de protections de ce type. &7Votre maximum
-        de protection diponible pour ce type d''objet est de : &3{max}&7.'
+      world: '&cVous ne pouvez plus créer de protections dans le monde &4{world}&c.
+        &7Votre montant maximum pour ce monde est de &3{max} &7protections.'
+      entities: '&cVous ne pouvez plus verrouiller d’entités. &7Votre nombre maximal
+        d’entités verrouillées est de &3{max} &7entités.'
     auto:
       cost: '&cVous ne pouvez pas protéger ce objet automatiquement. &7Vous n''avez
         pas assez d''argent pour cela. Coût : &c{cost} $'
@@ -147,9 +153,10 @@ command:
         general: |
           [T]&cVous ne pouvez pas protéger ce objet automatiquement. &7Vous avez atteint la limite maximum de protection disponible qui est de : &3{max}.[/T]
           [T]&8Permission : chestprotect.protections.NUMBER[/T]
-        type: '&cVous ne pouvez pas protéger cet objet automatiquement. &7Vous avez
-          atteint la limite maximum de protection de ce type disponible qui est de
-          : &3{max}.'
+        world: '&cImpossible de protéger automatiquement cet objet dans ce monde.
+          &7Votre montant maximum pour ce monde est de &3{max} &7protections.'
+        entities: '&cVous ne pouvez plus verrouiller d’entités. &7Votre nombre maximal
+          d’entités verrouillées est de &3{max} &7entités.'
       only-land: |
         [T]&cVous ne pouvez pas protéger ce objet automatiquement. &7Les protections ne peuvent être poser que dans votre land.[/T]
         [T]&7Claim land : &8/&3Lands claim &8[CLICK][H]&7Cliquer ici pour claim a votre position actuelle.[/H][C]lands claim[/C][/T]
@@ -169,6 +176,10 @@ command:
     activated: '#t#&7Mode-Non-Confiance:{newline}&aActivé'
     deactivated: '#t#&7Mode-Non-Confiance:{newline}&cDésactivé'
     success: '&b{player} &7retiré avec succés des joueurs de confiance de cette protection.'
+    group: '&cLe joueur &4{player} &cest approuvé via le groupe &4{group} &cet doit
+      être non approuvé dans le menu de ce groupe.'
+    priority: '&cVous ne pouvez pas retirer la confiance au joueur &4{player} &cdu
+      rôle &4{role}&c. &7Leur rôle a une priorité supérieure ou égale au vôtre.'
   setRole:
     activated: '#t#&7Rôle-Mode :{newline}&7Cliquer pour définir le rôle {role}&7.'
     deactivated: '#t#&7Rôle-Mode :{newline}&cDésactivé'
