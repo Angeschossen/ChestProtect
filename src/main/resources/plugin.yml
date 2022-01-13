@@ -4,11 +4,11 @@ version: ${project.version}
 author: Angeschossen
 api-version: 1.13
 
-softdepend: [Lands, GriefPrevention]
+softdepend: [Lands, UpgradeableHoppers, BetterFarming, UpradeableSpawners, PlaceholderAPI, Vault, WorldGuard, BentoBox, PlotSquared, SuperiorSkyblock2]
 
 commands:
   chestprotect:
-    aliases: [pr, protect, cp]
+    aliases: [cp, protect, protection]
     description: Protect objectives
   lock:
     aliases: [lo]
@@ -22,20 +22,29 @@ commands:
   untrust:
     aliases: [ut]
     description: Untrust player from objective
-  setrole:
-    aliases: [sr]
-    description: Untrust player from objective
 
 permissions:
   chestprotect.*:
     description: Gives access to all ChestProtect actions
     default: op
     children:
-      chestprotect.protections.NUMBER:
-        description: Set maximum protections amount
+      chestprotect.blocks.<number>:
+        description: Set maximum block protections amount
         default: op
-      chestprotect.members.NUMBER:
+      chestprotect.entities.<number>:
+        description: Set maximum entity protections amount
+        default: op
+      chestprotect.members.<number>:
         description: Set maximum protection member amount
+        default: op
+      chestprotect.groups.<number>:
+        description: Set maximum groups amount
+        default: op
+      chestprotect.free.blocks.<number>:
+        description: <number> block protections are free (don't cost anything)
+        default: op
+      chestprotect.free.entities.<number>:
+        description: <number> entity protections are free (don't cost anything)
         default: op
       chestprotect.command.*:
         description: Get access to all commands
@@ -62,18 +71,18 @@ permissions:
           chestprotect.command.setrole:
             description: Enter /SetRole mode
             default: op
+          chestprotect.command.view:
+            description: View nearby protections
+            default: op
       chestprotect.bypass.*:
         description: Bypass all protections
         default: op
         children:
-          chestprotect.bypass.edit:
-            description: Edit other players protections
-            default: op
           chestprotect.bypass.open:
             description: Open other players protections
             default: op
-          chestprotect.bypass.delete:
-            description: Delete other players protections
+          chestprotect.bypass.unlock:
+            description: Unlock other players protections
             default: op
       chestprotect.setting.*:
         description: Access to all protection and player settings
@@ -98,25 +107,27 @@ permissions:
               chestprotect.setting.player.setrole_persistent:
                 description: Access to toggle setrole persistent setting
                 default: op
-          chestprotect.setting.protection.*:
-            description: Access to all protection settings
-            default: op
-            children:
-              chestprotect.setting.protection.player_trust:
+              chestprotect.setting.player_trust:
                 description: Access to toggle role player trust setting
                 default: op
-              chestprotect.setting.protection.player_untrust:
+              chestprotect.setting.player_untrust:
                 description: Access to toggle role player untrust setting
                 default: op
-              chestprotect.setting.protection.player_setrole:
+              chestprotect.setting.player_setrole:
                 description: Access to toggle role player setrole setting
                 default: op
       chestprotect.admin.*:
         description: Access to all admin actions and commands
         default: op
         children:
+          chestprotect.admin.edit:
+            description: Edit other players protections
+            default: op
           chestprotect.admin.command.*:
             description: Access to all admin commands
+            default: op
+          chestprotect.admin.priority:
+            description: Bypass role priorities
             default: op
           chestprotect.admin.command.player:
             description: Access to /Protect admin player command
@@ -128,10 +139,6 @@ permissions:
           chestprotect.admin.command.import:
             descriptionw: Import other plugins protections. /Protect admin import lwc
             default: op
-      chestprotect.gui.*:
-        description: Access to all GUI menu actions.
+      chestprotect.teleport:
+        description: Teleport to protection via the GUI menu.
         default: op
-        children:
-          chestprotect.gui.protection.teleport:
-            description: Allow to teleport to protections.
-            default: op
