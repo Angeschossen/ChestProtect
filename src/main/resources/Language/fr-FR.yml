@@ -24,6 +24,7 @@
 # 
 # More information: https://github.com/Angeschossen/General/wiki/Messages
 
+
 # MAJ : 2022/01/13
 # Version plugin : 4.2.1
 # Author : Nogapra
@@ -121,6 +122,10 @@ message:
         &7Ce rôle est obligatoire pour les nouveaux joueurs.'
       visitor: '&cVous ne pouvez pas supprimer le rôle de "Visiteur" de cette protection.
         &7Ce rôle est obligatoire pour les joueurs de non-confiance.'
+  group:
+    create:
+      exists: Vous avez déjà un groupe avec le nom &4{group}&c. &7Veuillez choisir
+        un autre nom.
 command:
   general:
     no-permission: '&cVous n''avez pas la permission de faire cela. &8La permission
