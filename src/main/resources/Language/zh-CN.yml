@@ -97,3 +97,4 @@ command:
     role-not-exist: '&8[&e保护锁&8] &c角色&e {role} &c不存在。 &7请检查拼写错误。'
     -success: '&8[&e保护锁&8] &7成功地设置了玩家 &b{player} &7的角色类型为 &b{role} &7。'
   exit: '#t#&7所有操作;;&c已取消'
+  
