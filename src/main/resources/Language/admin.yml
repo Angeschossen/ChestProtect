@@ -1,0 +1,20 @@
+help:
+  command:
+    admin:
+      listperms: '[T]&e/{cmd} &8<&eplayer&8> - &7List permissions a player has[H]&7Click to copy.[/H][SC]{cmd}[/SC][/T]'
+      about: '[T]&e/{cmd} &8- &7Show information about ChestProtect[H]&7Click to
+        execute.[/H][C]{cmd}[/C][/T]'
+
+command:
+  listperms:
+    header: '[NoPrefix][T]&7----------&e&l<<<<&7-[H]&7Click here to navigate to the
+      previous page.[/H][C]{cmd} listperms {player} {previous}[/C][/T] &2Perm List &7Page&3 {page}
+      &8/&3 {pages} [T]&7-&e&l>>>>&7----------[H]&7Click here to go to the next page.[/H][C]{cmd}
+      listperms {player} {next}[/C][/T]'
+    footer: |
+      [NoPrefix]
+      &cPlayer &4{player} &chas these permissions, because they or their wildcard (perm.*) permissions are set in your permissions plugin. &7Click on the arrows below to navigate.
+
+       &cRed = wildcard perms
+       &eYellow = numbered perms
+      [T]&7----------&e&l<<<<&7-[H]&7Click here to navigate to the previous page.[/H][C]{cmd} listperms {player} {previous}[/C][/T] &2Perm List &7Page&3 {page} &8/&3 {pages} [T]&7-&e&l>>>>&7----------[H]&7Click here to go to the next page.[/H][C]{cmd} listperms {player} {next}[/C][/T]
