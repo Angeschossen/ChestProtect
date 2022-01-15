@@ -1,0 +1,115 @@
+general:
+  prefix: '&8[&6ChestProtect&8] '
+  unlimited: '&aunbegrenzt'
+  role:
+    owner: '&4Besitzer'
+    admin: '&cAdmin'
+    member: '&eMitglied'
+    visitor: '&7Besucher'
+    all: '&dAlle'
+help:
+  general:
+    prefix: '&7Benutzung: '
+    header: '&7----------<- &6ChestProtect Hilfe &7Seite&6 {page} &8/&6 {pages} &7->----------'
+    page: '&7Nutze &8/&3Protect help {next} &7für die nächste Seite.'
+    footer: '&7----------<- &6ChestProtect Hilfe &7Seite&6 {page} &8/&6 {pages} &7->----------'
+  command:
+    lock: '&8/&3Protect lock &8[&3player&8] - &7Objekt verschließen'
+    unlock: '&8/&3Protect unlock &8- &7Objekt öffnen'
+    trust: '&8/&3Protect trust &8<&3player&8> - &7Spieler vertrauen'
+    untrust: '&8/&3Protect untrust &8<&3player&8> - &7Spieler nicht mehr vertrauen'
+    setRole: '&8/&3Protect setrole &8<&3player&8> <&3role&8> - &7Setzt die Rolle'
+    menu: '&8/&3Protect menu &8[&3player&8] - &7Menü öffnen'
+    exit: '&8/&3Protect exit &8- &7Beenden'
+    help: '&8/&3Protect help &8[&3page&8] - &7Hilfesite'
+    admin:
+      reload: '&8/&3Protect reload &8- &7Konfiguration neu laden'
+      admin: '&8/&3Protect admin &8<&3action&8> - &7Admin Befehle ausführen'
+      about: '&8/&3Protect about &8- &7Zeigt Informationen'
+message:
+  world-invalid: '&cDies wurde in der Welt deaktiviert. &7Ein Administrator kann dies
+    in der Welt &3 {world} &caktivieren.'
+  object-invalid: '&cDu kannst das Objekt nicht schützen. Ein Administartor kann dies
+    in der Konfig aktivieren. Name:&3 {object}'
+  noaccess:
+    protection: '&cDieses Objekt ist geschützt, du kannst das nicht tun. Es gehört:
+      &3 player}&7.'
+    untrusted: '&cDu bist nicht mit der Sicherung vertraut, daher kannst du sie nicht
+      öffnen. Es gehört: &3{player}&7. &8Bypass: {bypass}'
+    management: '&cDieses Objekt ist geschützt, du kannst das nicht tun. Es gehört:
+      &3 {player}&7. &8Bypass: {bypass} &8Flag: {flag}'
+    action: '&cDieses Objekt ist geschützt, du kannst das nicht tun. Es gehört: &3
+      {player}&7. &8Bypass: {bypass} &8Flag: {flag}'
+    hopper: '&cDie Sicherung von deinem Trichter wurde entfernt. Deiner Rolle ist
+      es nicht erlaubt Trichter zu sichern. &7Welt: {world} X: {x} Y: {y} Z: {z}'
+  event:
+    open-owner: '&7Dieser Block gehört zu &3dir&7.'
+    open-trusted: '&7Dieser block ist geschptzt und gehört&3 {player}&7.'
+    protectable: '&7Den Block kann man sichern. Nutze dafür &8/&eLock &7.'
+  chat-action:
+    name: '&7Bitte gib den Namen im Chat ein.'
+    cancelled: '#t#&c&lAbgebrochen{newline}&c&lChat Action'
+    player: '&7Bitte gib den Namen des anderen Spielers ein.'
+  role:
+    not-exist: '&cRolle&e {role} &cexistiert nicht in diesem Gebiet. &7Tippfehler?'
+    delete:
+      owner: '&cDu kannst die Besitzer Rolle der Sicherung nicht entfernen. &7Die
+        Rolle wird benötigt.'
+      entry: '&cDu kannst die Gast Rolle nicht löschen. &7Sie wird benötigt für neue
+        Spieler.'
+      visitor: '&cDu kannst die Gast Rolle nicht löschen. &7Sie wird benötigt für
+        nicht vertraute Spieler.'
+command:
+  general:
+    no-permission: '&cDu hast keine Berechtigung, dies zu tun. &8Du brauchst folgende
+      Berechtigung {permission}.'
+    money-cost: '&cDu hast nicht genügend Geld. &7Du benötigst&c ${cost}&7.'
+    pos-not-allowed: '&cDu kannst dies hier nicht tun. &7Probiere es woanders.'
+    player-not-exist: '&cEs gibt keinen Spieler mit diesem Namen:&4 {player}&c. &7Tippfehler?'
+    not-protected: '&cDu kannst dies nicht tun. &7Dieser Block ist nicht geschützt.'
+    player-untrusted: '&cDu kannst dies nicht tun. &7Spieler&3 {player} &7ist hier
+      nicht getrusted.'
+  help:
+    help: '&7Use &8/&3{cmd} Hilfe &7für Hilfe.'
+    cmd-not-exist: '&cDieser Command existiert nicht. &7Command&3 {command} &7nicht
+      gefunden.'
+    no-page: '&cDie Seite&3 {page} &cexistiert nicht. &7Tippfehler?'
+  lock:
+    activated: '#t#&7Lock-Mode{newline}&aKlicken, um Objekt zu sichern.'
+    deactivated: '#t#&7Lock-Mode{newline}&cDeaktiviert'
+    already: '&cDu kannst diesen Block nicht sichern. &7Er ist bereits gesichert.'
+    max-protections: '&cDu kannst keine weiteren Objekte sichern. &7Die maximale Anzahl
+      an zu sichernden Objekteb ist&3 {max}&7.'
+    npc: '&cDu kannst keine NPCs sichern. &7Ein Administrator kann dies ändern.'
+    success: '&7Du hast dieses Objekt erfolgreich für&c ${cost}&7 gesichert.'
+    auto:
+      limit: '&cDieser Block konnte nicht automatisch gesichert werden. &7Du hast
+        die maximale Anzahl von &3 {max} &7 Sicherungen erreicht.'
+      cost: '&cDieser Block konnte nicht automatisch gesichert werden. &7Du hast nicht
+        genügend Geld. Cost:&c ${cost}'
+  unlock:
+    activated: '#t#&7Unlock-Mode{newline}&cKlicke, um das Objekt zu entsichern.'
+    deactivated: '#t#&7Unlock-Mode{newline}&cDeaktiviert'
+    success: '&7Objekt wurde erfolgreich entsichert.'
+  trust:
+    activated: '#t#&7Trust-Mode{newline}&7Klicken um Spieler &3 {player}&7 zu trusten.'
+    already: '&cDu kannst dies nicht tun. &7Spieler&3 {player} &7ist bereits getrusted.'
+    max-members: '&cDu kannst keine weiteren Spieler hinzufügen. &7Die maximale Anzahl
+      beträgt&c {max}&7. Permission: chestprotect.members.NUMBER'
+    deactivated: '#t#&7Untrust-Mode{newline}&cDeaktiviert'
+    success: '&7Du hast den Spieler&3 {player} &7erfolgreich untrusted.'
+  setRole:
+    activated: '#t#&7SetRole-Mode{newline}&7Klicke, um eine Rolle zu vergeben {role}&7.'
+    deactivated: '#t#&7SetRole-Mode{newline}&cDeaktiviert'
+    role-weight: '&cDu kannst diese Rolle nicht vergeben, wenn deine eigene Rolle
+      nicht höher ist, als die zu vergebene Rolle selbst. &7Frage jemanden mit einer
+      höheren Rolle um Hilfe.'
+    role-weight-target: '&cDu kannst die Rolle nicht verändern. &7Die Rolle des Spielers
+      ist höher, als deine eigene.'
+    role-not-exist: '&cDiese Rolle&e {role} &cexistiert nicht. &7Typo?'
+    success: '&7Rolle {role} wurde erfolgreich &7für Spieler&3 {player}&7 gesetzt.'
+  exit: '#t#&7Mode:{newline}&cDeaktiviert '
+  untrust:
+    activated: '#t#&7Untrust-Mode{newline}&7Click to untrust&3 {player}&7.'
+    deactivated: '#t#&7Untrust-Mode{newline}&cDeactivated'
+    success: '&7You successfully untrusted player&3 {player} &7from this protection.'
