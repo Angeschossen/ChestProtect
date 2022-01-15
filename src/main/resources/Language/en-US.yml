@@ -12,98 +12,133 @@ general:
 
 help:
   command:
-    lock: '[T]&e/{cmd} &8[&eplayer&8] - &7Lock object[H]&7Lock an object. Click to execute.[/H][C]{cmd}[/C][/T]'
+    lock: '[T]&e/{cmd} &8[&eplayer&8] - &7Lock object[H]&7Lock an object. Click to
+      execute.[/H][C]{cmd}[/C][/T]'
     unlock: '[T]&e/{cmd} &8- &7Unlock object[H]&7Unlock a protection. Click to execute.[/H][C]{cmd}[/C][/T]'
-    trust: '[T]&e/{cmd} &8<&eplayer&8> - &7Trust player[H]&7Trust a player at a protection. Click to copy.[/H][C]{cmd}[/C][/T]'
-    untrust: '[T]&e/{cmd} &8<&eplayer&8> - &7Untrust player[H]&7Untrust a player from a protection. Click to copy.[/H][C]{cmd}[/C][/T]'
-    menu: '[T]&e/{cmd} &8[&eplayer&8] - &7Open menu[H]&7Open the main menu. Click to execute.[/H][C]{cmd}[/C][/T]'
+    trust: '[T]&e/{cmd} &8<&eplayer&8> - &7Trust player[H]&7Trust a player at a protection.
+      Click to copy.[/H][C]{cmd}[/C][/T]'
+    untrust: '[T]&e/{cmd} &8<&eplayer&8> - &7Untrust player[H]&7Untrust a player from
+      a protection. Click to copy.[/H][C]{cmd}[/C][/T]'
+    menu: '[T]&e/{cmd} &8[&eplayer&8] - &7Open menu[H]&7Open the main menu. Click
+      to execute.[/H][C]{cmd}[/C][/T]'
     exit: '[T]&e/{cmd} &8- &7Exit mode[H]&7Exit lock or trust mode. Click to execute.[/H][C]{cmd}[/C][/T]'
-    help: '[T]&e/{cmd} &8[&epage&8] - &7Get help[H]&7Get a list of commands. Click to execute.[/H][C]{cmd}[/C][/T]'
-    view: '[T]&e/{cmd} - &7Visualize nearby protections[H]&7Visualize nearby protections. Click to execute.[/H][C]{cmd}[/C][/T]'
+    help: '[T]&e/{cmd} &8[&epage&8] - &7Get help[H]&7Get a list of commands. Click
+      to execute.[/H][C]{cmd}[/C][/T]'
+    view: '[T]&e/{cmd} - &7Visualize nearby protections[H]&7Visualize nearby protections.
+      Click to execute.[/H][C]{cmd}[/C][/T]'
     admin:
-      reload: '[T]&e/{cmd} &8- &7Reload configurations[H]&7Reload the configuration and language files. Click to execute.[/H][C]{cmd}[/C][/T]'
-      admin: '[T]&e/{cmd} &8<&eaction&8> - &7Run admin actions[H]&7Execute admin actions. Click to copy.[/H][C]{cmd}[/C][/T]'
-      about: '[T]&e/{cmd} &8- &7Show information[H]&7View information about ChestProtect. Click to execute.[/H][C]{cmd}[/C][/T]'
+      reload: '[T]&e/{cmd} &8- &7Reload configurations[H]&7Reload the configuration
+        and language files. Click to execute.[/H][C]{cmd}[/C][/T]'
+      admin: '[T]&e/{cmd} &8<&eaction&8> - &7Run admin actions[H]&7Execute admin actions.
+        Click to copy.[/H][C]{cmd}[/C][/T]'
+      about: '[T]&e/{cmd} &8- &7Show information[H]&7View information about ChestProtect.
+        Click to execute.[/H][C]{cmd}[/C][/T]'
 
 
 message:
-  world-invalid: '&cThis is deactivated in this world. &7A administrator needs to add it in config. Name of world:&3 {world}'
-  object-invalid: '&cYou can''t protect this object. &7A administrator needs to add it to the config. Name:&3 {object}'
+  world-invalid: '&cThis is deactivated in this world. &7A administrator needs to
+    add it in config. Name of world: &3{world}'
+  object-invalid: '&cYou can''t protect this object. &7A administrator needs to add
+    it to the config. Name: &3{object}'
   noaccess:
-    protection: '&cYou''re not allowed to do this at this protection. &7It belongs to&3 {player}&7.'
-    untrusted: '&cYou''re not trusted at this protection. &7It belongs to&3 {player}&7.'
-    management: '&cYou''re not allowed to do this at this protection. &7It belongs to&3 {player}&7.'
-    action: '&cYou''re not allowed to do this at this protection. &7It belongs to&3 {player}&7.'
-    hopper: '&cYour hopper has been removed from a protection. &7Your role is not allowed to use hoppers at this protection. &7World: {world} X: {x} Y: {y} Z: {z}'
-
+    protection: '&cYou''re not allowed to do this at this protection. &7It belongs
+      to &3{player}&7.'
+    untrusted: '&cYou''re not trusted at this protection. &7It belongs to &3{player}&7.'
+    management: '&cYou''re not allowed to do this at this protection. &7It belongs
+      to &3{player}&7.'
+    action: '&cYou''re not allowed to do this at this protection. &7It belongs to
+      &3{player}&7.'
+    hopper: '&cYour hopper has been removed from a protection. &7Your role is not
+      allowed to use hoppers at this protection. &7World: {world} X: {x} Y: {y} Z:
+      {z}'
+  
   event:
     open-owner: '&7This protection belongs to &3you&7.'
-    open-trusted: '&7This protection belongs to&3 {player}&7.'
+    open-trusted: '&7This protection belongs to &3{player}&7.'
     protectable: '&7You placed a protectable object. Execute &8/&3Lock &7to lock it.'
-
+  
   chat-input:
-    player: '#t#&6Enter the Name[newline]&7of the player in chat[newline]&7Enter "cancel" to abort.'
+    player: '#t#&6Enter the Name[newline]&7of the player in chat[newline]&7Enter "cancel"
+      to abort.'
     name: '#t#&6Enter the Name[newline]&7in chat[newline]&7Enter "cancel" to abort.'
-
+  
   teleportation:
-    already: '&cYou can''t start a second teleportation. There''s already a teleportation in progress. &7Please wait until it''s done.'
-    started: '&7Teleportation process started. Teleporting in&5 {sec} &7seconds. Please don''t move.'
-    cancelled: '&cYour teleportation has been cancelled. &7Please don''t move while you''re waiting&5 {sec} &7seconds for teleportation.'
-    plugin: '&cTeleportation has been cancelled by a 3rd party plugin. &7Please check your other plugins. &7This is not a Lands issue.'
+    already: '&cYou can''t start a second teleportation. There''s already a teleportation
+      in progress. &7Please wait until it''s done.'
+    started: '&7Teleportation process started. Teleporting in &5{sec} &7seconds. Please
+      don''t move.'
+    cancelled: '&cYour teleportation has been cancelled. &7Please don''t move while
+      you''re waiting &5{sec} &7seconds for teleportation.'
+    plugin: '&cTeleportation has been cancelled by a 3rd party plugin. &7Please check
+      your other plugins. &7This is not a Lands issue.'
     unsafe: '&cTeleportation has been cancelled, because the destination is not safe.'
-    corrected: '&7The original teleport destination was unsafe. &7Your final destination has been corrected to a safe location.'
-
+    corrected: '&7The original teleport destination was unsafe. &7Your final destination
+      has been corrected to a safe location.'
+  
   group:
     create:
-      exists: '&cYou already have a group with the name&4 {group}&c. &7Please choose a different name.'
-
+      exists: '&cYou already have a group with the name &4{group}&c. &7Please choose
+        a different name.'
+  
   role:
-    not-exist: '&cRole&e {role} &cdoes not exist at this protection. &7Typo?'
-
+    not-exist: '&cRole &e{role} &cdoes not exist at this protection. &7Typo?'
+    
     delete:
-      owner: '&cYou can''t delete the owner role of your protection. &7This role is required.'
-      entry: '&cYou can''t delete the entry role of your protection. &7It is required for new players.'
-      visitor: '&cYou can''t delete the visitor role of your protection. &7It''s required for untrusted players.'
+      owner: '&cYou can''t delete the owner role of your protection. &7This role is
+        required.'
+      entry: '&cYou can''t delete the entry role of your protection. &7It is required
+        for new players.'
+      visitor: '&cYou can''t delete the visitor role of your protection. &7It''s required
+        for untrusted players.'
 
 command:
   general:
-    no-permission: '&cYou don''t have permission to do this. &8You need permission {permission}.'
-    money-cost: '&cYou don''t have enough to pay the cost. &7You need&c ${cost}&7.'
-    player-not-exist: '&cThere''s no player with the name&4 {player}&c. &7Typo?'
+    no-permission: '&cYou don''t have permission to do this. &8You need permission
+      {permission}.'
+    money-cost: '&cYou don''t have enough to pay the cost. &7You need &c${cost}&7.'
+    player-not-exist: '&cThere''s no player with the name &4{player}&c. &7Typo?'
     not-protected: '&cYou can''t do that. &7This object isn''t protected.'
-    player-untrusted: '&cYou can''t do this. &7Player&3 {player} &7isn''t trusted at this protection.'
+    player-untrusted: '&cYou can''t do this. &7Player &3{player} &7isn''t trusted
+      at this protection.'
   help:
-    header: '[NoPrefix][T]&7-------&e&l<<<<&7-[H]&7Click here to navigate to the
-      previous page.[/H][C]{cmd} help {previous}[/C][/T] &6ChestProtect Help &7Page&3 {page}
-      &8/&3 {pages} [T]&7-&e&l>>>>&7-------[H]&7Click here to go to the next page.[/H][C]{cmd}
-      help {next}[/C][/T]'
+    header: |
+      [NoPrefix]
+      [T]&7-------&e&l<<<<&7-[H]&7Click here to navigate to the previous page.[/H][C]{cmd} help {previous}[/C][/T] &6ChestProtect Help &7Page &3{page} &8/ &3{pages} [T]&7-&e&l>>>>&7-------[H]&7Click here to go to the next page.[/H][C]{cmd} help {next}[/C][/T]'
     footer: |
       [NoPrefix]
       &7Click on the arrows below to navigate.
-      [T]&7-------&e&l<<<<&7-[H]&7Click here to navigate to the previous page.[/H][C]{cmd} help {previous}[/C][/T] &6ChestProtect Help &7Page&3 {page} &8/&3 {pages} [T]&7-&e&l>>>>&7-------[H]&7Click here to go to the next page.[/H][C]{cmd} help {next}[/C][/T]
+      [T]&7-------&e&l<<<<&7-[H]&7Click here to navigate to the previous page.[/H][C]{cmd} help {previous}[/C][/T] &6ChestProtect Help &7Page &3{page} &8/ &3{pages} [T]&7-&e&l>>>>&7-------[H]&7Click here to go to the next page.[/H][C]{cmd} help {next}[/C][/T]
     help: |
       &7Use &e/{cmd} help &7for help.
         [T]&7✖ &e/{cmd} View all commands
     cmd-unknown: |
-      &cThe command&4 {command} &cdoesn't exist.
+      &cThe command &4{command} &cdoesn't exist.
         [T]&7✖ View commands: &3/{cmd} help &8[CLICK][H]&7Click here to get a list of available commands[/H][C]chestprotect help[/C][/T]
-    no-page: '&cThe page&3 {page} &cdoesn''t exist. &7Typo?'
+    no-page: '&cThe page &3{page} &cdoesn''t exist. &7Typo?'
   lock:
     activated: '#t#&7Lock-Mode{newline}&aClick to lock a object.'
     deactivated: '#t#&7Lock-Mode{newline}&cDeactivated'
-    position: '&cYou''re not allowed to create protections at this position. &7The land owner may need to give your role permission to create protections here.'
+    position: '&cYou''re not allowed to create protections at this position. &7The
+      land owner may need to give your role permission to create protections here.'
     already: '&cYou can''t protect this object. &7It''s already protected.'
-    success: '&7You successfully protected this object for&c ${cost}&7.'
+    success: '&7You successfully protected this object for &c${cost}&7.'
     max:
-      general: '&cYou can''t create any more protections. &7Your maximum amount is&3 {max} &7protections.'
-      world: '&cYou can''t create any more protections in world&4 {world}&c. &7Your maximum amount for this world is&3 {max} &7protections.'
-      entities: '&cYou can''t lock any more entities. &7Your maximum amount of locked entities if&3 {max} &7entities.'
+      general: '&cYou can''t create any more protections. &7Your maximum amount is
+        &3{max} &7protections.'
+      world: '&cYou can''t create any more protections in world &4{world}&c. &7Your  maximum
+        amount for this world is &3{max} &7protections.'
+      entities: '&cYou can''t lock any more entities. &7Your maximum amount of locked
+        entities if &3{max} &7entities.'
     auto:
-      cost: '&cCouldn''t auto protect this object. &7You don''t have enough money to pay the cost. Cost:&c ${cost}'
+      cost: '&cCouldn''t auto protect this object. &7You don''t have enough money
+        to pay the cost. Cost: &c${cost}'
       max:
-        general: '&cCouldn''t auto protect this object. &7You reached your maximum amount of&3 {max} &7block protections.'
-        world: '&cCouldn''t auto protect this object in this world. &7You reached your maximum amount of&3 {max} &7protections in this world.'
-        entities: '&cYou can''t lock any more entities. &7Your maximum amount of locked entities if&3 {max} &7entities.'
+        general: '&cCouldn''t auto protect this object. &7You reached your maximum
+          amount of &3{max} &7block protections.'
+        world: '&cCouldn''t auto protect this object in this world. &7You reached
+          your maximum amount of &3{max} &7protections in this world.'
+        entities: '&cYou can''t lock any more entities. &7Your maximum amount of locked
+          entities if &3{max} &7entities.'
       only-land: |
         [T]&cCouldn't auto protect this object at this position. &7You're not allowed to create protections at your current location.[/T]
           [T]&7✖ Claim your own land: &e/lands claim &8[CLICK][H]&7Click here to claim at your current position.[/H][C]lands claim[/C][/T]
@@ -112,26 +147,31 @@ command:
     deactivated: '#t#&7Unlock-Mode{newline}&cDeactivated'
     success: '&7Successfully unlocked this object.'
   trust:
-    activated: '#t#&7Trust-Mode{newline}&7Click a protection to trust&3 {player}&7.'
+    activated: '#t#&7Trust-Mode{newline}&7Click a protection to trust &3{player}&7.'
     deactivated: '#t#&7Trust-Mode{newline}&cDeactivated'
-    already: '&cPlayer&4 {player} &cis already trusted at this protection.'
-    max-members: '&cYou can''t add any more members. &7The maximum for you is&c {max}&7. Permission: chestprotect.members.NUMBER'
-    success: '&7You successfully trusted player&3 {player} &7to this protection.'
+    already: '&cPlayer &4{player} &cis already trusted at this protection.'
+    max-members: '&cYou can''t add any more members. &7The maximum for you is &c{max}&7.
+      Permission: chestprotect.members.NUMBER'
+    success: '&7You successfully trusted player &3{player} &7to this protection.'
   untrust:
-    already: '&cPlayer&4 {player} &cisn''t trusted at this position. &7Typo?'
-    group: '&cThe player&4 {player} &cis trusted via the group&4 {group} &cand needs to be untrusted in the menu of this group.'
-    activated: '#t#&7Untrust-Mode{newline}&7Click to untrust&3 {player}&7.'
+    already: '&cPlayer &4{player} &cisn''t trusted at this position. &7Typo?'
+    group: '&cThe player &4{player} &cis trusted via the group &4{group} &cand needs
+      to be untrusted in the menu of this group.'
+    activated: '#t#&7Untrust-Mode{newline}&7Click to untrust &3{player}&7.'
     deactivated: '#t#&7Untrust-Mode{newline}&cDeactivated'
-    priority: '&cYou can''t untrust player&4 {player} &cof role&4 {role}&c. &7Their role has a higher or equal priority than yours.'
-    success: '&7You successfully untrusted player&3 {player} &7from this protection.'
+    priority: '&cYou can''t untrust player &4{player} &cof role &4{role}&c. &7Their
+      role has a higher or equal priority than yours.'
+    success: '&7You successfully untrusted player &3{player} &7from this protection.'
   setRole:
-    activated: '#t#&7SetRole-Mode{newline}&7Click to set role {role}&7.'
+    activated: '#t#&7SetRole-Mode{newline}&7Click to set role &e{role}&7.'
     deactivated: '#t#&7SetRole-Mode{newline}&cDeactivated'
-    role-weight: '&cYou can''t set this role since your own role isn''t higher than the target role. &7Ask someone with a higher role for help.'
-    role-weight-target: '&cYou can''t edit the role of this player. &7His role is higher than yours or equal.'
-    role-not-exist: '&cThe role&e {role} &cdoesn''t exist. &7Typo?'
-    success: '&7Successfully set role {role} &7for player&3 {player}&7.'
-  exit: '#t#&7Mode:{newline}&cDeactivated'
+    role-weight: '&cYou can''t set this role since your own role isn''t higher than
+      the target role. &7Ask someone with a higher role for help.'
+    role-weight-target: '&cYou can''t edit the role of this player. &7His role is
+      higher than yours or equal.'
+    role-not-exist: '&cThe role &e{role} &cdoesn''t exist. &7Typo?'
+    success: '&7Successfully set role &e{role} &7for player &3{player}&7.'
+  exit: '#t#&7Mode{newline}&cDeactivated'
   view:
     activated: '#t#&7Visualization{newline}&aNearby protections are visualized.'
     deactivated: '#t#&7Visualization{newline}&cDeactivated'
