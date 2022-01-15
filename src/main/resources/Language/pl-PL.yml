@@ -16,7 +16,6 @@ help:
     unlock: '&8/&7Protect unlock &8- &eOdblokuj obiekt'
     trust: '&8/&7Protect trust &8<&aGracz&8> - &eDodaj zaufaną osobę'
     untrust: '&8/&7Protect untrust &8<&aGracz&8> - &eUsuń zaufaną osobę'
-    setRole: '&8/&7Protect setrole &8<&aGracz&8> <&aRola&8> - &eUstaw rolę'
     menu: '&8/&7Protect menu &8[&aGracz&8] - &eOtwórz menu'
     exit: '&8/&7Protect exit &8- &eWyjdź z dowolnego trybu edycji'
     help: '&8/&7Protect help &8[&aSite&8] - &eUzyskaj pomoc'
@@ -24,7 +23,7 @@ help:
       import: '&8/&7Protect import &8<&aNazwaPluginu&8> &8- &eImportuj dane z innych pluginów'
       reload: '&8/&7Protect reload &8<&aConfig&8, &aLanguage&8> - &ePrzeładuj konfigurację'
       admin: '&8/&7Protect admin &8<&aKomenda&8> - &eUżyj komend administracyjnych'
-      about: '&8/&7Protect about &8- &eWyświetl informacje o SuperProtect'
+      about: '&8/&7Protect about &8- &eWyświetl informacje o ChestProtect'
 message:
   no-permission: '&8[&eChestProtect&8] &cNie masz do tego uprawnień. &7You
     need permission&b {permission}&7.'
