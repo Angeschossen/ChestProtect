@@ -7,11 +7,16 @@
 #
 # Resource page: https://www.spigotmc.org/resources/53494
 # Discord: https://discord.gg/B4MAJVk
-
+#
 # If you encounter any issues, please report them
 # to discord support server or via pm.
 # Bugs or problems are usually fixed within a few hours.
 # You can ignore the IDs in some setting names (_<ID>).
+#
+#################################################################
+# Blocks and entities, wich should be able to become protected, #
+# can be found in protectables.yml                              #
+#################################################################
 
 general:
   # Language
@@ -20,7 +25,7 @@ general:
   # German: de-DE by Cryper96
   # Chinese: zh-CN
   # Polish: pl-PL
-  # French: fr-FR
+  # French: fr-FR by Nogapra
   language: 'en-US'
 
   # Worlds where players should
@@ -28,60 +33,15 @@ general:
   worlds_list:
     - world
 
-  # Date format
-  # MM: Month
-  # dd: Day of month
-  # yyyy: Year
-  # hh: hours
-  # mm: minutes
-  # ss: seconds
-  # NOTE: These settings require server reload.
-  dateFormat:
-    # General format for invities etc.
-    # 24 hour format:
-    # MM/dd/yyyy HH:mm:ss
-    general_2: 'MM/dd/yyyy hh:mm:ss'
-    # Format for things like cooldown etc.
-    # NOTE: You will need to change
-    # the messages to for example {time} hours,
-    # if you change the format to
-    # 'hh:mm:ss'.
-    small: 'mm:ss'
+  # Set the format of all economy related displays.
+  # NOTE: This setting requires server reload / restart.
+  eco-format: '#,##0.00'
 
 
-
-# Blocks and entities, wich should be able to become protected.
-# NOTE: Only interactable blocks and entities can be protected.
-protectables:
-  types:
-    - CHEST
-    - BARREL
-    - FURNACE
-    - BLAST_FURNACE
-    - SMOKER
-    - OAK_DOOR
-    - IRON_DOOR
-    - SPRUCE_DOOR
-    - BIRCH_DOOR
-    - JUNGLE_DOOR
-    - ACACIA_DOOR
-    - DARK_OAK_DOOR
-    - OAK_TRAPDOOR
-    - SPRUCE_TRAPDOOR
-    - BIRCH_TRAPDOOR
-    - JUNGLE_TRAPDOOR
-    - ACACIA_TRAPDOOR
-    - DARK_OAK_TRAPDOOR
-    - LECTERN
-    - ARMOR_STAND
-    - COW
-    - SHEEP
-    - PIG
-    - CHICKEN
-
-  # Allow protecting NPCs?
-  npc: false
-
+#################################################################
+# Blocks and entities, wich should be able to become protected, #
+# can be found in protectables.yml                              #
+#################################################################
 
 
 # Protection settings
@@ -95,18 +55,22 @@ protection:
     # Give players a percentage back of the original lock cost. Gived at unlock. To disable this, use 0.
     cashback: 50.0
 
+  # Should protections take damage from tnt explosion to get unlocked?
+  allow-tnt: false
+
   # Sound settings
+  # You can disable sounds by setting them to ''
   sound:
     # Played when protection has been created.
-    locked: 'ENTITY_EXPERIENCE_ORB_PICKUP'
+    locked_sound: 'ENTITY_EXPERIENCE_ORB_PICKUP'
     # Played on protection deletion.
-    unlocked: 'BLOCK_ANVIL_BREAK'
+    unlocked_sound: 'BLOCK_ANVIL_BREAK'
 
   # Default protection settings
   setting:
     # Accept redstone signals?
     redstone:
-      enabled_10: false
+      enabled_11: false
 
   # Teleport to protection through the menu.
   # Permission chestprotect.teleport
@@ -145,6 +109,7 @@ protection:
         # NOTE: It's recommended to let this disabled for this role.
         player_setrole:
           default_11: false
+
     # Members (trusted players)
     member:
       setting:
@@ -181,14 +146,10 @@ protection:
         # /ChestProtect untrust
         player_untrust:
           default_10: true
-
-  # Set protection limits per world.
-  # Example: If you set the permission chestprotect.protections.5 for your players,
-  # they will be able to protect 5 protections in each protection world instead of 5 protections in general.
-  # NOTE: This only applies for protection permissions: chestprotect.protections.NUMBER
-  # NOTE: Entities can be teleported around worlds, so they always count to the world limit.
-  # It is recommended to keep this disabled.
-  protection-limit-per-world: false
+        # Allow this role to set roles?
+        # /Protect setrole
+        player_setrole:
+          default_13: true
 
 
 # Player default settings
@@ -197,30 +158,38 @@ player:
   # The players will be able to change these settings later in the GUI, if they have permission to do so.
   # NOTE: These settings are default settings. That means that they will only apply for new players.
   setting:
-    # Make the command /Lock persistent?
-    lock_persistent:
+    # Make the command lock and unlock persistent?
+    persistent_lock:
       # Default value
       default: false
-    # Make the command /Unlock persistent?
-    unlock_persistent:
-      default_2: false
-    # Make the command /Trust persistent?
-    trust_persistent:
+    # Make the command trust, untrust and setrole persistent?
+    persistent_trust:
       default_3: false
-    # Make the command /Protect setRole persistent?
-    set_role_persistent:
-      default_14: false
-    # Make the command /Untrust persistent?
-    untrust_persistent:
-      default_4: false
     # Auto lock placed blocks, wich are protectable?
-    auto-lock:
+    auto_lock:
       default_5: true
-
+    # Send notification when opening a protection?
+    notifications:
+      default_14: true
 
 
 # Database settings
 database:
+  # MySQL database
+  # To use this without issues, your connection limits etc. need to be configured properly in your MySQL server configuration.
+  # It is not recommended connecting multiple instances of ChestProtect servers to one database with the same table prefix.
+  mysql:
+    # NOTE: If disabled, SQLite will be used instead.
+    enabled_20: false
+    ip-address: 'localhost'
+    port: '3306'
+    username: 'minecraft'
+    password: 'password'
+    database: 'chestprotect'
+
+    # It is highly recommended setting a unique table prefix if the plugin shares a database with other plugins or ChestProtect instances.
+    table-prefix: 'chestprotect_'
+
   # Database purger
   # Delete protections from
   # inactive players
@@ -234,14 +203,9 @@ database:
 event:
   # If a player opens a protected object.
   open-protection:
-    # Notficiations settings
-    notify:
-      # Should the owner of a protection get a message, if he opens it.
-      owner: true
-      # Should a member of a protection get a message, if he opens it.
-      member: true
-    # Should it be possible to open a locked iron door if the player is trusted at it?
-    open-iron-doors: true
+    # Should players be able to open their double doors by just clicking at only one door?
+    # This also includes iron double and single doors.
+    double-doors: true
 
   # If someone places a protectable block or armorstand, which did not get auto locked.
   block-place:
@@ -269,7 +233,8 @@ command:
 
   # Set aliases for the /ChestProtect command
   # NOTE: This setting requires server reload.
-  chestprotect-aliases_list: []
+  alias:
+    chestprotect_list: [ ]
 
 
 
@@ -285,30 +250,32 @@ gui:
 # Integrations settings
 integration:
   # Lands settings (https://www.spigotmc.org/resources/53313)
+  # If you want to allow protections being opened during wars, add the "CHESTPROTECT_OPEN" flag to the wars.yml configuration file of Lands.
   lands:
     # Should protections only be allowed inside claims, where they're trusted?
+    # Protections in the wilderness won't be allowed.
+    # This also means that protections inside a land will get unlocked, if the land gets unclaimed.
     only-trusted: false
-    # Supports: Lands (https://www.spigotmc.org/resources/53313), SuperiorSkyblock2
+    # Should protections inside of a land/area get unlocked, if the player gets untrusted at this land/area?
+    # This includes the expiration of rentals.
+    untrust-remove: false
     # Allow players, which are trusted in the region where the protection is located in, to open the protection?
+    # Supports: Lands (https://www.spigotmc.org/resources/53313), SuperiorSkyblock2, BentoBox, PlotSquared, WorldGuard
     allow-region-members: false
-    # Allow protections to be opened during wars?
-    # Supports: Lands (https://www.spigotmc.org/resources/53313)
-    war: false
+    # Allow region owners to unclock protections of other players?
+    # Supports: Lands (https://www.spigotmc.org/resources/53313), SuperiorSkyblock2, BentoBox, PlotSquared, WorldGuard
+    owner-unlock: false
 
-  # Economy integrations
+  # Economy settings
+  # If no Vault is disabled or no economy plugin is found, it will use the "currency" item from the gui file instead.
   economy:
-    # Default currency
-    # Used when no Vault Economy plugin found or Vault disabled.
-    # NOTE: This currency is item based.
-    default:
-      # Item, wich should be used as currency.
-      # Materials can be found here:
-      # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
-      item: 'IRON_INGOT'
-
     # Vault
+    # You need an economy plugin, which supports Vault, to let this work.
     Vault:
-      enabled_5: true
+      enabled_10: true
+
+    levels:
+      enabled_9: false
 
   # Chat integrations
   chat:
