@@ -24,7 +24,7 @@ help:
       import: '&8/&7Protect import &8<&aPlugin&8> &8- &eNhập dữ liệu từ plugin khác'
       reload: '&8/&7Protect reload &8<&aConfig&8, &aLanguage&8> - &eTải lại cấu hình'
       admin: '&8/&7Protect admin &8<&aAction&8> - &eChạy hành động của quản trị viên'
-      about: '&8/&7Protect about &8- &eHiện thông tin về SuperProtect'
+      about: '&8/&7Protect about &8- &eHiện thông tin về ChestProtect'
 
 message:
   no-permission: '&8[&eChestProtect&8] &cBạn không có quyền làm điều này. &7Bạn cần quyền&b {permission}&7.'
