@@ -79,7 +79,7 @@ general:
   now: '&aNow'
   enabled: '&aEnabled'
   disabled: '&cDisabled'
-  others: Others
+  others: 'Others'
   online: '&aOnline'
   previous: '&8previous'
   role:
