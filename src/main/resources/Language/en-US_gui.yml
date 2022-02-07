@@ -1,12 +1,85 @@
+# Resource page: https://www.spigotmc.org/resources/authors/315463/
+# Discord: https://discord.gg/B4MAJVk
+# 
+# If you encounter any issues, please report them
+# to discord support server or via pm.
+# Bugs or issues are mostly fixed within hours.
+# 
+# 
+# Here you can edit the whole GUI.
+# You can set GUI titles, the size and
+# item names, lores, materials and slots.
+# Don't remove any values or keys.
+# 
+# You also can add new items to your GUI.
+# This can be done under gui.<GUI>.s.<YourItemName>
+# The name needs to be unique in this section.
+# Example:
+# 
+# gui:
+#   lands:
+#     title: '&8Your Lands'
+#     size: 27
+#     s:
+#       close:
+#         name: '&cClose'
+#         lore:
+#         - '&7Close this menu.'
+#         - ' '
+#         - '&8- &7You can open it again'
+#         - '  &7with &8/&3Lands menu&7.'
+#         material: 'RED_STAINED_GLASS_PANE'
+#         slot: 9
+# 
+# Please note: You need to set all values
+# otherwise Lands will auto generate values.
+# Also you can't set items where list items
+# are configured. Means if for example the
+# list in the Lands GUI goes from slot
+# 10 - 12 you can set any items with
+# the slot 10, 11, 12. They will be ignored.
+# 
+# 
+# You also can apply new placeholders.
+# This can be done under gui.<GUI>.p.<YourItemName>
+# The name needs to be unique in this section.
+# Example:
+# 
+# gui:
+#   lands:
+#     p:
+#       placeholder_1:
+#       material: 'GRAY_STAINED_GLASS_PANE'
+#       from: 1
+#       to: 9
+# 
+# Please note: You need to set all values
+# otherwise Lands will auto generate values.
+# Also you can't set items where list items
+# are configured. Means if for example the
+# list in the Lands GUI goes from slot
+# 10 - 12 you can set any items with
+# the slot 10, 11, 12. They will be ignored.
+# Added enabled: false to a item to disable it.
+# You can set every item as a custom head:
+# Visit /https://minecraft-heads.com/custom-heads
+# Then copy the 'value:' and paste it at 'material:'
+# 
+# 
+# If you encounter any issues or you simply have
+# some questions, contact me via PM or Discord.
+# Discord: https://discord.gg/B4MAJVk
+
+
 general:
-  wYes: '&aYes'
-  wNo: '&cNo'
+  wYes: 'Yes'
+  wNo: 'No'
   none: '&cNone'
   all: '&aAll'
   now: '&aNow'
   enabled: '&aEnabled'
   disabled: '&cDisabled'
-  others: '&7Others'
+  others: Others
   online: '&aOnline'
   previous: '&8previous'
   role:
@@ -95,7 +168,7 @@ gui:
         lore:
         - '&7Go to previous page: &9{previous}'
         - ''
-        - '&7Current: &3{current}'
+        - '&7Current:&3 {current}'
         material: ARROW
         slot: 21
       page_next:
@@ -103,7 +176,7 @@ gui:
         lore:
         - '&7Go to next page: &9{next}'
         - ''
-        - '&7Current: &3{current}'
+        - '&7Current:&3 {current}'
         material: ARROW
         slot: 25
       back:
@@ -122,7 +195,7 @@ gui:
         - ''
         - '&7Keep lock and unlock mode'
         - '&7activated until manual'
-        - '&7desactivation?'
+        - '&7deactivation?'
         material: OAK_SIGN
         from: 10
         to: 18
@@ -337,7 +410,7 @@ gui:
         lore:
         - '&7Go to previous page: &9{previous}'
         - ''
-        - '&7Current: &3{current}'
+        - '&7Current:&3 {current}'
         material: ARROW
         slot: 39
       page_next:
@@ -345,12 +418,12 @@ gui:
         lore:
         - '&7Go to next page: &9{next}'
         - ''
-        - '&7Current: &3{current}'
+        - '&7Current:&3 {current}'
         material: ARROW
         slot: 44
     l:
       block:
-        name: '&7World:&6 {world} &7X: &6{x} &7Y: &6{y} &7Z: &6{z}'
+        name: '&7World:&6 {world} &7X:&6 {x} &7Y:&6 {y} &7Z:&6 {z}'
         lore:
         - '&7Edit this block protection.'
         - ''
@@ -372,9 +445,9 @@ gui:
         - '&7Edit this entity protection.'
         - ''
         - '&7Last seen at:'
-        - '&7X: &3{x}'
-        - '&7Y: &3{y}'
-        - '&7Z: &3{z}'
+        - '&7X:&3 {x}'
+        - '&7Y:&3 {y}'
+        - '&7Z:&3 {z}'
         material: PLAYER_HEAD
         from: 10
         to: 36
@@ -419,7 +492,7 @@ gui:
       failure_cost:
         name: '&4Failure: &cNot enough Money'
         lore:
-        - '&7You need &c${cost} &7to pay'
+        - '&7You need&c {cost} &7to pay'
         - '&7the teleportation cost.'
       failure_teleport:
         name: '&4Failure: &cNot allowed'
@@ -485,12 +558,12 @@ gui:
       failure_group:
         name: '&4Failure: &cNot allowed'
         lore:
-        - '&7Only the owner &3{owner}'
+        - '&7Only the owner&3 {owner}'
         - '&7can edit the group.'
       failure_unlock:
         name: '&4Failure: &cNot allowed'
         lore:
-        - '&7Only the owner &3{owner} &7can'
+        - '&7Only the owner&3 {owner} &7can'
         - '&7unlock this protection.'
     p:
       placeholder_1:
@@ -506,7 +579,7 @@ gui:
         lore:
         - '&7Go to previous page: &9{previous}'
         - ''
-        - '&7Current: &3{current}'
+        - '&7Current:&3 {current}'
         material: ARROW
         slot: 21
       page_next:
@@ -514,7 +587,7 @@ gui:
         lore:
         - '&7Go to next page: &9{next}'
         - ''
-        - '&7Current: &3{current}'
+        - '&7Current:&3 {current}'
         material: ARROW
         slot: 25
       back:
@@ -529,7 +602,7 @@ gui:
         name: '&8> &6Redstone Signals'
         lore:
         - '&7Current: {enabled}'
-        - ' '
+        - ''
         - '&7Should redstone signals'
         - '&7be allowed?'
         material: REDSTONE
@@ -539,7 +612,7 @@ gui:
         name: '&8> &6Public'
         lore:
         - '&7Current: {enabled}'
-        - ' '
+        - ''
         - '&7Should everyone be able'
         - '&7to take and put items?'
         - '&7They wont be able to destroy it.'
@@ -679,7 +752,7 @@ gui:
         name: '&4Failure: &cMax trusted Players'
         lore:
         - '&7This protection reached its maximum'
-        - '&7amount of &3{max} &7members.'
+        - '&7amount of&3 {max} &7members.'
     f:
       trust:
         name: '&8> &aTrust Player'
@@ -687,7 +760,7 @@ gui:
         - '&7Click here to trust'
         - '&7a player to this protection.'
         - ''
-        - '&7Available: &3{players} &8/&c {max}'
+        - '&7Available:&3 {players} &8/&c {max}'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
         slot: 32
       untrust:
@@ -709,7 +782,7 @@ gui:
         lore:
         - '&7Go to previous page: &9{previous}'
         - ''
-        - '&7Current: &3{current}'
+        - '&7Current:&3 {current}'
         material: ARROW
         slot: 30
       page_next:
@@ -717,7 +790,7 @@ gui:
         lore:
         - '&7Go to next page: &9{next}'
         - ''
-        - '&7Current: &3{current}'
+        - '&7Current:&3 {current}'
         material: ARROW
         slot: 35
     p:
@@ -755,7 +828,7 @@ gui:
         lore:
         - '&7Go to previous page: &9{previous}'
         - ''
-        - '&7Current: &3{current}'
+        - '&7Current:&3 {current}'
         material: ARROW
         slot: 30
       create:
@@ -769,7 +842,7 @@ gui:
         lore:
         - '&7Go to next page: &9{next}'
         - ''
-        - '&7Current: &3{current}'
+        - '&7Current:&3 {current}'
         material: ARROW
         slot: 34
     a:
@@ -777,7 +850,7 @@ gui:
         name: '&4Failure: &cMax reached'
         lore:
         - '&7You reached your maximum amount'
-        - '&7of &3{max} &7groups.'
+        - '&7of&3 {max} &7groups.'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
@@ -877,8 +950,8 @@ gui:
         name: '&4Failure: &cMax trusted Players'
         lore:
         - '&7This protection reached its maximum'
-        - '&7amount of &3{max} &7members.'
-        - ' '
+        - '&7amount of&3 {max} &7members.'
+        - ''
         - '&8Permission: chestprotect.members.NUMBER'
     f:
       trust:
@@ -886,8 +959,8 @@ gui:
         lore:
         - '&7Click here to add a player'
         - '&7to all protections of this group.'
-        - ' '
-        - '&7Available: &3{players} &8/ &c{max}'
+        - ''
+        - '&7Available:&3 {players} &8/&c {max}'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
         slot: 32
       untrust:
@@ -912,7 +985,7 @@ gui:
         lore:
         - '&7Go to previous page: &9{previous}'
         - ''
-        - '&7Current: &3{current}'
+        - '&7Current:&3 {current}'
         material: ARROW
         slot: 30
       page_next:
@@ -920,7 +993,7 @@ gui:
         lore:
         - '&7Go to next page: &9{next}'
         - ''
-        - '&7Current: &3{current}'
+        - '&7Current:&3 {current}'
         material: ARROW
         slot: 35
     p:
@@ -952,6 +1025,14 @@ gui:
         - '&7to this group.'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
         slot: 32
+      add_all:
+        name: '&8> &aAdd all unassigned Types'
+        lore:
+        - '&7Add all protection types, that'
+        - '&7aren''t already part of another'
+        - '&7group.'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
+        slot: 33
     f:
       back:
         name: '&cBack'
@@ -965,7 +1046,7 @@ gui:
         lore:
         - '&7Go to previous page: &9{previous}'
         - ''
-        - '&7Current: &3{current}'
+        - '&7Current:&3 {current}'
         material: ARROW
         slot: 30
       page_next:
@@ -973,9 +1054,9 @@ gui:
         lore:
         - '&7Go to next page: &9{next}'
         - ''
-        - '&7Current: &3{current}'
+        - '&7Current:&3 {current}'
         material: ARROW
-        slot: 34
+        slot: 35
     a:
       failure_already:
         name: '&4Failure: &cAlready in Group'
@@ -1033,7 +1114,7 @@ gui:
         - '&7Click here to trust'
         - '&7a player to this protection.'
         - ''
-        - '&7Available: &3{players} &8/&c {max}'
+        - '&7Available:&3 {players} &8/&c {max}'
         material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
         slot: 32
       back:
@@ -1048,7 +1129,7 @@ gui:
         lore:
         - '&7Go to previous page: &9{previous}'
         - ''
-        - '&7Current: &3{current}'
+        - '&7Current:&3 {current}'
         material: ARROW
         slot: 30
       page_next:
@@ -1056,7 +1137,7 @@ gui:
         lore:
         - '&7Go to next page: &9{next}'
         - ''
-        - '&7Current: &3{current}'
+        - '&7Current:&3 {current}'
         material: ARROW
         slot: 35
     p:
