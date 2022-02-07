@@ -1,3 +1,31 @@
+# Here you can edit all chat messages
+# GUI items and menus can be found in <language>_gui.yml
+# 
+# If you encounter any issues or have questions, contact plugin support.
+# Plugin page: https://www.spigotmc.org/resources/authors/315463/
+# Discord: https://discord.gg/B4MAJVk
+# 
+# ###############################
+# About chat message type system:
+# Does only work for messages in
+# "message" or "command" section.
+# ###############################
+# 
+# You can use some codes to set the type
+# of a message to title, actionbar or chat.
+# How does it work:
+# 
+# For example we want to print a message as a title:
+# Set message to: '#t#Title[newline]Subtitle'(Set "#t#" in front of it; use [newline] to set the subtitle)
+# 
+# You also send a message at the actionbar:
+# Set message to: '#a#This is a actionbar message.'
+# (Set #a# in front of it.)
+# 
+# More information: https://github.com/Angeschossen/General/wiki/Messages
+
+
+
 general:
   prefix:
     normal: '&8[&6ChestProtect&8] '
@@ -9,32 +37,31 @@ general:
     member: '&eMember'
     visitor: '&7Visitor'
     all: '&dAll'
-
 help:
   command:
-    lock: '[T]&e/{cmd} &8[&eplayer&8] - &7Lock object[H]&7Lock an object. Click to
-      execute.[/H][C]{cmd}[/C][/T]'
-    unlock: '[T]&e/{cmd} &8- &7Unlock object[H]&7Unlock a protection. Click to execute.[/H][C]{cmd}[/C][/T]'
-    trust: '[T]&e/{cmd} &8<&eplayer&8> - &7Trust player[H]&7Trust a player at a protection.
-      Click to copy.[/H][C]{cmd}[/C][/T]'
-    untrust: '[T]&e/{cmd} &8<&eplayer&8> - &7Untrust player[H]&7Untrust a player from
-      a protection. Click to copy.[/H][C]{cmd}[/C][/T]'
-    menu: '[T]&e/{cmd} &8[&eplayer&8] - &7Open menu[H]&7Open the main menu. Click
-      to execute.[/H][C]{cmd}[/C][/T]'
-    exit: '[T]&e/{cmd} &8- &7Exit mode[H]&7Exit lock or trust mode. Click to execute.[/H][C]{cmd}[/C][/T]'
-    help: '[T]&e/{cmd} &8[&epage&8] - &7Get help[H]&7Get a list of commands. Click
-      to execute.[/H][C]{cmd}[/C][/T]'
-    view: '[T]&e/{cmd} - &7Visualize nearby protections[H]&7Visualize nearby protections.
+    lock: '[T]&e/chestprotect {subcmd} &8[&eplayer&8] - &7Lock object[H]&7Lock an
+      object. Click to execute.[/H][C]{cmd}[/C][/T]'
+    unlock: '[T]&e/chestprotect {subcmd} &8- &7Unlock object[H]&7Unlock a protection.
       Click to execute.[/H][C]{cmd}[/C][/T]'
+    trust: '[T]&e/chestprotect {subcmd} &8<&eplayer&8> - &7Trust player[H]&7Trust
+      a player at a protection. Click to copy.[/H][C]{cmd}[/C][/T]'
+    untrust: '[T]&e/chestprotect {subcmd} &8<&eplayer&8> - &7Untrust player[H]&7Untrust
+      a player from a protection. Click to copy.[/H][C]{cmd}[/C][/T]'
+    menu: '[T]&e/chestprotect {subcmd} &8[&eplayer&8] - &7Open menu[H]&7Open the main
+      menu. Click to execute.[/H][C]{cmd}[/C][/T]'
+    exit: '[T]&e/chestprotect {subcmd} &8- &7Exit mode[H]&7Exit lock or trust mode.
+      Click to execute.[/H][C]{cmd}[/C][/T]'
+    help: '[T]&e/chestprotect {subcmd} &8[&epage&8] - &7Get help[H]&7Get a list of
+      commands. Click to execute.[/H][C]{cmd}[/C][/T]'
+    view: '[T]&e/chestprotect {subcmd} - &7Visualize nearby protections[H]&7Visualize
+      nearby protections. Click to execute.[/H][C]{cmd}[/C][/T]'
     admin:
-      reload: '[T]&e/{cmd} &8- &7Reload configurations[H]&7Reload the configuration
-        and language files. Click to execute.[/H][C]{cmd}[/C][/T]'
-      admin: '[T]&e/{cmd} &8<&eaction&8> - &7Run admin actions[H]&7Execute admin actions.
-        Click to copy.[/H][C]{cmd}[/C][/T]'
-      about: '[T]&e/{cmd} &8- &7Show information[H]&7View information about ChestProtect.
-        Click to execute.[/H][C]{cmd}[/C][/T]'
-
-
+      reload: '[T]&e/chestprotect {subcmd} &8- &7Reload configurations[H]&7Reload
+        the configuration and language files. Click to execute.[/H][C]{cmd}[/C][/T]'
+      admin: '[T]&e/chestprotect {subcmd} &8<&eaction&8> - &7Run admin actions[H]&7Execute
+        admin actions. Click to copy.[/H][C]{cmd}[/C][/T]'
+      about: '[T]&e/chestprotect {subcmd} &8- &7Show information[H]&7View information
+        about ChestProtect. Click to execute.[/H][C]{cmd}[/C][/T]'
 message:
   world-invalid: '&cThis is deactivated in this world. &7A administrator needs to
     add it in config. Name of world: &3{world}'
@@ -51,17 +78,14 @@ message:
     hopper: '&cYour hopper has been removed from a protection. &7Your role is not
       allowed to use hoppers at this protection. &7World: {world} X: {x} Y: {y} Z:
       {z}'
-  
   event:
     open-owner: '&7This protection belongs to &3you&7.'
     open-trusted: '&7This protection belongs to &3{player}&7.'
     protectable: '&7You placed a protectable object. Execute &8/&3Lock &7to lock it.'
-  
   chat-input:
     player: '#t#&6Enter the Name[newline]&7of the player in chat[newline]&7Enter "cancel"
       to abort.'
     name: '#t#&6Enter the Name[newline]&7in chat[newline]&7Enter "cancel" to abort.'
-  
   teleportation:
     already: '&cYou can''t start a second teleportation. There''s already a teleportation
       in progress. &7Please wait until it''s done.'
@@ -74,15 +98,12 @@ message:
     unsafe: '&cTeleportation has been cancelled, because the destination is not safe.'
     corrected: '&7The original teleport destination was unsafe. &7Your final destination
       has been corrected to a safe location.'
-  
   group:
     create:
       exists: '&cYou already have a group with the name &4{group}&c. &7Please choose
         a different name.'
-  
   role:
     not-exist: '&cRole &e{role} &cdoes not exist at this protection. &7Typo?'
-    
     delete:
       owner: '&cYou can''t delete the owner role of your protection. &7This role is
         required.'
@@ -90,12 +111,11 @@ message:
         for new players.'
       visitor: '&cYou can''t delete the visitor role of your protection. &7It''s required
         for untrusted players.'
-
 command:
   general:
     no-permission: '&cYou don''t have permission to do this. &8You need permission
       {permission}.'
-    money-cost: '&cYou don''t have enough to pay the cost. &7You need &c${cost}&7.'
+    money-cost: '&cYou don''t have enough to pay the cost. &7You need &c{cost}&7.'
     player-not-exist: '&cThere''s no player with the name &4{player}&c. &7Typo?'
     not-protected: '&cYou can''t do that. &7This object isn''t protected.'
     player-untrusted: '&cYou can''t do this. &7Player &3{player} &7isn''t trusted
@@ -121,17 +141,17 @@ command:
     position: '&cYou''re not allowed to create protections at this position. &7The
       land owner may need to give your role permission to create protections here.'
     already: '&cYou can''t protect this object. &7It''s already protected.'
-    success: '&7You successfully protected this object for &c${cost}&7.'
+    success: '&7You successfully protected this object for &c{cost}&7.'
     max:
       general: '&cYou can''t create any more protections. &7Your maximum amount is
         &3{max} &7protections.'
-      world: '&cYou can''t create any more protections in world &4{world}&c. &7Your  maximum
-        amount for this world is &3{max} &7protections.'
+      world: '&cYou can''t create any more protections in world &4{world}&c. &7Your
+        maximum amount for this world is &3{max} &7protections.'
       entities: '&cYou can''t lock any more entities. &7Your maximum amount of locked
         entities if &3{max} &7entities.'
     auto:
       cost: '&cCouldn''t auto protect this object. &7You don''t have enough money
-        to pay the cost. Cost: &c${cost}'
+        to pay the cost. Cost: &c{cost}'
       max:
         general: '&cCouldn''t auto protect this object. &7You reached your maximum
           amount of &3{max} &7block protections.'
@@ -163,15 +183,15 @@ command:
       role has a higher or equal priority than yours.'
     success: '&7You successfully untrusted player &3{player} &7from this protection.'
   setRole:
-    activated: '#t#&7SetRole-Mode{newline}&7Click to set role &e{role}&7.'
+    activated: '#t#&7SetRole-Mode{newline}&7Click to set role {role}&7.'
     deactivated: '#t#&7SetRole-Mode{newline}&cDeactivated'
     role-weight: '&cYou can''t set this role since your own role isn''t higher than
       the target role. &7Ask someone with a higher role for help.'
     role-weight-target: '&cYou can''t edit the role of this player. &7His role is
       higher than yours or equal.'
     role-not-exist: '&cThe role &e{role} &cdoesn''t exist. &7Typo?'
-    success: '&7Successfully set role &e{role} &7for player &3{player}&7.'
-  exit: '#t#&7Mode{newline}&cDeactivated'
+    success: '&7Successfully set role {role} &7for player &3{player}&7.'
+  exit: '#t#&7Mode:{newline}&cDeactivated'
   view:
     activated: '#t#&7Visualization{newline}&aNearby protections are visualized.'
     deactivated: '#t#&7Visualization{newline}&cDeactivated'
