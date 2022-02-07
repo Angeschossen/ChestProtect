@@ -25,11 +25,6 @@
 # More information: https://github.com/Angeschossen/General/wiki/Messages
 
 
-# MAJ : 2022/01/13
-# Version plugin : 4.2.2
-# Author : Nogapra
-# Discord : Nogapra#2800
-# Serveur Minecraft® : play.jaime-la-survie.fr
 
 general:
   prefix:
@@ -42,39 +37,36 @@ general:
     member: '&eMembre'
     visitor: '&7Visiteur'
     all: '&dTout'
-
 help:
   command:
-    lock: '[T]&e/{cmd} lock &8[&eplayer&8] - &7Vérouiller un objet[H]&7Vérouiller
-      un objet pour le protéger. Cliquez pour éxécuter.[/H][C]{cmd} lock[/C][/T]'
-    unlock: '[T]&e/{cmd} unlock &8- &7Dévérouiller un objet[H]&7Dévérouiller une protection.
-      Cliquez pour éxécuter.[/H][C]{cmd} unlock[/C][/T]'
-    trust: '[T]&e/{cmd} trust &8<&eplayer&8> - &7Approuver un joueur[H]&7Approuver
+    lock: '[T]&e/chestprotect {subcmd} &8[&eplayer&8] - &7Vérouiller un objet[H]&7Vérouiller
+      un objet pour le protéger. Cliquez pour éxécuter.[/H][C]{cmd}[/C][/T]'
+    unlock: '[T]&e/chestprotect {subcmd} &8- &7Dévérouiller un objet[H]&7Dévérouiller
+      une protection. Cliquez pour éxécuter.[/H][C]{cmd}[/C][/T]'
+    trust: '[T]&e/chestprotect {subcmd} &8<&eplayer&8> - &7Approuver un joueur[H]&7Approuver
       un joueur sur une protection pour l''autoriser à s''en servir. Cliquez pour
-      éxécuter.[/H][C]{cmd} trust[/C][/T]'
-    untrust: '[T]&e/{cmd} untrust &8<&eplayer&8> - &7Retirer un joueur[H]&7Retirer
-      un joueur de la protection. Cliquez pour éxécuter.[/H][C]{cmd} untrust[/C][/T]'
-    menu: '[T]&e/{cmd} menu &8[&eplayer&8] - &7Ouvrir le menu[H]&7Ouvrir le menu principal.
-      Cliquez pour éxécuter.[/H][C]{cmd} menu[/C][/T]'
-    exit: '[T]&e/{cmd} exit &8- &7Sortir des modes[H]&7Sortir des modes vérouiller
-      ou approuvé. Cliquez pour éxécuter.[/H][C]{cmd} exit[/C][/T]'
-    help: '[T]&e/{cmd} help &8[&epage&8] - &7Obtenir l''aide[H]&7Obtenir la liste
-      des commandes disponible. Cliquez pour éxécuter.[/H][C]{cmd} help[/C][/T]'
-    view: '[T]&e/{cmd} view - &7Visualiser les protections proche[H]&7Visualizer les
-      protections proche. Cliquez pour éxécuter.[/H][C]{cmd} view[/C][/T]'
+      copier.[/H][C]{cmd}[/C][/T]'
+    untrust: '[T]&e/chestprotect {subcmd} &8<&eplayer&8> - &7Retirer un joueur[H]&7Retirer
+      un joueur de la protection. Cliquez pour copier.[/H][C]{cmd}[/C][/T]'
+    menu: '[T]&e/chestprotect {subcmd} &8[&eplayer&8] - &7Ouvrir le menu[H]&7Ouvrir
+      le menu principal. Cliquez pour éxécuter.[/H][C]{cmd}[/C][/T]'
+    exit: '[T]&e/chestprotect {subcmd} &8- &7Sortir des modes[H]&7Sortir des modes
+      vérouiller ou approuvé. Cliquez pour éxécuter.[/H][C]{cmd}[/C][/T]'
+    help: '[T]&e/chestprotect {subcmd} &8[&epage&8] - &7Obetenir l''aide[H]&7Obtenir
+      la liste des commandes disponible. Cliquez pour éxécuter.[/H][C]{cmd}[/C][/T]'
+    view: '[T]&e/chestprotect {subcmd} - &7Visualiser les protections proche[H]&7Visualizer
+      les protections proche. Cliquez pour éxécuter.[/H][C]{cmd}[/C][/T]'
     admin:
-      reload: '[T]&e/{cmd} reload &8- &7Recharger les fichiers de configuration[H]&7Recharger
-        les fichiers de configuration et les fichiers de langage, certaine option
-        nécéssiteront un restart serveur. Cliquez pour éxécuter.[/H][C]{cmd} reload[/C][/T]'
-      admin: '[T]&e/{cmd} admin &8<&eaction&8> - &7Exécuter des actions administrateur[H]&7Exécuter
-        des actions administrateur. Cliquez pour copier.[/H][C]{cmd} admin[/C][/T]'
-      about: '[T]&e/{cmd} about &8- &7Afficher les information[H]&7Voir les informations
-        à propos de ChestProtect. Cliquez pour éxécuter.[/H][C]{cmd} about[/C][/T]'
-
-
+      reload: '[T]&e/chestprotect {subcmd} &8- &7Recharger les fichiers de configuration[H]&7Recharger
+        les fichiers de configuration et les fichiers de langage, certaines options
+        nécéssiteront un restart serveur. Cliquez pour éxécuter.[/H][C]{cmd}[/C][/T]'
+      admin: '[T]&e/chestprotect {subcmd} &8<&eaction&8> - &7Exécuter des actions
+        administrateur[H]&7Exécuter des actions administrateur. Cliquez pour copier.[/H][C]{cmd}[/C][/T]'
+      about: '[T]&e/chestprotect {subcmd} &8- &7Afficher les informations[H]&7Voir
+        les informations à propos de ChestProtect. Cliquez pour éxécuter.[/H][C]{cmd}[/C][/T]'
 message:
   world-invalid: '&cCeci est désactivé dans ce monde. &7Un administrateur doit l''ajouter
-    dans la configuration. Monde : &3{world}'
+    dans la configuration. Monde : &b{world}'
   object-invalid: '&cVous ne pouvez pas protéger cette objet. &7Un administrateur
     doit l''ajouter à la configuration. Nom : &3{object}'
   noaccess:
@@ -89,18 +81,15 @@ message:
     hopper: '&cVotre hopper a été retiré de cette protection. &7Votre rôle ne vous
       permet pas d''utiliser de hoppers sur cette protection. &7Monde : {world} X:
       {x} Y: {y} Z: {z}'
-  
   event:
     open-owner: '&7Cet objet &3vous &7appartient.'
     open-trusted: '&7Cet objet est protégé par &3{player}&7.'
     protectable: '&7Cet objet peut être protégé. Entrez &8/&3Lock &7pour le verrouiller.'
-  
   chat-input:
     player: '#t#&6Entrer le nom [newline]&7du joueur dans le chat[newline]&7Entrer
       "cancel" pour annuler.'
     name: '#t#&6Entrer le nom[newline]&7dans le chat[newline]&7Entrer "cancel" pour
       annuler.'
-  
   teleportation:
     already: '&cVous ne pouvez pas commencer une seconde téléportation. Une téléportation
       est déjà en cours. &7S''il vous plaît patienter pendant qu''elle s''éffectue.'
@@ -109,20 +98,16 @@ message:
     cancelled: '&cVotre téléportation a été annulée. &7S''il vous plaît ne bouger
       pas pendant que vous patientez pendant &5{sec} &7secondes pour la téléportation.'
     plugin: '&cLa téléortation a été annulée par un plugin tier. &7S''il vous plaît
-      contrôler vos autres plugins. &7Ce n''est pas une erreur de ChestProtect.'
+      contrôler vos autres plugin. &7Ce n''est pas une erreur de ChestProtect.'
     unsafe: '&cLa téléportation a été annulée, car la destination n''est pas sécurisée.'
     corrected: '&7La destination de téléportation n''est pas sécurisée. &7Votre destination
       final a été placée correctement dans une zone sécurisée.'
-  
   group:
     create:
       exists: Vous avez déjà un groupe avec le nom &4{group}&c. &7S''il vous plaît,
         veuillez choisir un autre nom.'
-  
   role:
-    not-exist: '&cLe rôle &e{role} &cn''existe pas dans cette protection. &7S''il
-      vous plaît, vérifiez son orthographe.'
-    
+    not-exist: '&cLe rôle &e{role} &cn''existe pas dans cette protection.'
     delete:
       owner: '&cVous ne pouvez pas supprimer le rôle "Propriétaire" de cette protection.
         &7Ce rôle est obligatoire.'
@@ -130,14 +115,13 @@ message:
         &7Ce rôle est obligatoire pour les nouveaux joueurs.'
       visitor: '&cVous ne pouvez pas supprimer le rôle de "Visiteur" de cette protection.
         &7Ce rôle est obligatoire pour les joueurs de non-confiance.'
-
 command:
   general:
     no-permission: '&cVous n''avez pas la permission de faire cela. &8La permission
       {permission} est requise.'
-    money-cost: '&cVous n''avez pas assez d''argent. &7Il vous faut &c{cost} $&7.'
+    money-cost: '&cVous n''avez pas assez d''argent. &7Il vous faut &c{cost} &7.'
     player-not-exist: '&cIl n''y pas de joueurs s''appelant &4{player}&c. &7S''il
-      vous plaît, vérifiez l''orthographe de son pseudo.'
+      vous plaît, vérifiez son orthographe.'
     not-protected: '&&cVous ne pouvez pas faire cela. &7Cet objet n''est pas protégé.'
     player-untrusted: '&cVous ne pouvez pas faire cela. &7Le joueur &3{player} &7ne
       fait pas partie des joueurs de confiance sur cette protection.'
@@ -163,7 +147,7 @@ command:
       &7Le propriétaire du land doit vous donner le bon rôle de permission pour créer
       des protections ici.'
     already: '&&cVous ne pouvez pas protéger cet objet. &7Il est déja protégé.'
-    success: '&7Objet protégé avec succés pour &c{cost} $&7.'
+    success: '&7Objet protégé avec succés pour &c{cost} &7.'
     max:
       general: '&cVous ne pouvez pas créer plus de protections. &7Votre maximum de
         protection disponible est de &3{max}&7.'
@@ -173,7 +157,7 @@ command:
         d''entités verrouillées est de &3{max} &7entités.'
     auto:
       cost: '&cVous ne pouvez pas protéger cet objet automatiquement. &7Vous n''avez
-        pas assez d''argent pour cela. Coût : &c{cost} $'
+        pas assez d''argent pour cela. Coût : &c{cost} '
       max:
         general: '&cVous ne pouvez pas protéger cet objet automatiquement. &7Vous
           avez atteint la limite maximum de protection disponible qui est de : &3{max}.'
@@ -185,41 +169,40 @@ command:
         [T]&cVous ne pouvez pas protéger cet objet automatiquement. &7Les protections ne peuvent être poser que dans votre land.[/T]
           [T]&7✖ Claim land : &e/lands claim &8[CLICK][H]&7Cliquer ici pour claim a votre position actuelle.[/H][C]lands claim[/C][/T]
   unlock:
-    activated: '#t#&7Mode-Déverrouillé{newline}&aActivé, &fcliquez sur un objet pour
-      le dévérouiller !'
-    deactivated: '#t#&7Mode-Déverrouillé{newline}&cDésactivé'
+    activated: '#t#&7Mode-Déverrouillé :{newline}&aActivé, &fcliquez sur un objet
+      pour le dévérouiller !'
+    deactivated: '#t#&7Mode-Déverrouillé :{newline}&cDésactivé'
     success: '&7L''objet a été déverrouillé avec succés.'
   trust:
-    activated: '#t#&7Mode-Confiance{newline}&aActivé, &fcliquez sur un objet pour
+    activated: '#t#&7Mode-Confiance :{newline}&aActivé, &fcliquez sur un objet pour
       approuvé &3{player} &7!'
-    deactivated: '#t#&7Mode-Confiance{newline}&cDésactivé'
+    deactivated: '#t#&7Mode-Confiance :{newline}&cDésactivé'
     already: '&cVous ne pouvez pas faire cela. &4{player} &cest déja ajouté à la protection.'
     max-members: '&cVous ne pouvez pas ajouter plus de membres. &7Le maximum pour
-      vous est de &c{max}&7. Contactez un administrateur pour de l''aide.'
-    success: '&3{player} &7ajouté avec succés à cette protection.'
+      vous est de &b{max}&7. Contactez un administrateur pour de l''aide.'
+    success: '&b{player} &7 ajouté avec succés à cette protection.'
   untrust:
     already: '&cLe joueur &4{player} &cn''est pas approuvé à cette position. &7S''il
-      vous plaît, vérifiez l''orthographe de son pseudo.'
+      vous plaît, vérifiez son orthographe.'
     group: '&cLe joueur &4{player} &cest approuvé via le groupe &4{group} &cet doit
       être non approuvé dans le menu de ce groupe.'
-    activated: '#t#&7Mode-Non-Confiance{newline}&aActivé'
-    deactivated: '#t#&7Mode-Non-Confiance{newline}&cDésactivé'
+    activated: '#t#&7Mode-Non-Confiance :{newline}&aActivé'
+    deactivated: '#t#&7Mode-Non-Confiance:{newline}&cDésactivé'
     priority: '&cVous ne pouvez pas désapprouvé le joueur &4{player} &cdu rôle &4{role}&c.
       &7Son rôle a une priorité supérieure ou égale au votre.'
     success: '&b{player} &7retiré avec succés des joueurs approuvé dans cette protection.'
   setRole:
-    activated: '#t#&7Mode-Rôle{newline}&7Cliquer pour définir le rôle &e{role}&7.'
-    deactivated: '#t#&7Mode-Rôle{newline}&cDésactivé'
+    activated: '#t#&7Mode-Rôle :{newline}&7Cliquer pour définir le rôle {role}&7.'
+    deactivated: '#t#&7Mode-Rôle :{newline}&cDésactivé'
     role-weight: '&cVous ne pouvez pas définir ce rôle car celui-ci est supérieur
       au vôtre. &7Demander de l''aide à un joueur approuvé ayant un Rôle supérieur.'
     role-weight-target: '&cVous ne pouvez pas éditer le rôle de ce joueur. &7Son rôle
       est supérieur ou équivalent au votre.'
-    role-not-exist: '&cLe rôle &e{role} &cn''existe pas. &7S''il vous plaît, son vérifiez
-      l''orthographe.'
-    success: '&7La définition du rôle &e{role} &7pour le joueur &3{player} &7a été
-      réaliser avec succès.'
-  exit: '#t#&7Mode{newline}&cDésactivé'
+    role-not-exist: '&cLe rôle &e{role} &cn''existe pas.'
+    success: '&7La définition du rôle {role} &7pour le joueur &3{player} &7a été réaliser
+      avec succès.'
+  exit: '#t#&7Mode :{newline}&cDésactivé'
   view:
-    activated: '#t#&7Visualisation{newline}&aLes protections proche sont maintenant
+    activated: '#t#&7Visualisation :{newline}&aLes protections proche sont maintenant
       visible.'
-    deactivated: '#t#&7Visualisation{newline}&cDésactivée'
+    deactivated: '#t#&7Visualisation :{newline}&cDésactivée'
