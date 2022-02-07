@@ -26,7 +26,7 @@ general:
   # Chinese: zh-CN
   # Polish: pl-PL
   # French: fr-FR by Nogapra
-  language: 'en-US'
+  language: '$en-US'
 
   # Worlds where players should
   # be able to lock objects
@@ -46,15 +46,6 @@ general:
 
 # Protection settings
 protection:
-  # Costs to create protection
-  costs:
-    general: 50
-    # Increase protection cost by a specific percentage. To disable this, use 0.
-    # For example paying 5% more compared to the previous protection creation (lock).
-    increase: 5.0
-    # Give players a percentage back of the original lock cost. Gived at unlock. To disable this, use 0.
-    cashback: 50.0
-
   # Should protections take damage from tnt explosion to get unlocked?
   allow-tnt: false
 
