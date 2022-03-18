@@ -45,6 +45,7 @@ general:
 
 
 # Protection settings
+# Protection costs and protection types can be edited in protectables.yml
 protection:
   # Should protections take damage from tnt explosion to get unlocked?
   allow-tnt: false
@@ -256,6 +257,11 @@ integration:
     # Allow region owners to unclock protections of other players?
     # Supports: Lands (https://www.spigotmc.org/resources/53313), SuperiorSkyblock2, BentoBox, PlotSquared, WorldGuard
     owner-unlock: false
+
+  # Apply the chestprotect-lock flag also to global regions in world manager plugins, like WorldGuard?
+  # For Lands use /lands admin wilderness instead.
+  # This option requires server reload / restart.
+  global-regions: false
 
   # Economy settings
   # If no Vault is disabled or no economy plugin is found, it will use the "currency" item from the gui file instead.
