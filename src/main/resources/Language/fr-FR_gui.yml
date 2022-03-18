@@ -1,25 +1,100 @@
+# Resource page: https://www.spigotmc.org/resources/authors/315463/
+# Discord: https://discord.gg/B4MAJVk
+#
+# If you encounter any issues, please report them
+# to discord support server or via pm.
+# Bugs or issues are mostly fixed within hours.
+#
+#
+# Here you can edit the whole GUI.
+# You can set GUI titles, the size and
+# item names, lores, materials and slots.
+# Don't remove any values or keys.
+#
+# You also can add new items to your GUI.
+# This can be done under gui.<GUI>.s.<YourItemName>
+# The name needs to be unique in this section.
+# Example:
+#
+# gui:
+#   lands:
+#     title: '&8Your Lands'
+#     size: 27
+#     s:
+#       close:
+#         name: '&cClose'
+#         lore:
+#         - '&7Close this menu.'
+#         - ' '
+#         - '&8- &7You can open it again'
+#         - '  &7with &8/&3Lands menu&7.'
+#         material: 'RED_STAINED_GLASS_PANE'
+#         slot: 9
+#
+# Please note: You need to set all values
+# otherwise Lands will auto generate values.
+# Also you can't set items where list items
+# are configured. Means if for example the
+# list in the Lands GUI goes from slot
+# 10 - 12 you can set any items with
+# the slot 10, 11, 12. They will be ignored.
+#
+#
+# You also can apply new placeholders.
+# This can be done under gui.<GUI>.p.<YourItemName>
+# The name needs to be unique in this section.
+# Example:
+#
+# gui:
+#   lands:
+#     p:
+#       placeholder_1:
+#       material: 'GRAY_STAINED_GLASS_PANE'
+#       from: 1
+#       to: 9
+#
+# Please note: You need to set all values
+# otherwise Lands will auto generate values.
+# Also you can't set items where list items
+# are configured. Means if for example the
+# list in the Lands GUI goes from slot
+# 10 - 12 you can set any items with
+# the slot 10, 11, 12. They will be ignored.
+# Added enabled: false to a item to disable it.
+# You can set every item as a custom head:
+# Visit /https://minecraft-heads.com/custom-heads
+# Then copy the 'value:' and paste it at 'material:'
+#
+#
+# If you encounter any issues or you simply have
+# some questions, contact me via PM or Discord.
+# Discord: https://discord.gg/B4MAJVk
+
 general:
   wYes: '&aOui'
   wNo: '&cNon'
   none: '&cAucun'
-  all: '&aAll'
+  all: '&aTout'
   now: '&aMaintenant'
   enabled: '&aActivé'
   disabled: '&cDésactivé'
   others: Autres
-  online: '&aOnline'
-  previous: '&8previous'
+  online: '&aConnecté'
+  previous: '&8précédent'
+
   role:
-    owner: '&4Owner'
+    owner: '&4Propriétaire'
     admin: '&cAdmin'
-    member: '&eMember'
-    visitor: '&7Visitor'
+    member: '&eMembre'
+    visitor: '&7Visiteur'
+
   lands:
     flags:
       chestprotect_lock:
         name: Objets vérouillés
         description: Autoriser les joueurs de ce rôle à vérouiller les objet dans
           cette area ?
+
 skull:
   entity:
     cow: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWQ2YzZlZGE5NDJmN2Y1ZjcxYzMxNjFjNzMwNmY0YWVkMzA3ZDgyODk1ZjlkMmIwN2FiNDUyNTcxOGVkYzUifX19
@@ -27,16 +102,21 @@ skull:
     pig: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIxNjY4ZWY3Y2I3OWRkOWMyMmNlM2QxZjNmNGNiNmUyNTU5ODkzYjZkZjRhNDY5NTE0ZTY2N2MxNmFhNCJ9fX0=
     armor_stand: ARMOR_STAND
     others: PAPER
+
   role:
     owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmJjMzExYTRmYjljNDkzODliNGY0NThjMjllOTY4MzI0YzU4MjNiOGE5OWVhZGUxNzQ3ODY2Yzk1YjA2NGEifX19
     admin: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2UzZmVhODhlMmI4NWNjZGZiMWIzODcyOTgyZWFlMTY0ODlhODRjNjgxYmQ5ZmU0ZmU5YmM4YmNjMmU1In19fQ==
     member: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjFhZGZkZjA3MTE3NWFkYWQ2NDRmZTRiM2E5NzMxYWM2YThmYTQ3NTExNjJlODEzOGM4OTlmYmFhNWZmMGI5In19fQ==
     visitor: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
+
+
 physical-item:
   currency:
     name: ''
     lore: []
     material: GOLD_INGOT
+
+
 gui:
   main:
     title: '&8Menu principal'
@@ -70,8 +150,8 @@ gui:
         lore:
         - '&7Fermer ce menu.'
         - ''
-        - '&7Vous pourrez le réouvrir'
-        - '&7avec &8/&3Protect menu&7.'
+        - '&8- &7Vous pourrez le réouvrir'
+        - '  &7avec &8/&3Protect menu&7.'
         material: RED_STAINED_GLASS_PANE
         slot: 9
     f:
@@ -87,31 +167,28 @@ gui:
         material: GRAY_STAINED_GLASS_PANE
         from: 1
         to: 27
+
   settings_player:
     title: '&8Vos réglages'
     size: 27
     f:
       page_previous:
-        name: '&9Page précedente'
+        name: '&c&lPage précedente'
         lore:
-        - '&7Aller à la page précédente : &9{previous}'
-        - ''
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Aller à la page précédente : &3{previous}'
         material: ARROW
         slot: 21
       page_next:
         name: '&aPage suivante'
         lore:
-        - '&7Aller à la page suivante : &9{next}'
-        - ''
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Aller à la page suivante : &9{next}'
         material: ARROW
         slot: 25
       back:
         name: '&cRetour'
         lore:
-        - '&7Retourner à'
-        - '{back}&7.'
+        - '&8✖ &7Retourner à'
+        - '   &7{back}.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
     l:
@@ -149,9 +226,9 @@ gui:
         - '&7des blocs protégeables'
         - '&7quand vous les placez ?'
         - ''
-        - '&7Cela fonctionne seulement, si vous'
-        - '&7avez &2assez d''argent &7et que vous n''avez'
-        - '&7pas encore attein votre limite de protections.'
+        - '&8- &7Cela fonctionne seulement, si vous'
+        - '  &7avez &2assez d''argent &7et que vous n''avez'
+        - '  &7pas encore attein votre limite de protections.'
         material: OBSERVER
         from: 10
         to: 18
@@ -173,7 +250,7 @@ gui:
         - '&7Vous n''êtes pas autorisé à'
         - '&7éditer ce réglage.'
         - ''
-        - '&7Vous devez avoir la permission'
+        - '&8- &7Vous devez avoir la permission'
         - '  &8{permission}&7.'
     p:
       placeholder_1:
@@ -184,6 +261,7 @@ gui:
         material: GRAY_STAINED_GLASS_PANE
         from: 19
         to: 27
+
   blocks:
     title: '&8Types de protection'
     size: 27
@@ -248,8 +326,8 @@ gui:
       back:
         name: '&cRetour'
         lore:
-        - '&7Retourner à'
-        - '{back}&7.'
+        - '&8✖ &7Retourner à'
+        - '   &7{back}.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
     p:
@@ -257,6 +335,7 @@ gui:
         material: GRAY_STAINED_GLASS_PANE
         from: 1
         to: 27
+
   entities:
     title: '&8Types d''entités'
     size: 27
@@ -313,8 +392,8 @@ gui:
       back:
         name: '&cRetour'
         lore:
-        - '&7Retourner à'
-        - '{back}&7.'
+        - '&8✖ &7Retourner à'
+        - '   &7{back}.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
     p:
@@ -322,6 +401,7 @@ gui:
         material: GRAY_STAINED_GLASS_PANE
         from: 1
         to: 27
+
   protection-type:
     title: '&8Type {material}'
     size: 45
@@ -329,24 +409,20 @@ gui:
       back:
         name: '&cRetour'
         lore:
-        - '&7Retourner à'
-        - '{back}&7.'
+        - '&8✖ &7Retourner à'
+        - '   &7{back}.'
         material: RED_STAINED_GLASS_PANE
         slot: 37
       page_previous:
-        name: '&9Page précedente'
+        name: '&c&lPage précedente'
         lore:
-        - '&7Aller à la page précédente : &9{previous}'
-        - ''
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Aller à la page précédente : &3{previous}'
         material: ARROW
         slot: 39
       page_next:
         name: '&aPage suivante'
         lore:
-        - '&7Aller à la page suivante : &9{next}'
-        - ''
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Aller à la page suivante : &9{next}'
         material: ARROW
         slot: 44
     l:
@@ -358,9 +434,9 @@ gui:
         - '&8✖ &9CLIC DROIT'
         - '&7Téléportez vous à cette protection'
         - ''
-        - '&7Chunk: '
-        - '&7X : {chunk-x}'
-        - '&7Z : {chunk-z}'
+        - '&8- &7Chunk: '
+        - '  &7X : {chunk-x}'
+        - '  &7Z : {chunk-z}'
         - ''
         - '&8✖ &bSHIFT + CLIC GAUCHE'
         - '&7Supprimer cette protection.'
@@ -436,15 +512,16 @@ gui:
         material: GRAY_STAINED_GLASS_PANE
         from: 38
         to: 45
+
   protection:
-    title: '&7X : &b{x} &7Y : &b{y} &7Z : &b{z}'
+    title: '&8X : {x} Y : {y} Z : {z}'
     size: 27
     f:
       back:
         name: '&cRetour'
         lore:
-        - '&7Retourner à'
-        - '{back}&7.'
+        - '&8✖ &7Retourner à'
+        - '   &7{back}.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
       group:
@@ -470,7 +547,7 @@ gui:
       flags:
         name: '&8> &6Editer les Flags'
         lore:
-        - '&7Cliquer pour editier les flags.'
+        - '&7Cliquer pour editer les flags.'
         - ''
         - '&7Chaque type de bloc peut'
         - '&7avoir des flags différents.'
@@ -492,37 +569,34 @@ gui:
         name: '&4Echec : &cpas la permission'
         lore:
         - '&7Seul le propriétaire &3{owner}'
-        - '&7peut dévérouiller cette protection.'
+        - '&7peut faire cela.'
     p:
       placeholder_1:
         material: GRAY_STAINED_GLASS_PANE
         from: 1
         to: 27
+
   protection_flags:
     title: '&8Flags'
     size: 27
     f:
       page_previous:
-        name: '&9Page précedente'
+        name: '&c&lPage précedente'
         lore:
-        - '&7Aller à la page précédente : &9{previous}'
-        - ''
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Aller à la page précédente : &3{previous}'
         material: ARROW
         slot: 21
       page_next:
         name: '&aPage suivante'
         lore:
-        - '&7Aller à la page suivante : &9{next}'
-        - ''
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Aller à la page suivante : &9{next}'
         material: ARROW
         slot: 25
       back:
         name: '&cRetour'
         lore:
-        - '&7Retourner à'
-        - '{back}&7.'
+        - '&8✖ &7Retourner à'
+        - '   &7{back}.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
     l:
@@ -562,6 +636,7 @@ gui:
         material: GRAY_STAINED_GLASS_PANE
         from: 19
         to: 27
+
   action-confirm:
     title: '&8S''il vous plaît, confirmer cette action'
     size: 27
@@ -597,6 +672,7 @@ gui:
         material: GRAY_STAINED_GLASS_PANE
         from: 19
         to: 27
+
   protection_players:
     title: '&8Joueurs approuvés'
     size: 36
@@ -606,9 +682,9 @@ gui:
         lore:
         - '&7Rôle : {role}'
         - ''
-        - '&bCLIC GAUCHE'
+        - '&8✖ &bCLIC GAUCHE'
         - '&7▲ Promouvoir'
-        - '&9CLIC DROIT'
+        - '&8✖ &9CLIC DROIT'
         - '&7▼ Rétrograder'
         - ''
         - '&8✖ &3TOUCHE A'
@@ -701,24 +777,20 @@ gui:
       back:
         name: '&cRetour'
         lore:
-        - '&7Retourner à'
-        - '{back}&7.'
+        - '&8✖ &7Retourner à'
+        - '   &7{back}.'
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
-        name: '&9Page précedente'
+        name: '&c&lPage précedente'
         lore:
-        - '&7Aller à la page précédente : &9{previous}'
-        - ''
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Aller à la page précédente : &3{previous}'
         material: ARROW
         slot: 30
       page_next:
         name: '&aPage suivante'
         lore:
-        - '&7Aller à la page suivante : &9{next}'
-        - ''
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Aller à la page suivante : &9{next}'
         material: ARROW
         slot: 35
     p:
@@ -730,6 +802,7 @@ gui:
         material: GRAY_STAINED_GLASS_PANE
         from: 29
         to: 36
+
   player_groups:
     title: '&8Groups'
     size: 36
@@ -747,16 +820,14 @@ gui:
       back:
         name: '&cRetour'
         lore:
-        - '&7Retourner à'
-        - '{back}&7.'
+        - '&8✖ &7Retourner à'
+        - '   &7{back}.'
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
-        name: '&9Page précedente'
+        name: '&c&lPage précedente'
         lore:
-        - '&7Aller à la page précédente : &9{previous}'
-        - ''
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Aller à la page précédente : &3{previous}'
         material: ARROW
         slot: 30
       create:
@@ -768,9 +839,7 @@ gui:
       page_next:
         name: '&aPage suivante'
         lore:
-        - '&7Aller à la page suivante : &9{next}'
-        - ''
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Aller à la page suivante : &9{next}'
         material: ARROW
         slot: 34
     a:
@@ -818,8 +887,8 @@ gui:
       back:
         name: '&cRetour'
         lore:
-        - '&7Retourner à'
-        - '{back}&7.'
+        - '&8✖ &7Retourner à'
+        - '   &7{back}.'
         material: RED_STAINED_GLASS_PANE
         slot: 19
     p:
@@ -836,9 +905,9 @@ gui:
         lore:
         - '&7Rôle : {role}'
         - ''
-        - '&bCLIC GAUCHE'
+        - '&8✖ &bCLIC GAUCHE'
         - '&7▲ Promouvoir'
-        - '&9CLIC DROIT'
+        - '&8✖ &9CLIC DROIT'
         - '&7▼ Rétrograder'
         - ''
         - '&8✖ &3TOUCHE A'
@@ -904,24 +973,20 @@ gui:
       back:
         name: '&cRetour'
         lore:
-        - '&7Retourner à'
-        - '{back}&7.'
+        - '&8✖ &7Retourner à'
+        - '   &7{back}.'
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
-        name: '&9Page précedente'
+        name: '&c&lPage précedente'
         lore:
-        - '&7Aller à la page précédente : &9{previous}'
-        - ''
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Aller à la page précédente : &3{previous}'
         material: ARROW
         slot: 30
       page_next:
         name: '&aPage suivante'
         lore:
-        - '&7Aller à la page suivante : &9{next}'
-        - ''
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Aller à la page suivante : &9{next}'
         material: ARROW
         slot: 35
     p:
@@ -965,24 +1030,20 @@ gui:
       back:
         name: '&cRetour'
         lore:
-        - '&7Retourner à'
-        - '{back}&7.'
+        - '&8✖ &7Retourner à'
+        - '   &7{back}.'
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
-        name: '&9Page précedente'
+        name: '&c&lPage précedente'
         lore:
-        - '&7Aller à la page précédente : &9{previous}'
-        - ''
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Aller à la page précédente : &3{previous}'
         material: ARROW
         slot: 30
       page_next:
         name: '&aPage suivante'
         lore:
-        - '&7Aller à la page suivante : &9{next}'
-        - ''
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Aller à la page suivante : &9{next}'
         material: ARROW
         slot: 35
     a:
@@ -1048,24 +1109,20 @@ gui:
       back:
         name: '&cRetour'
         lore:
-        - '&7Retourner à'
-        - '{back}&7.'
+        - '&8✖ &7Retourner à'
+        - '   &7{back}.'
         material: RED_STAINED_GLASS_PANE
         slot: 28
       page_previous:
-        name: '&9Page précedente'
+        name: '&c&lPage précedente'
         lore:
-        - '&7Aller à la page précédente : &9{previous}'
-        - ''
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Aller à la page précédente : &3{previous}'
         material: ARROW
         slot: 30
       page_next:
         name: '&aPage suivante'
         lore:
-        - '&7Aller à la page suivante : &9{next}'
-        - ''
-        - '&7Actuelle : &3{current}'
+        - '&8✖ &7Aller à la page suivante : &9{next}'
         material: ARROW
         slot: 35
     p:
