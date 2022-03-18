@@ -1,30 +1,28 @@
 # Here you can edit all chat messages
 # GUI items and menus can be found in <language>_gui.yml
-# 
+#
 # If you encounter any issues or have questions, contact plugin support.
 # Plugin page: https://www.spigotmc.org/resources/authors/315463/
 # Discord: https://discord.gg/B4MAJVk
-# 
+#
 # ###############################
 # About chat message type system:
 # Does only work for messages in
 # "message" or "command" section.
 # ###############################
-# 
+#
 # You can use some codes to set the type
 # of a message to title, actionbar or chat.
 # How does it work:
-# 
+#
 # For example we want to print a message as a title:
 # Set message to: '#t#Title[newline]Subtitle'(Set "#t#" in front of it; use [newline] to set the subtitle)
-# 
+#
 # You also send a message at the actionbar:
 # Set message to: '#a#This is a actionbar message.'
 # (Set #a# in front of it.)
-# 
+#
 # More information: https://github.com/Angeschossen/General/wiki/Messages
-
-
 
 general:
   prefix:
@@ -37,6 +35,7 @@ general:
     member: '&eMember'
     visitor: '&7Visitor'
     all: '&dAll'
+
 help:
   command:
     lock: '[T]&e/chestprotect {subcmd} &8[&eplayer&8] - &7Lock object[H]&7Lock an
@@ -62,6 +61,8 @@ help:
         admin actions. Click to copy.[/H][C]{cmd}[/C][/T]'
       about: '[T]&e/chestprotect {subcmd} &8- &7Show information[H]&7View information
         about ChestProtect. Click to execute.[/H][C]{cmd}[/C][/T]'
+
+
 message:
   world-invalid: '&cThis is deactivated in this world. &7A administrator needs to
     add it in config. Name of world: &3{world}'
@@ -78,14 +79,17 @@ message:
     hopper: '&cYour hopper has been removed from a protection. &7Your role is not
       allowed to use hoppers at this protection. &7World: {world} X: {x} Y: {y} Z:
       {z}'
+  
   event:
     open-owner: '&7This protection belongs to &3you&7.'
     open-trusted: '&7This protection belongs to &3{player}&7.'
     protectable: '&7You placed a protectable object. Execute &8/&3Lock &7to lock it.'
+  
   chat-input:
     player: '#t#&6Enter the Name[newline]&7of the player in chat[newline]&7Enter "cancel"
       to abort.'
     name: '#t#&6Enter the Name[newline]&7in chat[newline]&7Enter "cancel" to abort.'
+  
   teleportation:
     already: '&cYou can''t start a second teleportation. There''s already a teleportation
       in progress. &7Please wait until it''s done.'
@@ -98,12 +102,15 @@ message:
     unsafe: '&cTeleportation has been cancelled, because the destination is not safe.'
     corrected: '&7The original teleport destination was unsafe. &7Your final destination
       has been corrected to a safe location.'
+  
   group:
     create:
       exists: '&cYou already have a group with the name &4{group}&c. &7Please choose
         a different name.'
+  
   role:
     not-exist: '&cRole &e{role} &cdoes not exist at this protection. &7Typo?'
+    
     delete:
       owner: '&cYou can''t delete the owner role of your protection. &7This role is
         required.'
@@ -111,6 +118,7 @@ message:
         for new players.'
       visitor: '&cYou can''t delete the visitor role of your protection. &7It''s required
         for untrusted players.'
+
 command:
   general:
     no-permission: '&cYou don''t have permission to do this. &8You need permission
