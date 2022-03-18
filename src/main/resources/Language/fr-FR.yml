@@ -1,3 +1,29 @@
+# Here you can edit all chat messages
+# GUI items and menus can be found in <language>_gui.yml
+#
+# If you encounter any issues or have questions, contact plugin support.
+# Plugin page: https://www.spigotmc.org/resources/authors/315463/
+# Discord: https://discord.gg/B4MAJVk
+#
+# ###############################
+# About chat message type system:
+# Does only work for messages in
+# "message" or "command" section.
+# ###############################
+#
+# You can use some codes to set the type
+# of a message to title, actionbar or chat.
+# How does it work:
+#
+# For example we want to print a message as a title:
+# Set message to: '#t#Title[newline]Subtitle'(Set "#t#" in front of it; use [newline] to set the subtitle)
+#
+# You also send a message at the actionbar:
+# Set message to: '#a#This is a actionbar message.'
+# (Set #a# in front of it.)
+#
+# More information: https://github.com/Angeschossen/General/wiki/Messages
+
 general:
   prefix:
     normal: '&8[&6ChestProtect&8] '
@@ -9,6 +35,7 @@ general:
     member: '&eMembre'
     visitor: '&7Visiteur'
     all: '&dTout'
+
 help:
   command:
     lock: '[T]&e/chestprotect {subcmd} &8[&eplayer&8] - &7Vérouiller un objet[H]&7Vérouiller
@@ -36,6 +63,8 @@ help:
         administrateur[H]&7Exécuter des actions administrateur. Cliquez pour copier.[/H][C]{cmd}[/C][/T]'
       about: '[T]&e/chestprotect {subcmd} &8- &7Afficher les informations[H]&7Voir
         les informations à propos de ChestProtect. Cliquez pour éxécuter.[/H][C]{cmd}[/C][/T]'
+
+
 message:
   world-invalid: '&cCeci est désactivé dans ce monde. &7Un administrateur doit l''ajouter
     dans la configuration. Monde : &b{world}'
@@ -53,15 +82,18 @@ message:
     hopper: '&cVotre hopper a été retiré de cette protection. &7Votre rôle ne vous
       permet pas d''utiliser de hoppers sur cette protection. &7Monde : {world} X:
       {x} Y: {y} Z: {z}'
+
   event:
     open-owner: '&7Cet objet &3vous &7appartient.'
     open-trusted: '&7Cet objet est protégé par &3{player}&7.'
     protectable: '&7Cet objet peut être protégé. Entrez &8/&3Lock &7pour le verrouiller.'
+
   chat-input:
     player: '#t#&6Entrer le nom [newline]&7du joueur dans le chat[newline]&7Entrer
       "cancel" pour annuler.'
     name: '#t#&6Entrer le nom[newline]&7dans le chat[newline]&7Entrer "cancel" pour
       annuler.'
+
   teleportation:
     already: '&cVous ne pouvez pas commencer une seconde téléportation. Une téléportation
       est déjà en cours. &7S''il vous plaît patienter pendant qu''elle s''éffectue.'
@@ -74,12 +106,15 @@ message:
     unsafe: '&cLa téléportation a été annulée, car la destination n''est pas sécurisée.'
     corrected: '&7La destination de téléportation n''est pas sécurisée. &7Votre destination
       final a été placée correctement dans une zone sécurisée.'
+
   group:
     create:
       exists: Vous avez déjà un groupe avec le nom &4{group}&c. &7S''il vous plaît,
         veuillez choisir un autre nom.'
+
   role:
     not-exist: '&cLe rôle &e{role} &cn''existe pas dans cette protection.'
+
     delete:
       owner: '&cVous ne pouvez pas supprimer le rôle "Propriétaire" de cette protection.
         &7Ce rôle est obligatoire.'
@@ -87,6 +122,7 @@ message:
         &7Ce rôle est obligatoire pour les nouveaux joueurs.'
       visitor: '&cVous ne pouvez pas supprimer le rôle de "Visiteur" de cette protection.
         &7Ce rôle est obligatoire pour les joueurs de non-confiance.'
+
 command:
   general:
     no-permission: '&cVous n''avez pas la permission de faire cela. &8La permission
