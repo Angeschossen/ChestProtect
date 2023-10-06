@@ -6,5 +6,6 @@
           cashback: 2.5
 
 + Added: [Suggestion] group API
++ Added: API docs
 + Improved: compatability of protection unload with 3rd party plugin
 - Fixed: untrusted open protection menu via hologram
