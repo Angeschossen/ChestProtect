@@ -1,0 +1,225 @@
+skull:
+  entity:
+    cow: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWQ2YzZlZGE5NDJmN2Y1ZjcxYzMxNjFjNzMwNmY0YWVkMzA3ZDgyODk1ZjlkMmIwN2FiNDUyNTcxOGVkYzUifX19'
+    sheep: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjMxZjljY2M2YjNlMzJlY2YxM2I4YTExYWMyOWNkMzNkMThjOTVmYzczZGI4YTY2YzVkNjU3Y2NiOGJlNzAifX19=='
+    pig: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIxNjY4ZWY3Y2I3OWRkOWMyMmNlM2QxZjNmNGNiNmUyNTU5ODkzYjZkZjRhNDY5NTE0ZTY2N2MxNmFhNCJ9fX0='
+    armor_stand: 'ARMOR_STAND'
+    others: 'PAPER'
+
+  role:
+    owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmJjMzExYTRmYjljNDkzODliNGY0NThjMjllOTY4MzI0YzU4MjNiOGE5OWVhZGUxNzQ3ODY2Yzk1YjA2NGEifX19
+    admin: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2UzZmVhODhlMmI4NWNjZGZiMWIzODcyOTgyZWFlMTY0ODlhODRjNjgxYmQ5ZmU0ZmU5YmM4YmNjMmU1In19fQ==
+    member: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjFhZGZkZjA3MTE3NWFkYWQ2NDRmZTRiM2E5NzMxYWM2YThmYTQ3NTExNjJlODEzOGM4OTlmYmFhNWZmMGI5In19fQ==
+    visitor: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
+
+physical:
+  currency:
+    material: GOLD_INGOT
+
+additional:
+  lands_flag_lock:
+    material: IRON_BARS
+  lands_flag_open:
+    material: CHEST
+
+
+# Common Sounds
+# These are applied to all items starting with the defined prefix.
+common_sounds:
+  # Play a sound when the item is set in the menu.
+  set:
+    # Each item starting with [item_type]_failure_<name> will have this sound set.
+    # You can still override the "sound_set" for any item in their sections.
+    failure: ENTITY_VILLAGER_NO
+    
+
+common:
+  size: 45
+  entries: 10-36
+  # Automatically correct slots if menus, that inherit items from this section, have a smaller size?
+  # If this is disabled, items, which slots go over the menu size, will be set to slot 0 instead.
+  # To manually override the slots for a common item in a menu, just define this item in the custom section of the menu.
+  auto-correct: true
+  items:
+    default:
+      back:
+        material: RED_STAINED_GLASS_PANE
+        slots: 37
+      refresh_page_previous:
+        material: ARROW
+        slots: 38
+      refresh_page_next:
+        material: ARROW
+        slots: 44
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        slots: 1-45
+
+gui:
+  main:
+    items:
+      default:
+        protections:
+          material: 'CHEST'
+          slots: 20
+        groups:
+          material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWMyZmYyNDRkZmM5ZGQzYTJjZWY2MzExMmU3NTAyZGM2MzY3YjBkMDIxMzI5NTAzNDdiMmI0NzlhNzIzNjZkZCJ9fX0='
+          slots: 22
+        settings:
+          material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0OWI5MzE4ZTMzMTU4ZTY0YTQ2YWIwZGUxMjFjM2Q0MDAwMGUzMzMyYzE1NzQ5MzJiM2M4NDlkOGZhMGRjMiJ9fX0='
+          slots: 24
+        info:
+          material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmNmYWZmYThjNmM3ZjYyNjIxNjgyZmU1NjcxMWRjM2I4OTQ0NjVmZGY3YTYyZjQzYjMxYTBkMzQwM2YzNGU3In19fQ=='
+          slots: 26
+
+  list_settings_player:
+    items:
+      default:
+        entry_persistent_lock:
+          material: 'OAK_SIGN'
+        entry_persistent_trust:
+          material: 'PLAYER_HEAD'
+        entry_auto_lock:
+          material: 'OBSERVER'
+        entry_notifications:
+          material: 'PAPER'
+
+  list_blocks:
+    items:
+      default:
+        type_chest:
+          material: 'CHEST'
+          slots: 20
+        type_barrel:
+          material: 'BARREL'
+          slots: 21
+        type_door:
+          material: 'OAK_DOOR'
+          slots: 22
+        type_furnace:
+          material: 'FURNACE'
+          slots: 23
+        type_armor_stand:
+          material: 'ARMOR_STAND'
+          slots: 24
+        type_shulker_box:
+          material: 'SHULKER_BOX'
+          slots: 25
+        others:
+          material: 'PAPER'
+          slots: 26
+
+  list_protection-type:
+    items:
+      default:
+        entry_object:
+          material: 'INHERIT'
+
+  protection:
+    items:
+      default:
+        members:
+          material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
+          slots: 11
+        group:
+          material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWMyZmYyNDRkZmM5ZGQzYTJjZWY2MzExMmU3NTAyZGM2MzY3YjBkMDIxMzI5NTAzNDdiMmI0NzlhNzIzNjZkZCJ9fX0=
+          slots: 13
+        flags:
+          material: REDSTONE
+          slots: 15
+        name:
+          material: NAME_TAG
+          slots: 17
+        delete:
+          material: RED_DYE
+          slots: 32
+
+  list_protection_flags:
+    items:
+      default:
+        entry_redstone:
+          material: REDSTONE
+        entry_public_take:
+          material: CHEST
+        entry_hologram:
+          material: PAPER
+        entry_public_insert:
+          material: CHEST
+
+  action-confirm:
+    items:
+      default:
+        info:
+          material: OAK_SIGN
+          slots: [5,14,23,32,41]
+        confirm:
+          material: LIME_STAINED_GLASS_PANE
+          slots: [1-4,10-13,19-22,28-31,37-40]
+        cancel:
+          material: RED_STAINED_GLASS_PANE
+          slots: [6-9,15-18,24-27,33-36,42-45]
+
+  list_protection_players:
+    items:
+      default:
+        entry_object:
+          material: INHERIT
+        entry_object_group:
+          material: INHERIT
+        trust:
+          material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
+          slots: 40
+        untrust:
+          material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
+          slots: 42
+
+  list_player_groups:
+    items:
+      default:
+        entry_object:
+          material: 'PAPER'
+        entry_object_select:
+          material: 'PAPER'
+        create:
+          material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0='
+          slots: 41
+
+  group:
+    items:
+      default:
+        members:
+          material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
+          slots: 21
+        objects:
+          material: CHEST
+          slots: 25
+
+  list_group_players:
+    items:
+      default:
+        entry_object:
+          material: INHERIT
+        trust:
+          material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
+          slots: 40
+        untrust:
+          material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
+          slots: 42
+
+  list_group_types:
+    items:
+      default:
+        entry_object:
+          material: INHERIT
+        add:
+          material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
+          slots: 40
+        refresh_add_all:
+          material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
+          slots: 42
+
+  list_protectables:
+    items:
+      default:
+        entry_object:
+          material: INHERIT

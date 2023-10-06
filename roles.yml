@@ -1,0 +1,21 @@
+# Wiki: https://github.com/Angeschossen/ChestProtect/wiki/Roles
+roles:
+  owner:
+    name: '&4Owner'
+    flags: 'ALL'
+  admin:
+    name: '&cAdmin'
+    flags:
+      - HOPPER_TRANSFER
+      - OPEN
+      - PLAYER_TRUST
+      - PLAYER_UNTRUST
+      - PLAYER_SETROLE
+  member:
+    name: '&eMember'
+    flags:
+      - HOPPER_TRANSFER
+      - OPEN
+  visitor:
+    name: '&7Visitor'
+    flags: []

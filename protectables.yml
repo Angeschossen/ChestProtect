@@ -1,0 +1,451 @@
+# If this setting is enabled, all costs configurations from below will be ignored.
+global-costs:
+  enabled: false
+  value: 25
+  cashback: 50
+
+
+# These are the default protectable objects. You can also add your own by using the currect material.
+# But please note that only the default types were fully tested. If you encounter any issues with a custom added type,
+# please leave a suggestion on our Discord to officially support the type.
+# Also, all listed objects were split into blocks and entities from a user perspective not technical (for example item frames
+# are listed under blocks, but are technically entities.
+# Link: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+# Example:
+#    <material>:
+#      enabled: true
+#      costs:
+#        value: 10
+#        cashback: 15
+protectables:
+  blocks:
+    # Disable the whole category?
+    enabled: true
+    types:
+      chest:
+        enabled: true
+        # Should a hologram be displayed for containers?
+        # By default, holograms display free space and the name of the protection.
+        # Players can still disable it in the protection menu.
+        hologram: true
+        costs:
+          value: 50
+          # Increase protection cost by a specific percentage. To disable this, use 0.
+          # For example paying 5 % more compared to the previous protection creation OF THIS BLOCK TYPE.
+          # Give players a percentage back of the original lock cost at unlock. To disable this, use 0.
+          cashback: 50
+      barrel:
+        enabled: true
+        hologram: true
+        costs:
+          value: 75
+          cashback: 50
+      furnace:
+        enabled: true
+        hologram: true
+        costs:
+          value: 50
+          cashback: 50  
+      smoker:
+        enabled: true
+        hologram: true
+        costs:
+          value: 75
+          cashback: 50
+      door:
+        enabled: true
+        costs:
+          value: 50
+          cashback: 50
+      trapdoor:
+        enabled: true
+        costs:
+          value: 25
+          cashback: 50
+      lectern:
+        enabled: true
+        costs:
+          value: 250
+          cashback: 50
+      armor_stand:
+        enabled: true
+        costs:
+          value: 400
+          cashback: 50
+      item_frame:
+        enabled: true
+        costs:
+          value: 5
+          cashback: 2.5
+      shulker_box:
+        enabled: true
+        hologram: true
+        costs:
+          value: 200
+          cashback: 50
+      crafting_table:
+        enabled: false
+        costs:
+          value: 10
+          cashback: 50
+      hopper:
+        enabled: true
+        hologram: false
+        costs:
+          value: 10
+          cashback: 15
+      bed:
+        enabled: false
+        hologram: false
+        costs:
+          value: 10
+          cashback: 15
+      pressure_plate:
+        enabled: false
+        costs:
+          value: 10
+          cashback: 15
+      player_head:
+        enabled: false
+        costs:
+          value: 5
+          cashback: 2.5
+      player_wall_head:
+        enabled: false
+        costs:
+          value: 5
+          cashback: 2.5
+      sign:
+        enabled: false
+        costs:
+          value: 5
+          cashback: 2.5
+
+
+  entities:
+    # Disable the whole category?
+    enabled: true
+    types:
+      cow:
+        enabled: true
+        icon: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWQ2YzZlZGE5NDJmN2Y1ZjcxYzMxNjFjNzMwNmY0YWVkMzA3ZDgyODk1ZjlkMmIwN2FiNDUyNTcxOGVkYzUifX19
+        costs:
+          value: 50
+          cashback: 50
+      sheep:
+        enabled: true
+        icon: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjMxZjljY2M2YjNlMzJlY2YxM2I4YTExYWMyOWNkMzNkMThjOTVmYzczZGI4YTY2YzVkNjU3Y2NiOGJlNzAifX19
+        costs:
+          value: 50
+          cashback: 50
+      pig:
+        enabled: true
+        icon: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIxNjY4ZWY3Y2I3OWRkOWMyMmNlM2QxZjNmNGNiNmUyNTU5ODkzYjZkZjRhNDY5NTE0ZTY2N2MxNmFhNCJ9fX0=
+        costs:
+          value: 50
+          cashback: 50
+      chicken:
+        enabled: true
+        icon: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTYzODQ2OWE1OTljZWVmNzIwNzUzNzYwMzI0OGE5YWIxMWZmNTkxZmQzNzhiZWE0NzM1YjM0NmE3ZmFlODkzIn19fQ==
+        costs:
+          value: 50
+          cashback: 50
+      dolphin:
+        enabled: true
+        icon: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGU5Njg4Yjk1MGQ4ODBiNTViN2FhMmNmY2Q3NmU1YTBmYTk0YWFjNmQxNmY3OGU4MzNmNzQ0M2VhMjlmZWQzIn19fQ==
+        costs:
+          value: 500
+          cashback: 50
+      donkey:
+        enabled: true
+        icon: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjNhOTc2YzA0N2Y0MTJlYmM1Y2IxOTcxMzFlYmVmMzBjMDA0YzBmYWY0OWQ4ZGQ0MTA1ZmNhMTIwN2VkYWZmMyJ9fX0=
+        costs:
+          value: 75
+          cashback: 50
+      horse:
+        enabled: true
+        icon: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWYxNWMyN2NiN2MzNWE2ZTdhYTc2MzU3M2RkYmZmOTgwODUxNmJkYWJjMjNmMWNiNTE2MzkxOGM0YTEzOTIifX19
+        costs:
+          value: 150
+          cashback: 50
+      fox:
+        enabled: true
+        icon: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDg5NTRhNDJlNjllMDg4MWFlNmQyNGQ0MjgxNDU5YzE0NGEwZDVhOTY4YWVkMzVkNmQzZDczYTNjNjVkMjZhIn19fQ==
+        costs:
+          value: 85
+          cashback: 50
+      llama:
+        enabled: true
+        costs:
+          value: 150
+          cashback: 50
+      mushroom_cow:
+        enabled: true
+        costs:
+          value: 50
+          cashback: 50
+      ocelot:
+        enabled: true
+        costs:
+          value: 50
+          cashback: 50
+      panda:
+        enabled: true
+        costs:
+          value: 50
+          cashback: 50
+      parrot:
+        enabled: true
+        costs:
+          value: 50
+          cashback: 50
+      polar_bear:
+        enabled: true
+        costs:
+          value: 50
+          cashback: 50
+      wolf:
+        enabled: true
+        costs:
+          value: 50
+          cashback: 50
+      rabbit:
+        enabled: true
+        costs:
+          value: 50
+          cashback: 50
+      turtle:
+        enabled: true
+        costs:
+          value: 50
+          cashback: 50
+      cod:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      pufferfish:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      squid:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      salmon:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      tropical_fish:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      iron_golem:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      cave_spider:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      creeper:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      drowned:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      elder_guardian:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      ender_dragon:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      enderman:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      endermite:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      evoker:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      ghast:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      giant:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      guardian:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      hoglin:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      husk:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      illusioner:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      magma_cube:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      mule:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      phantom:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      piglin:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      pillager:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      ravager:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      silverfish:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      skeleton:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      skeleton_horse:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      slime:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      snowman:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      spider:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      stray:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      strider:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      vex:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      villager:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      vindicator:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      wandering_trader:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      witch:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      wither:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      wither_skeleton:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      zoglin:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      zombie:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      zombie_horse:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      zombie_villager:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50
+      zombified_piglin:
+        enabled: false
+        costs:
+          value: 50
+          cashback: 50

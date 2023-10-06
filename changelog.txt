@@ -1,0 +1,10 @@
++ Added: "sign" section in protectables to add all signs
+      sign:
+        enabled: false
+        costs:
+          value: 5
+          cashback: 2.5
+
++ Added: [Suggestion] group API
++ Improved: compatability of protection unload with 3rd party plugin
+- Fixed: untrusted open protection menu via hologram
