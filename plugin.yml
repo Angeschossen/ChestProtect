@@ -5,7 +5,7 @@ author: Angeschossen
 api-version: 1.13
 folia-supported: true
 
-softdepend: [Lands, UpgradeableHoppers, BetterFarming, UpradeableSpawners, PlaceholderAPI, Vault, WorldGuard, BentoBox, PlotSquared, SuperiorSkyblock2, DecentHolograms, HolographicDisplays, CMI]
+softdepend: [Lands, UpgradeableHoppers, BetterFarming, UpradeableSpawners, PlaceholderAPI, Vault, WorldGuard, BentoBox, PlotSquared, SuperiorSkyblock2, DecentHolograms, HolographicDisplays, CMI, ChestSort]
 
 commands:
   chestprotect:

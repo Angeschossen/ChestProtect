@@ -1,1 +1,1 @@
-+ Added: [Suggestion] default group
++ Added: ChestSort integration to protect against sorting if untrusted
