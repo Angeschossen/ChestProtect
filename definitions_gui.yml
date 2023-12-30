@@ -152,6 +152,11 @@ gui:
           material: INHERIT
         entry_object_group:
           material: INHERIT
+        entry_object_region:
+          material: INHERIT
+        refresh_allow-region:
+          material: skin:8449b9318e33158e64a46ab0de121c3d40000e3332c1574932b3c849d8fa0dc2
+          slots: 41
         trust:
           material: skin:ffec3d25ae0d147c342c45370e0e43300a4e48a5b43f9bb858babff756144dac
           slots: 40

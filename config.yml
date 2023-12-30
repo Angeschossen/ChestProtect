@@ -203,8 +203,9 @@ integration:
     # Should protections inside a land/area get unlocked, if the player gets untrusted at this land/area?
     # This includes the expiration of rentals.
     untrust-remove: false
-    # Allow players, which are trusted in the region where the protection is located in, to open the protection?
     # Supports: Lands (https://www.spigotmc.org/resources/53313), SuperiorSkyblock2, BentoBox, PlotSquared, WorldGuard
+    # Allow players, which are trusted in the region where the farm is located in, to break blocks, place blocks and interact, if they're allowed to do so in the region?
+    # This is a default option. Players can change it later in the menu.
     allow-region-members: false
     # Allow region owners to unlock protections of other players?
     # This also allows owners, to open protections of other players in their claim.
