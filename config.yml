@@ -38,7 +38,7 @@ general:
     # The short format will use the normal format if the value is lower than 1000.
     # If the value is higher or equal than 1000, it will return {value} divided by 1000.
     # This format is only used by a small amount of messages.
-    short: '${value}k'
+    short-unit: '${value}{unit}'
 
   # If enabled, limit permissions will be combined instead of just taking the highest value.
   # Example: A player has the permission chestprotect.blocks.5 and chestprotect.blocks.2.

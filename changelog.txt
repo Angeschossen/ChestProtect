@@ -1,1 +1,1 @@
-+ Added: Farm owners can now toggle in the players menu if land members should be added to the farm automatically
+- Fixed: Trusting players prints already trusted
