@@ -1,1 +1,1 @@
-+ Added: [Suggestion] instructions on how to cancel lock etc. mode in actionbar to default locale
++ Added: [#2491] error on init in rare cases with Lands
