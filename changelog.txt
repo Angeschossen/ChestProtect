@@ -1,1 +1,2 @@
-+ Added: [#2491] error on init in rare cases with Lands
+- Fixed: [#2502] Issues with retrieving skin data for heads, etc. This finally removes errors printed by the server's API. Which might
+occur if Mojangs API is down etc.
