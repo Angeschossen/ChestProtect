@@ -1,2 +1,2 @@
-- Fixed: [#2502] Issues with retrieving skin data for heads, etc. This finally removes errors printed by the server's API. Which might
-occur if Mojangs API is down etc.
++ Added: API: for offline player usage
+https://github.com/Angeschossen/ChestProtectAPI/commit/da3e0a26b9bccc015658fd3767072697632fbe6c
