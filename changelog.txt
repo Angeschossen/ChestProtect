@@ -1,2 +1,1 @@
-+ Added: API: for offline player usage
-https://github.com/Angeschossen/ChestProtectAPI/commit/da3e0a26b9bccc015658fd3767072697632fbe6c
+- Fixed: [#2516] Duplicates in protection list menu if reached max
