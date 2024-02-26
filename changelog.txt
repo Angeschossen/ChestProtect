@@ -1,1 +1,2 @@
-- Fixed: [#2516] Duplicates in protection list menu if reached max
++ Added: You can now disable every teleportation by unsetting the following permissions:
+https://github.com/Angeschossen/UpgradeableSpawners/wiki/Permissions#teleportation
