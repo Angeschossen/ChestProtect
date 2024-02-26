@@ -140,6 +140,10 @@ permissions:
           chestprotect.admin.command.import:
             descriptionw: Import other plugins protections. /Protect admin import lwc
             default: op
-      chestprotect.teleport:
-        description: Teleport to protection via the GUI menu.
-        default: op
+
+      chestprotect.teleport.*:
+        description: Allow all teleportation.
+        children:
+          chestprotect.teleport.protection:
+            description: Allow teleportation to protections.
+            default: true
