@@ -169,7 +169,7 @@ gui:
       default:
         entry_object:
           material: 'PAPER'
-        entry_default:
+        entry_object_default:
           material: 'PAPER'
         entry_object_select:
           material: 'PAPER'
