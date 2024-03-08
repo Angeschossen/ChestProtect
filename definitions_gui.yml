@@ -199,7 +199,7 @@ gui:
           material: skin:548d7d1e03e1af145b0125ab841285672b421265da2ab915015f9058438ba2d8
           slots: 42
 
-  list_group_types:
+  list_group_objects:
     items:
       default:
         entry_object:
@@ -211,7 +211,7 @@ gui:
           material: skin:94c28ffb9063e63037c7c9c3a99975333254946ddfa0018996151740a5c66842
           slots: 42
 
-  list_protectables:
+  group_objects_choices:
     items:
       default:
         entry_object:
