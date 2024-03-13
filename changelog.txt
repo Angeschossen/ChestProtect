@@ -1,1 +1,2 @@
-- Fixed: Protections being listed multiple times in menu
++ Changed: WorldGuard lock flag behaviour - no longer bound to only-trusted
+- Fixed: Protection hook info error upon placement

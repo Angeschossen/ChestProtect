@@ -211,7 +211,7 @@ gui:
           material: skin:94c28ffb9063e63037c7c9c3a99975333254946ddfa0018996151740a5c66842
           slots: 42
 
-  group_objects_choices:
+  list_group_objects_choices:
     items:
       default:
         entry_object:
