@@ -1,2 +1,1 @@
-+ Changed: WorldGuard lock flag behaviour - no longer bound to only-trusted
-- Fixed: Protection hook info error upon placement
+- Fixed: Trusting players
