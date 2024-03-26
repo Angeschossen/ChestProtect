@@ -1,1 +1,1 @@
-- Fixed: Trusting players
+- Fixed: Locking armor stands, item frames
