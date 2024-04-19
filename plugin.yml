@@ -9,19 +9,19 @@ softdepend: [Lands, UpgradeableHoppers, BetterFarming, UpradeableSpawners, Place
 
 commands:
   chestprotect:
-    aliases: [cp, protect, protection]
+#    aliases: [cp, protect, protection]
     description: Protect objectives
   lock:
-    aliases: [lo]
+#    aliases: [lo]
     description: Lock objects
   unlock:
-    aliases: [ul]
+#    aliases: [ul]
     description: Unlock objects
   trust:
-    aliases: [tr]
+#    aliases: [tr]
     description: Trust player to objective
   untrust:
-    aliases: [ut]
+#    aliases: [ut]
     description: Untrust player from objective
 
 permissions:

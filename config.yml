@@ -46,6 +46,30 @@ general:
   #          If disabled: This will result in a limit of 5 protected blocks (containers etc.).
   permission-stacking: false
 
+  # Date format
+  # MM: Month
+  # dd: Day of month
+  # yyyy: Year
+  # hh: hours
+  # mm: minutes
+  # ss: seconds
+  # NOTE: These settings require server reload / restart.
+  date-format:
+    # Set the time zone for date text outputs.
+    # Example: America/Los_Angeles or GMT-8:00
+    # List of time zones: https://timezonedb.com/time-zones
+    # If empty, it uses the time zone of the machine your server is running on.
+    time-zone: ''
+    # General format for invites etc.
+    # Examples:
+    #   American 12-hour format (a = 12 hour format): MM/dd/yyyy hh:mm a
+    #   German 24-hour format: dd.MM.yyyy hh:mm
+    general: 'MM/dd/yyyy hh:mm a'
+    # Format used when only a time displayed.
+    # Examples:
+    #   American 12-hour format (a = 12-hour format): hh:mm a
+    #   German 24-hour format: hh:mm
+    time_2: 'hh:mm a'
 
 #################################################################
 # Blocks and entities, which should be able to become protected, #
@@ -176,7 +200,10 @@ command:
   # Set aliases for the /chestprotect command
   # NOTE: This setting requires server reload.
   alias:
-    chestprotect_list: [ ]
+    chestprotect_list:
+      - "cp"
+      - "protect"
+      - "protection"
 
 
 

@@ -1,1 +1,1 @@
-- Fixed: Locking armor stands, item frames
++ Changed: Default command aliases are now removeable
