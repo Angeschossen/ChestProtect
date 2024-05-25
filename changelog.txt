@@ -1,1 +1,1 @@
-+ Changed: Default command aliases are now removeable
+- Fixed: Untrust error
