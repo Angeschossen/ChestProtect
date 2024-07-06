@@ -1,1 +1,2 @@
-- Fixed: Untrust error
+- Fixed: Signs on 1.21
+- Fixed: Error if invalid icon material

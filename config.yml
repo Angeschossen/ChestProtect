@@ -278,3 +278,13 @@ integration:
       # The name of the layer where users can see the marked protections.
       layer: 'ChestProtect'
       icon: 'Protections X: {x} Z: {z}'
+
+
+# Configure logging
+logging:
+  # We might ask you to enable this, when you submit a bugreport.
+  # It's also helpful to debug variables for events.yml.
+  debug: false
+  # Identify caller of events etc.
+  # Available: land_balance_changed
+  print-callstack_list: []
