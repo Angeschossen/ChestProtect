@@ -1,2 +1,1 @@
-- Fixed: Signs on 1.21
-- Fixed: Error if invalid icon material
+- Fixed: Issue with protection icon in menu error
