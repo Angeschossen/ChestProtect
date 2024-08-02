@@ -93,6 +93,8 @@ permissions:
             description: Access to all player settings
             default: op
             children:
+              chestprotect.setting.player.auto_lock:
+                description: Access to toggle auto lock
               chestprotect.setting.player.lock_persistent:
                 description: Access to toggle lock persistent setting
                 default: op

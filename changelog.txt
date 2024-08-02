@@ -1,1 +1,3 @@
-- Fixed: Issue with protection icon in menu error
+- Fixed: Issue when deleting protection hook from db
+- Fixed: Issue menu item not found
+- Fixed: Chat input for Folia
