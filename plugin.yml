@@ -6,6 +6,8 @@ api-version: 1.13
 folia-supported: true
 
 softdepend: [Lands, UpgradeableHoppers, BetterFarming, UpradeableSpawners, PlaceholderAPI, Vault, WorldGuard, BentoBox, PlotSquared, SuperiorSkyblock2, DecentHolograms, HolographicDisplays, CMI, ChestSort]
+libraries:
+  - "org.apache.commons:commons-lang3:3.17.0"
 
 commands:
   chestprotect:

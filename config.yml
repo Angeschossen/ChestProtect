@@ -123,6 +123,7 @@ player:
   # Here you can set DEFAULT settings for NEW players.
   # The players will be able to change these settings later in the GUI, if they have permission to do so.
   # NOTE: These settings are default settings. That means that they will only apply for new players.
+  #       Existing players can toggle them in their menu (/chestprotect menu).
   setting:
     # Make the command lock and unlock persistent?
     persistent_lock:

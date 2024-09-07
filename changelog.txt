@@ -1,3 +1,2 @@
-- Fixed: Issue when deleting protection hook from db
-- Fixed: Issue menu item not found
-- Fixed: Chat input for Folia
+- Fixed: BlockExplodeEvent with 1.21
+- Fixed: Protection unlock
