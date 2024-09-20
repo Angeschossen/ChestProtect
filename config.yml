@@ -236,7 +236,6 @@ integration:
     # This is a default option. Players can change it later in the menu.
     allow-region-members: false
     # Allow region owners to unlock protections of other players?
-    # This also allows owners, to open protections of other players in their claim.
     owner-unlock: false
 
   # chestprotect-lock flag that allows you to prevent locking objects in plugins like WorldGuard.

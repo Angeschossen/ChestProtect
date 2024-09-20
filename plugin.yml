@@ -8,6 +8,9 @@ folia-supported: true
 softdepend: [Lands, UpgradeableHoppers, BetterFarming, UpradeableSpawners, PlaceholderAPI, Vault, WorldGuard, BentoBox, PlotSquared, SuperiorSkyblock2, DecentHolograms, HolographicDisplays, CMI, ChestSort]
 libraries:
   - "org.apache.commons:commons-lang3:3.17.0"
+  - "com.zaxxer:HikariCP:4.0.3"
+  - "org.slf4j:slf4j-jdk14:1.7.32"
+  - "org.slf4j:slf4j-api:1.7.32"
 
 commands:
   chestprotect:
