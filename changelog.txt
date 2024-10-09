@@ -1,1 +1,1 @@
-- Fixed: Item frame protection with left hand
+- Fixed: BlockState checks causing tps issue in some cases
